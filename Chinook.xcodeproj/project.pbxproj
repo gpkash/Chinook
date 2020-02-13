@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		153D6C15960B7BB66B2D5C73 /* Pods_ChinookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296E3368E3A2D0AF112CD23 /* Pods_ChinookTests.framework */; };
+		524A1D1423E77C000074B0F7 /* SiteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A1D1323E77C000074B0F7 /* SiteList.swift */; };
+		524A1D1723E77C430074B0F7 /* XMLDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A1D1623E77C430074B0F7 /* XMLDecodable.swift */; };
+		524A1D1923E793320074B0F7 /* SiteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A1D1823E793320074B0F7 /* SiteData.swift */; };
+		524A1DCC23E7DC0B0074B0F7 /* NSLocale+i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A1DCB23E7DC0B0074B0F7 /* NSLocale+i18n.swift */; };
+		5279FA5D23F104140092FD45 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279FA5C23F104140092FD45 /* UIViewController+Alert.swift */; };
+		528642FA23E65B0C00CA165F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528642F923E65B0C00CA165F /* AppDelegate.swift */; };
+		528642FC23E65B0C00CA165F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528642FB23E65B0C00CA165F /* SceneDelegate.swift */; };
+		528642FE23E65B0C00CA165F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528642FD23E65B0C00CA165F /* ViewController.swift */; };
+		5286430123E65B0C00CA165F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528642FF23E65B0C00CA165F /* Main.storyboard */; };
+		5286430323E65B0F00CA165F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5286430223E65B0F00CA165F /* Assets.xcassets */; };
+		5286430623E65B0F00CA165F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5286430423E65B0F00CA165F /* LaunchScreen.storyboard */; };
+		5286431123E65B0F00CA165F /* ChinookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286431023E65B0F00CA165F /* ChinookTests.swift */; };
+		5286431F23E6769000CA165F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286431E23E6769000CA165F /* Endpoint.swift */; };
+		5286432123E676A800CA165F /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286432023E676A800CA165F /* Host.swift */; };
+		5286432723E6791F00CA165F /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286432623E6791F00CA165F /* DataLoader.swift */; };
+		5286432923E67B2100CA165F /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286432823E67B2100CA165F /* Endpoints.swift */; };
+		5286432B23E67B6F00CA165F /* Hosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286432A23E67B6F00CA165F /* Hosts.swift */; };
+		528643DE23E67DF600CA165F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528643DD23E67DF600CA165F /* NetworkError.swift */; };
+		528643E023E68BA200CA165F /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528643DF23E68BA200CA165F /* Site.swift */; };
+		52F9E68223F0FA83003F533D /* FetchCityPageWeatherSiteDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9E68123F0FA83003F533D /* FetchCityPageWeatherSiteDataOperation.swift */; };
+		52F9E68523F0FD92003F533D /* FetchCityPageWeatherSiteListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9E68423F0FD92003F533D /* FetchCityPageWeatherSiteListOperation.swift */; };
+		52F9E68723F0FF03003F533D /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9E68623F0FF03003F533D /* ConcurrentOperation.swift */; };
+		65A2DA6E392CF08206B279BB /* Pods_Chinook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17650A8761A7DCFC5C492DF /* Pods_Chinook.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5286430D23E65B0F00CA165F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 528642EE23E65B0C00CA165F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 528642F523E65B0C00CA165F;
+			remoteInfo = Chinook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47E33F31D905BE1DA941710F /* Pods-ChinookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChinookTests.release.xcconfig"; path = "Target Support Files/Pods-ChinookTests/Pods-ChinookTests.release.xcconfig"; sourceTree = "<group>"; };
+		524A1D1323E77C000074B0F7 /* SiteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteList.swift; sourceTree = "<group>"; };
+		524A1D1623E77C430074B0F7 /* XMLDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLDecodable.swift; sourceTree = "<group>"; };
+		524A1D1823E793320074B0F7 /* SiteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteData.swift; sourceTree = "<group>"; };
+		524A1DCB23E7DC0B0074B0F7 /* NSLocale+i18n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLocale+i18n.swift"; sourceTree = "<group>"; };
+		5279FA5C23F104140092FD45 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		528642F623E65B0C00CA165F /* Chinook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chinook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		528642F923E65B0C00CA165F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		528642FB23E65B0C00CA165F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		528642FD23E65B0C00CA165F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5286430023E65B0C00CA165F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5286430223E65B0F00CA165F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5286430523E65B0F00CA165F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5286430723E65B0F00CA165F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5286430C23E65B0F00CA165F /* ChinookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChinookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5286431023E65B0F00CA165F /* ChinookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinookTests.swift; sourceTree = "<group>"; };
+		5286431223E65B0F00CA165F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5286431E23E6769000CA165F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		5286432023E676A800CA165F /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		5286432623E6791F00CA165F /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		5286432823E67B2100CA165F /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		5286432A23E67B6F00CA165F /* Hosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hosts.swift; sourceTree = "<group>"; };
+		528643DD23E67DF600CA165F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		528643DF23E68BA200CA165F /* Site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
+		5296E3368E3A2D0AF112CD23 /* Pods_ChinookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChinookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F9E68123F0FA83003F533D /* FetchCityPageWeatherSiteDataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCityPageWeatherSiteDataOperation.swift; sourceTree = "<group>"; };
+		52F9E68423F0FD92003F533D /* FetchCityPageWeatherSiteListOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCityPageWeatherSiteListOperation.swift; sourceTree = "<group>"; };
+		52F9E68623F0FF03003F533D /* ConcurrentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
+		56F845E8D42A188A46F8C79E /* Pods-Chinook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinook.debug.xcconfig"; path = "Target Support Files/Pods-Chinook/Pods-Chinook.debug.xcconfig"; sourceTree = "<group>"; };
+		F17650A8761A7DCFC5C492DF /* Pods_Chinook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chinook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5FB3DA65083928C18F674DA /* Pods-Chinook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinook.release.xcconfig"; path = "Target Support Files/Pods-Chinook/Pods-Chinook.release.xcconfig"; sourceTree = "<group>"; };
+		FB3D497061571A7CD542DC35 /* Pods-ChinookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChinookTests.debug.xcconfig"; path = "Target Support Files/Pods-ChinookTests/Pods-ChinookTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		528642F323E65B0C00CA165F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A2DA6E392CF08206B279BB /* Pods_Chinook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5286430923E65B0F00CA165F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				153D6C15960B7BB66B2D5C73 /* Pods_ChinookTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DC563163459B2F04C88C497 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56F845E8D42A188A46F8C79E /* Pods-Chinook.debug.xcconfig */,
+				F5FB3DA65083928C18F674DA /* Pods-Chinook.release.xcconfig */,
+				FB3D497061571A7CD542DC35 /* Pods-ChinookTests.debug.xcconfig */,
+				47E33F31D905BE1DA941710F /* Pods-ChinookTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		524A1D1523E77C230074B0F7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				524A1D1623E77C430074B0F7 /* XMLDecodable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		524A1DCA23E7DBF70074B0F7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				524A1DCB23E7DC0B0074B0F7 /* NSLocale+i18n.swift */,
+				5279FA5C23F104140092FD45 /* UIViewController+Alert.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		528642ED23E65B0C00CA165F = {
+			isa = PBXGroup;
+			children = (
+				528642F823E65B0C00CA165F /* Chinook */,
+				5286430F23E65B0F00CA165F /* Tests */,
+				528642F723E65B0C00CA165F /* Products */,
+				1DC563163459B2F04C88C497 /* Pods */,
+				53851F11C6DC23A554EF092F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		528642F723E65B0C00CA165F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528642F623E65B0C00CA165F /* Chinook.app */,
+				5286430C23E65B0F00CA165F /* ChinookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		528642F823E65B0C00CA165F /* Chinook */ = {
+			isa = PBXGroup;
+			children = (
+				524A1DCA23E7DBF70074B0F7 /* Categories */,
+				5286432223E676BB00CA165F /* Model */,
+				5286431D23E6768300CA165F /* Network */,
+				52F9E68323F0FD21003F533D /* Operations */,
+				524A1D1523E77C230074B0F7 /* Protocols */,
+				5286432523E676D700CA165F /* Supporting Files */,
+				528642F923E65B0C00CA165F /* AppDelegate.swift */,
+				528642FD23E65B0C00CA165F /* ViewController.swift */,
+			);
+			path = Chinook;
+			sourceTree = "<group>";
+		};
+		5286430F23E65B0F00CA165F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5286431023E65B0F00CA165F /* ChinookTests.swift */,
+				5286431223E65B0F00CA165F /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		5286431D23E6768300CA165F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5286432623E6791F00CA165F /* DataLoader.swift */,
+				5286431E23E6769000CA165F /* Endpoint.swift */,
+				5286432823E67B2100CA165F /* Endpoints.swift */,
+				5286432023E676A800CA165F /* Host.swift */,
+				5286432A23E67B6F00CA165F /* Hosts.swift */,
+				528643DD23E67DF600CA165F /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5286432223E676BB00CA165F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				528643DF23E68BA200CA165F /* Site.swift */,
+				524A1D1323E77C000074B0F7 /* SiteList.swift */,
+				524A1D1823E793320074B0F7 /* SiteData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5286432523E676D700CA165F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				528642FB23E65B0C00CA165F /* SceneDelegate.swift */,
+				528642FF23E65B0C00CA165F /* Main.storyboard */,
+				5286430223E65B0F00CA165F /* Assets.xcassets */,
+				5286430423E65B0F00CA165F /* LaunchScreen.storyboard */,
+				5286430723E65B0F00CA165F /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52F9E68323F0FD21003F533D /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				52F9E68123F0FA83003F533D /* FetchCityPageWeatherSiteDataOperation.swift */,
+				52F9E68423F0FD92003F533D /* FetchCityPageWeatherSiteListOperation.swift */,
+				52F9E68623F0FF03003F533D /* ConcurrentOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		53851F11C6DC23A554EF092F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F17650A8761A7DCFC5C492DF /* Pods_Chinook.framework */,
+				5296E3368E3A2D0AF112CD23 /* Pods_ChinookTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		528642F523E65B0C00CA165F /* Chinook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5286431523E65B0F00CA165F /* Build configuration list for PBXNativeTarget "Chinook" */;
+			buildPhases = (
+				3AA7F92B72AA35FFBE85E670 /* [CP] Check Pods Manifest.lock */,
+				528642F223E65B0C00CA165F /* Sources */,
+				528642F323E65B0C00CA165F /* Frameworks */,
+				528642F423E65B0C00CA165F /* Resources */,
+				09230818E13B18A61E3C6E03 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chinook;
+			productName = Chinook;
+			productReference = 528642F623E65B0C00CA165F /* Chinook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5286430B23E65B0F00CA165F /* ChinookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5286431823E65B0F00CA165F /* Build configuration list for PBXNativeTarget "ChinookTests" */;
+			buildPhases = (
+				72D3920D40C3678A6EC2FE1D /* [CP] Check Pods Manifest.lock */,
+				5286430823E65B0F00CA165F /* Sources */,
+				5286430923E65B0F00CA165F /* Frameworks */,
+				5286430A23E65B0F00CA165F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5286430E23E65B0F00CA165F /* PBXTargetDependency */,
+			);
+			name = ChinookTests;
+			productName = ChinookTests;
+			productReference = 5286430C23E65B0F00CA165F /* ChinookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528642EE23E65B0C00CA165F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Gary Kash";
+				TargetAttributes = {
+					528642F523E65B0C00CA165F = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					5286430B23E65B0F00CA165F = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 528642F523E65B0C00CA165F;
+					};
+				};
+			};
+			buildConfigurationList = 528642F123E65B0C00CA165F /* Build configuration list for PBXProject "Chinook" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 528642ED23E65B0C00CA165F;
+			productRefGroup = 528642F723E65B0C00CA165F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528642F523E65B0C00CA165F /* Chinook */,
+				5286430B23E65B0F00CA165F /* ChinookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528642F423E65B0C00CA165F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5286430623E65B0F00CA165F /* LaunchScreen.storyboard in Resources */,
+				5286430323E65B0F00CA165F /* Assets.xcassets in Resources */,
+				5286430123E65B0C00CA165F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5286430A23E65B0F00CA165F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09230818E13B18A61E3C6E03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chinook/Pods-Chinook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chinook/Pods-Chinook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chinook/Pods-Chinook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AA7F92B72AA35FFBE85E670 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chinook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72D3920D40C3678A6EC2FE1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChinookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		528642F223E65B0C00CA165F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528642FE23E65B0C00CA165F /* ViewController.swift in Sources */,
+				5286432723E6791F00CA165F /* DataLoader.swift in Sources */,
+				5286432B23E67B6F00CA165F /* Hosts.swift in Sources */,
+				528642FA23E65B0C00CA165F /* AppDelegate.swift in Sources */,
+				5286432123E676A800CA165F /* Host.swift in Sources */,
+				528642FC23E65B0C00CA165F /* SceneDelegate.swift in Sources */,
+				524A1D1423E77C000074B0F7 /* SiteList.swift in Sources */,
+				52F9E68723F0FF03003F533D /* ConcurrentOperation.swift in Sources */,
+				52F9E68223F0FA83003F533D /* FetchCityPageWeatherSiteDataOperation.swift in Sources */,
+				5279FA5D23F104140092FD45 /* UIViewController+Alert.swift in Sources */,
+				528643E023E68BA200CA165F /* Site.swift in Sources */,
+				524A1D1923E793320074B0F7 /* SiteData.swift in Sources */,
+				5286432923E67B2100CA165F /* Endpoints.swift in Sources */,
+				524A1D1723E77C430074B0F7 /* XMLDecodable.swift in Sources */,
+				5286431F23E6769000CA165F /* Endpoint.swift in Sources */,
+				52F9E68523F0FD92003F533D /* FetchCityPageWeatherSiteListOperation.swift in Sources */,
+				524A1DCC23E7DC0B0074B0F7 /* NSLocale+i18n.swift in Sources */,
+				528643DE23E67DF600CA165F /* NetworkError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5286430823E65B0F00CA165F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5286431123E65B0F00CA165F /* ChinookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5286430E23E65B0F00CA165F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 528642F523E65B0C00CA165F /* Chinook */;
+			targetProxy = 5286430D23E65B0F00CA165F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		528642FF23E65B0C00CA165F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5286430023E65B0C00CA165F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5286430423E65B0F00CA165F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5286430523E65B0F00CA165F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5286431323E65B0F00CA165F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5286431423E65B0F00CA165F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5286431623E65B0F00CA165F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56F845E8D42A188A46F8C79E /* Pods-Chinook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4433L6U9RR;
+				INFOPLIST_FILE = "Chinook/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TheFloorIsLava.Chinook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5286431723E65B0F00CA165F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5FB3DA65083928C18F674DA /* Pods-Chinook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4433L6U9RR;
+				INFOPLIST_FILE = "Chinook/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TheFloorIsLava.Chinook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5286431923E65B0F00CA165F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB3D497061571A7CD542DC35 /* Pods-ChinookTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4433L6U9RR;
+				INFOPLIST_FILE = ChinookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TheFloorIsLava.ChinookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chinook.app/Chinook";
+			};
+			name = Debug;
+		};
+		5286431A23E65B0F00CA165F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47E33F31D905BE1DA941710F /* Pods-ChinookTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4433L6U9RR;
+				INFOPLIST_FILE = ChinookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TheFloorIsLava.ChinookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chinook.app/Chinook";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		528642F123E65B0C00CA165F /* Build configuration list for PBXProject "Chinook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5286431323E65B0F00CA165F /* Debug */,
+				5286431423E65B0F00CA165F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5286431523E65B0F00CA165F /* Build configuration list for PBXNativeTarget "Chinook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5286431623E65B0F00CA165F /* Debug */,
+				5286431723E65B0F00CA165F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5286431823E65B0F00CA165F /* Build configuration list for PBXNativeTarget "ChinookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5286431923E65B0F00CA165F /* Debug */,
+				5286431A23E65B0F00CA165F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528642EE23E65B0C00CA165F /* Project object */;
+}

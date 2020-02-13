@@ -1,0 +1,963 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02DB2E386A2458ACA24265C98D97DAE6 /* ValueBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A9C1A204F3DCEADF75B2568FB65D7E /* ValueBox.swift */; };
+		080127DFF286793DA4996F7755D9664C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6029AB9D5E820E4FD1358D1F68BA17 /* Box.swift */; };
+		08FB829F9C1BB02B7FD195510D0F54C7 /* XMLKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52552F396032DF9631C68551CC4D9720 /* XMLKey.swift */; };
+		10702542EA42857F7A04FCA158C4696E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990964182F5DC45A9C95FF91589AECA3 /* String+Extensions.swift */; };
+		1C66426697AF4E8CB5802A524EB6DDA2 /* XMLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967504A5990298B96BF75112CECEBA61 /* XMLReferencingEncoder.swift */; };
+		2114F1882944B2775317FD556B77CA7D /* XMLDecoderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECBD1C01E125675669C4F5157C5D1C2 /* XMLDecoderImplementation.swift */; };
+		24FEA88A7385C295A5EB180E7EFFE5FC /* SharedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76404CF87AD16F9E73BEFA8F4B2C7DD3 /* SharedBox.swift */; };
+		275BFE81479EA0D4B1F493C8DE4C0679 /* DoubleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E4ABA0BD5EC0A55B8622FFFA8A7E9E /* DoubleBox.swift */; };
+		2CCF7788A23A0482DE9864011DB68D14 /* BoolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC4B183AB239A0F21E9258069CDC2A8 /* BoolBox.swift */; };
+		2D6F10F9393AFA0628529F0A7528CC93 /* XMLEncoderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A86268EAC0D8B53B5C2AF8734E302BE /* XMLEncoderImplementation.swift */; };
+		30C5EE154D0682485865F79A020A0434 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB57075858CD5FA6BA950B76B9F35B72 /* ISO8601DateFormatter.swift */; };
+		37D779DCB47A1A3787F88BE238EBE8FF /* URLBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71140AC0E7CBD7A6FA3004DBC87EFF8 /* URLBox.swift */; };
+		4843316F32A1452074A3181B9F38D90F /* SingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B39077C3BAF3EEA0924EF3C9F8D66 /* SingleValueEncodingContainer.swift */; };
+		4CDC87156088944B680E1EC37F1B703F /* XMLCoder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 158374B3C29B60925D11BCBF3DEEB193 /* XMLCoder-dummy.m */; };
+		4F8BCB221CFFD3D2C0337448826C55BE /* Pods-ChinookTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC4B181CD50BE2AD5D7728DB589717 /* Pods-ChinookTests-dummy.m */; };
+		58A42F2038BCBBF88F27E1C95B07F7D8 /* DecimalBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68206F48FE5E2F1820732705ED547903 /* DecimalBox.swift */; };
+		5A45D909FFBE93CABCE5BCD9354D28EC /* FloatBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89610BA75F4F4178FFDD9423B707F84E /* FloatBox.swift */; };
+		61D6AB9DDE5D8C42BA5767D257815389 /* Metatypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC340487BB161F01EC26C6CF8F0132A /* Metatypes.swift */; };
+		6399A998F57953FC186755AC01D0D892 /* XMLChoiceDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE637E003BB02DD461771CA5992515A1 /* XMLChoiceDecodingContainer.swift */; };
+		69F98AC8EC47AAB924A2619C2C3A8C2B /* XMLEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03951ACAB5EC92F5C3CD1BA78C8950C7 /* XMLEncodingStorage.swift */; };
+		6AE02697DE5F74A3B01B02663BE46E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6E3881C35A71B43F5AB86C01ED27C66E /* XMLDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB1C834D89E1BC0D08A3602EABDFEA /* XMLDecodingStorage.swift */; };
+		6EED70837717E2BE8AD42D4E050C5718 /* UnkeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC779E080619EBDF8F28D3E17FF590C7 /* UnkeyedBox.swift */; };
+		6FE13FE8BA1B39B0A7EE7AC866C39C60 /* XMLUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B205B5A4D24556C2F8F4BC3A15CA9EF /* XMLUnkeyedEncodingContainer.swift */; };
+		72A280538756E35B8473A4E8B8B1E4EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		749AB1FFF43E7BF2CD3DBB19DD083E9B /* SingleKeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766540F377672B1A2B960F8C019FA3F /* SingleKeyedBox.swift */; };
+		83325AC6EC526FAD4AE109EB00163ACC /* EncodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9288CA66D4E14D6C73D7E6958B925A85 /* EncodingErrorExtension.swift */; };
+		8E5CA0782D2A5EE65D8C8CAD24D2ADDD /* DateBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB1726A463FE7ECB88D824EE6EE3E63 /* DateBox.swift */; };
+		9655E9995760FDC451823ECA4AF29A29 /* Pods-ChinookTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B002C303595AED13836D2B89170C12 /* Pods-ChinookTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98A9482E85CA36B04791AD4AF344CB0F /* DynamicNodeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2FA3A6DC555F04522233D936FA3868 /* DynamicNodeDecoding.swift */; };
+		9CEEFADBC0C01A03BA2EB49188022035 /* ChoiceBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619BCB212BDBDA256A48021AAE5A3870 /* ChoiceBox.swift */; };
+		9DE1449A448CC12433AB66A3DEBABF8D /* UIntBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313DA15AD34233574CD409671D161F7C /* UIntBox.swift */; };
+		9F33D754EA970D8610EE6E69B5E19521 /* XMLHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5771620296375EC16212B66560646E /* XMLHeader.swift */; };
+		A053CF013B0D734F67C7513EB33A6223 /* DynamicNodeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D392D6F040525263115D153B61605F /* DynamicNodeEncoding.swift */; };
+		A0BDA3EEDEFD6D0333ADEB3A7254A2B5 /* XMLCoder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C91466795C1C00D02FA7D5E876227E9 /* XMLCoder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A312439B91C6CF8CC9F1FDE3D11EBBCD /* StringBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88171B10389D728183F8F40EAE7624D0 /* StringBox.swift */; };
+		A85D3874A01F15FE847E8727EE857094 /* NullBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7FA5FD9A34D4AE6730B6C385E864A9 /* NullBox.swift */; };
+		C1A55A5D5B7CFF1BDB467AD9096C33AC /* XMLChoiceEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A08A088F949C120DE0F1D422B4CF9 /* XMLChoiceEncodingContainer.swift */; };
+		C2DE590BF1D406B39BA891526AE70E92 /* DecodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7A4BFC5676B635E046C842C27EEF1B /* DecodingErrorExtension.swift */; };
+		C87325C642D2092C4F11E86DB7144197 /* XMLChoiceCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC322F5EA0885ACDF40D35949F5373CD /* XMLChoiceCodingKey.swift */; };
+		CC0F543289098EAE3D026C0611B17819 /* Pods-Chinook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7CFDEC5F06ED7BA89E09D53C3458A7 /* Pods-Chinook-dummy.m */; };
+		D1F201BF2CA1929B800D2D80480ECCAB /* KeyedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A1AA0CBF372EDADD6E21E618D44B5C /* KeyedStorage.swift */; };
+		D3AC28C4DFCC58CCB9A159AB2AF44511 /* XMLCoderElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5630D1127A45E3313ADF94CC413381 /* XMLCoderElement.swift */; };
+		D89921854FC609A38BC631CB5F1D5833 /* KeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABAFCBC2810AF433B3815A87E0DE0D /* KeyedBox.swift */; };
+		DE9DADF9A37AC2867A3BF3DBA2666E5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E299B9AAFE616A658B888B0D993632D6 /* DataBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A0FAF9055750239E944A37D1FADEA8 /* DataBox.swift */; };
+		E5833DE71EC4F03B7D778F1C20E6E1EE /* XMLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD853B5B8DB8BA78C4542E1B223762B9 /* XMLEncoder.swift */; };
+		E625A58D195A1E334488607F032CA05A /* XMLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FE5F63F9598EC3BBF6DE479264D5D1 /* XMLDecoder.swift */; };
+		E6568297510A49CCB0408F60684D1093 /* XMLKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE18AC8904CF78169B38E648E2C3182 /* XMLKeyedEncodingContainer.swift */; };
+		EB867C980BF0D7305BD708071E99BC51 /* XMLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF2365AC6E160882CBBAA7908DF7DA7 /* XMLUnkeyedDecodingContainer.swift */; };
+		ED0EBE106CF45F1A6DD55D23F291B864 /* XMLStackParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F5A0E67C6BFC02432BC4162F41D5DE /* XMLStackParser.swift */; };
+		F10687E0097BC6077F0654F7DDF79B66 /* IntBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4BE470D065ECD6C87E6AD11D922A9D /* IntBox.swift */; };
+		F6AFED1CF892646157E55DE19BDA7DED /* XMLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD45563EA2B6667459588BE8EFA6740 /* XMLKeyedDecodingContainer.swift */; };
+		FAF1596E3FFE0F9F745CE2903923E539 /* SingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAFD8975784E3B7F34141FEC1E1E23E /* SingleValueDecodingContainer.swift */; };
+		FDF399678EB55EFBAA47137AA8F5191A /* Pods-Chinook-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61143071ABA47C4EB3E7639046E7BBC2 /* Pods-Chinook-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		748E0AB48B10FD6A072E641FE6F0C5D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 319ED3F8B949571B5968E61DFF06C8D6;
+			remoteInfo = "Pods-Chinook";
+		};
+		A346A6588AB960924D37B56E7D9108E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1753B4FA19C5F745ADF56B844ACAB36;
+			remoteInfo = XMLCoder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03951ACAB5EC92F5C3CD1BA78C8950C7 /* XMLEncodingStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLEncodingStorage.swift; path = Sources/XMLCoder/Encoder/XMLEncodingStorage.swift; sourceTree = "<group>"; };
+		07D392D6F040525263115D153B61605F /* DynamicNodeEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicNodeEncoding.swift; path = Sources/XMLCoder/Encoder/DynamicNodeEncoding.swift; sourceTree = "<group>"; };
+		158374B3C29B60925D11BCBF3DEEB193 /* XMLCoder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XMLCoder-dummy.m"; sourceTree = "<group>"; };
+		19A9C1A204F3DCEADF75B2568FB65D7E /* ValueBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/ValueBox.swift; sourceTree = "<group>"; };
+		1C17B0A9B265516BBA248941FAFB9D5F /* Pods-ChinookTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChinookTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1C7A4BFC5676B635E046C842C27EEF1B /* DecodingErrorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecodingErrorExtension.swift; path = Sources/XMLCoder/Decoder/DecodingErrorExtension.swift; sourceTree = "<group>"; };
+		23BD42FF29DEFEC5B02A97D783A36696 /* Pods-ChinookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChinookTests.release.xcconfig"; sourceTree = "<group>"; };
+		24AB1C834D89E1BC0D08A3602EABDFEA /* XMLDecodingStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLDecodingStorage.swift; path = Sources/XMLCoder/Decoder/XMLDecodingStorage.swift; sourceTree = "<group>"; };
+		2B205B5A4D24556C2F8F4BC3A15CA9EF /* XMLUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLUnkeyedEncodingContainer.swift; path = Sources/XMLCoder/Encoder/XMLUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		2E5771620296375EC16212B66560646E /* XMLHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLHeader.swift; path = Sources/XMLCoder/Auxiliaries/XMLHeader.swift; sourceTree = "<group>"; };
+		313DA15AD34233574CD409671D161F7C /* UIntBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIntBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/UIntBox.swift; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3AB1726A463FE7ECB88D824EE6EE3E63 /* DateBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/DateBox.swift; sourceTree = "<group>"; };
+		3B7FA5FD9A34D4AE6730B6C385E864A9 /* NullBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NullBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/NullBox.swift; sourceTree = "<group>"; };
+		3ECBD1C01E125675669C4F5157C5D1C2 /* XMLDecoderImplementation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLDecoderImplementation.swift; path = Sources/XMLCoder/Decoder/XMLDecoderImplementation.swift; sourceTree = "<group>"; };
+		3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XMLCoder.framework; path = XMLCoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BD45563EA2B6667459588BE8EFA6740 /* XMLKeyedDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLKeyedDecodingContainer.swift; path = Sources/XMLCoder/Decoder/XMLKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		4E2FA3A6DC555F04522233D936FA3868 /* DynamicNodeDecoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicNodeDecoding.swift; path = Sources/XMLCoder/Decoder/DynamicNodeDecoding.swift; sourceTree = "<group>"; };
+		522B39077C3BAF3EEA0924EF3C9F8D66 /* SingleValueEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueEncodingContainer.swift; path = Sources/XMLCoder/Encoder/SingleValueEncodingContainer.swift; sourceTree = "<group>"; };
+		52552F396032DF9631C68551CC4D9720 /* XMLKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLKey.swift; path = Sources/XMLCoder/Auxiliaries/XMLKey.swift; sourceTree = "<group>"; };
+		5F41C64068A8D0745F9559C30140CBCF /* Pods-Chinook-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chinook-acknowledgements.plist"; sourceTree = "<group>"; };
+		61143071ABA47C4EB3E7639046E7BBC2 /* Pods-Chinook-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Chinook-umbrella.h"; sourceTree = "<group>"; };
+		619BCB212BDBDA256A48021AAE5A3870 /* ChoiceBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChoiceBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/ChoiceBox.swift; sourceTree = "<group>"; };
+		68206F48FE5E2F1820732705ED547903 /* DecimalBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/DecimalBox.swift; sourceTree = "<group>"; };
+		68C0307502A8C4FE80982B7DFB7BF0BF /* Pods-ChinookTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChinookTests-Info.plist"; sourceTree = "<group>"; };
+		6A86268EAC0D8B53B5C2AF8734E302BE /* XMLEncoderImplementation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLEncoderImplementation.swift; path = Sources/XMLCoder/Encoder/XMLEncoderImplementation.swift; sourceTree = "<group>"; };
+		6B5630D1127A45E3313ADF94CC413381 /* XMLCoderElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLCoderElement.swift; path = Sources/XMLCoder/Auxiliaries/XMLCoderElement.swift; sourceTree = "<group>"; };
+		6E4BE470D065ECD6C87E6AD11D922A9D /* IntBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/IntBox.swift; sourceTree = "<group>"; };
+		6F584EFDDCD8633E9239C8F9064B07AB /* XMLCoder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMLCoder.xcconfig; sourceTree = "<group>"; };
+		70B002C303595AED13836D2B89170C12 /* Pods-ChinookTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChinookTests-umbrella.h"; sourceTree = "<group>"; };
+		70F1176C8D410A854663DAF2155704E9 /* Pods-Chinook-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chinook-Info.plist"; sourceTree = "<group>"; };
+		73A0FAF9055750239E944A37D1FADEA8 /* DataBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/DataBox.swift; sourceTree = "<group>"; };
+		76404CF87AD16F9E73BEFA8F4B2C7DD3 /* SharedBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharedBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/SharedBox.swift; sourceTree = "<group>"; };
+		764A08A088F949C120DE0F1D422B4CF9 /* XMLChoiceEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLChoiceEncodingContainer.swift; path = Sources/XMLCoder/Encoder/XMLChoiceEncodingContainer.swift; sourceTree = "<group>"; };
+		7BABAFCBC2810AF433B3815A87E0DE0D /* KeyedBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/KeyedBox.swift; sourceTree = "<group>"; };
+		7FC340487BB161F01EC26C6CF8F0132A /* Metatypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Metatypes.swift; path = Sources/XMLCoder/Auxiliaries/Metatypes.swift; sourceTree = "<group>"; };
+		828EABF6CC51633C28C757770BBC93BF /* Pods-ChinookTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChinookTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		839BF041C25A686C869920077F8A2392 /* Pods_ChinookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChinookTests.framework; path = "Pods-ChinookTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88171B10389D728183F8F40EAE7624D0 /* StringBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/StringBox.swift; sourceTree = "<group>"; };
+		89610BA75F4F4178FFDD9423B707F84E /* FloatBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/FloatBox.swift; sourceTree = "<group>"; };
+		8BAC4B181CD50BE2AD5D7728DB589717 /* Pods-ChinookTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChinookTests-dummy.m"; sourceTree = "<group>"; };
+		9288CA66D4E14D6C73D7E6958B925A85 /* EncodingErrorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EncodingErrorExtension.swift; path = Sources/XMLCoder/Encoder/EncodingErrorExtension.swift; sourceTree = "<group>"; };
+		958D7322D2444DCFB9DA33719D184A41 /* Pods-Chinook-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chinook-acknowledgements.markdown"; sourceTree = "<group>"; };
+		967504A5990298B96BF75112CECEBA61 /* XMLReferencingEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLReferencingEncoder.swift; path = Sources/XMLCoder/Encoder/XMLReferencingEncoder.swift; sourceTree = "<group>"; };
+		990964182F5DC45A9C95FF91589AECA3 /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Sources/XMLCoder/Auxiliaries/String+Extensions.swift"; sourceTree = "<group>"; };
+		9C91466795C1C00D02FA7D5E876227E9 /* XMLCoder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMLCoder-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A02FC4C7E24CA0E4346FDF6FFA03079F /* Pods-Chinook-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chinook-frameworks.sh"; sourceTree = "<group>"; };
+		A11F7AA30098AA2D819B178E1B74D753 /* Pods-Chinook.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Chinook.modulemap"; sourceTree = "<group>"; };
+		A69D6BB31F8C9CF0E19E26F4ED740DB3 /* XMLCoder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = XMLCoder.modulemap; sourceTree = "<group>"; };
+		AB57075858CD5FA6BA950B76B9F35B72 /* ISO8601DateFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateFormatter.swift; path = Sources/XMLCoder/Auxiliaries/ISO8601DateFormatter.swift; sourceTree = "<group>"; };
+		AB7CFDEC5F06ED7BA89E09D53C3458A7 /* Pods-Chinook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Chinook-dummy.m"; sourceTree = "<group>"; };
+		AD853B5B8DB8BA78C4542E1B223762B9 /* XMLEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLEncoder.swift; path = Sources/XMLCoder/Encoder/XMLEncoder.swift; sourceTree = "<group>"; };
+		ADE18AC8904CF78169B38E648E2C3182 /* XMLKeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLKeyedEncodingContainer.swift; path = Sources/XMLCoder/Encoder/XMLKeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		ADF2365AC6E160882CBBAA7908DF7DA7 /* XMLUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLUnkeyedDecodingContainer.swift; path = Sources/XMLCoder/Decoder/XMLUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		B766540F377672B1A2B960F8C019FA3F /* SingleKeyedBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleKeyedBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/SingleKeyedBox.swift; sourceTree = "<group>"; };
+		B8E4ABA0BD5EC0A55B8622FFFA8A7E9E /* DoubleBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoubleBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/DoubleBox.swift; sourceTree = "<group>"; };
+		BE62C4B9129CB433FD1904BE48F62BA8 /* Pods-Chinook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chinook.debug.xcconfig"; sourceTree = "<group>"; };
+		BE637E003BB02DD461771CA5992515A1 /* XMLChoiceDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLChoiceDecodingContainer.swift; path = Sources/XMLCoder/Decoder/XMLChoiceDecodingContainer.swift; sourceTree = "<group>"; };
+		CC9EAF64ACA44488000012CA4C9B0102 /* Pods-ChinookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChinookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDC4B183AB239A0F21E9258069CDC2A8 /* BoolBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoolBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/BoolBox.swift; sourceTree = "<group>"; };
+		D23F925D04E87965872FBD5117EF3AAD /* Pods_Chinook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Chinook.framework; path = "Pods-Chinook.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D708EEB955147EFC2FB3B711C767B240 /* Pods-Chinook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chinook.release.xcconfig"; sourceTree = "<group>"; };
+		D71140AC0E7CBD7A6FA3004DBC87EFF8 /* URLBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/URLBox.swift; sourceTree = "<group>"; };
+		D8B807321029426ACDDCD464B0D50CA7 /* XMLCoder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMLCoder-prefix.pch"; sourceTree = "<group>"; };
+		DDAFD8975784E3B7F34141FEC1E1E23E /* SingleValueDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueDecodingContainer.swift; path = Sources/XMLCoder/Decoder/SingleValueDecodingContainer.swift; sourceTree = "<group>"; };
+		E458A03767AB7A280E83436B7C968EA8 /* XMLCoder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "XMLCoder-Info.plist"; sourceTree = "<group>"; };
+		E5A1AA0CBF372EDADD6E21E618D44B5C /* KeyedStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedStorage.swift; path = Sources/XMLCoder/Auxiliaries/KeyedStorage.swift; sourceTree = "<group>"; };
+		E6F5A0E67C6BFC02432BC4162F41D5DE /* XMLStackParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLStackParser.swift; path = Sources/XMLCoder/Auxiliaries/XMLStackParser.swift; sourceTree = "<group>"; };
+		EB6029AB9D5E820E4FD1358D1F68BA17 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/XMLCoder/Auxiliaries/Box/Box.swift; sourceTree = "<group>"; };
+		EC322F5EA0885ACDF40D35949F5373CD /* XMLChoiceCodingKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLChoiceCodingKey.swift; path = Sources/XMLCoder/Auxiliaries/XMLChoiceCodingKey.swift; sourceTree = "<group>"; };
+		F9FE5F63F9598EC3BBF6DE479264D5D1 /* XMLDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLDecoder.swift; path = Sources/XMLCoder/Decoder/XMLDecoder.swift; sourceTree = "<group>"; };
+		FB699F71AE6A6B9BD2409B22654AF127 /* Pods-ChinookTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ChinookTests.modulemap"; sourceTree = "<group>"; };
+		FC779E080619EBDF8F28D3E17FF590C7 /* UnkeyedBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnkeyedBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/UnkeyedBox.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87784E277079C13084A9FBBCB7AB1BE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9DADF9A37AC2867A3BF3DBA2666E5E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C88A1DC7DEBBA88187F614840571C498 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE02697DE5F74A3B01B02663BE46E78 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB67E4BBBC8C67D3BFA3C6FD46E1722A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A280538756E35B8473A4E8B8B1E4EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11D1D7014034F7B3F31ACB57D6EE1D59 /* XMLCoder */ = {
+			isa = PBXGroup;
+			children = (
+				CDC4B183AB239A0F21E9258069CDC2A8 /* BoolBox.swift */,
+				EB6029AB9D5E820E4FD1358D1F68BA17 /* Box.swift */,
+				619BCB212BDBDA256A48021AAE5A3870 /* ChoiceBox.swift */,
+				73A0FAF9055750239E944A37D1FADEA8 /* DataBox.swift */,
+				3AB1726A463FE7ECB88D824EE6EE3E63 /* DateBox.swift */,
+				68206F48FE5E2F1820732705ED547903 /* DecimalBox.swift */,
+				1C7A4BFC5676B635E046C842C27EEF1B /* DecodingErrorExtension.swift */,
+				B8E4ABA0BD5EC0A55B8622FFFA8A7E9E /* DoubleBox.swift */,
+				4E2FA3A6DC555F04522233D936FA3868 /* DynamicNodeDecoding.swift */,
+				07D392D6F040525263115D153B61605F /* DynamicNodeEncoding.swift */,
+				9288CA66D4E14D6C73D7E6958B925A85 /* EncodingErrorExtension.swift */,
+				89610BA75F4F4178FFDD9423B707F84E /* FloatBox.swift */,
+				6E4BE470D065ECD6C87E6AD11D922A9D /* IntBox.swift */,
+				AB57075858CD5FA6BA950B76B9F35B72 /* ISO8601DateFormatter.swift */,
+				7BABAFCBC2810AF433B3815A87E0DE0D /* KeyedBox.swift */,
+				E5A1AA0CBF372EDADD6E21E618D44B5C /* KeyedStorage.swift */,
+				7FC340487BB161F01EC26C6CF8F0132A /* Metatypes.swift */,
+				3B7FA5FD9A34D4AE6730B6C385E864A9 /* NullBox.swift */,
+				76404CF87AD16F9E73BEFA8F4B2C7DD3 /* SharedBox.swift */,
+				B766540F377672B1A2B960F8C019FA3F /* SingleKeyedBox.swift */,
+				DDAFD8975784E3B7F34141FEC1E1E23E /* SingleValueDecodingContainer.swift */,
+				522B39077C3BAF3EEA0924EF3C9F8D66 /* SingleValueEncodingContainer.swift */,
+				990964182F5DC45A9C95FF91589AECA3 /* String+Extensions.swift */,
+				88171B10389D728183F8F40EAE7624D0 /* StringBox.swift */,
+				313DA15AD34233574CD409671D161F7C /* UIntBox.swift */,
+				FC779E080619EBDF8F28D3E17FF590C7 /* UnkeyedBox.swift */,
+				D71140AC0E7CBD7A6FA3004DBC87EFF8 /* URLBox.swift */,
+				19A9C1A204F3DCEADF75B2568FB65D7E /* ValueBox.swift */,
+				EC322F5EA0885ACDF40D35949F5373CD /* XMLChoiceCodingKey.swift */,
+				BE637E003BB02DD461771CA5992515A1 /* XMLChoiceDecodingContainer.swift */,
+				764A08A088F949C120DE0F1D422B4CF9 /* XMLChoiceEncodingContainer.swift */,
+				6B5630D1127A45E3313ADF94CC413381 /* XMLCoderElement.swift */,
+				F9FE5F63F9598EC3BBF6DE479264D5D1 /* XMLDecoder.swift */,
+				3ECBD1C01E125675669C4F5157C5D1C2 /* XMLDecoderImplementation.swift */,
+				24AB1C834D89E1BC0D08A3602EABDFEA /* XMLDecodingStorage.swift */,
+				AD853B5B8DB8BA78C4542E1B223762B9 /* XMLEncoder.swift */,
+				6A86268EAC0D8B53B5C2AF8734E302BE /* XMLEncoderImplementation.swift */,
+				03951ACAB5EC92F5C3CD1BA78C8950C7 /* XMLEncodingStorage.swift */,
+				2E5771620296375EC16212B66560646E /* XMLHeader.swift */,
+				52552F396032DF9631C68551CC4D9720 /* XMLKey.swift */,
+				4BD45563EA2B6667459588BE8EFA6740 /* XMLKeyedDecodingContainer.swift */,
+				ADE18AC8904CF78169B38E648E2C3182 /* XMLKeyedEncodingContainer.swift */,
+				967504A5990298B96BF75112CECEBA61 /* XMLReferencingEncoder.swift */,
+				E6F5A0E67C6BFC02432BC4162F41D5DE /* XMLStackParser.swift */,
+				ADF2365AC6E160882CBBAA7908DF7DA7 /* XMLUnkeyedDecodingContainer.swift */,
+				2B205B5A4D24556C2F8F4BC3A15CA9EF /* XMLUnkeyedEncodingContainer.swift */,
+				D19B2E629068E78491091C13E48D5677 /* Support Files */,
+			);
+			name = XMLCoder;
+			path = XMLCoder;
+			sourceTree = "<group>";
+		};
+		4D0561789A0534A7884370F31B2FC78F /* Pods-Chinook */ = {
+			isa = PBXGroup;
+			children = (
+				A11F7AA30098AA2D819B178E1B74D753 /* Pods-Chinook.modulemap */,
+				958D7322D2444DCFB9DA33719D184A41 /* Pods-Chinook-acknowledgements.markdown */,
+				5F41C64068A8D0745F9559C30140CBCF /* Pods-Chinook-acknowledgements.plist */,
+				AB7CFDEC5F06ED7BA89E09D53C3458A7 /* Pods-Chinook-dummy.m */,
+				A02FC4C7E24CA0E4346FDF6FFA03079F /* Pods-Chinook-frameworks.sh */,
+				70F1176C8D410A854663DAF2155704E9 /* Pods-Chinook-Info.plist */,
+				61143071ABA47C4EB3E7639046E7BBC2 /* Pods-Chinook-umbrella.h */,
+				BE62C4B9129CB433FD1904BE48F62BA8 /* Pods-Chinook.debug.xcconfig */,
+				D708EEB955147EFC2FB3B711C767B240 /* Pods-Chinook.release.xcconfig */,
+			);
+			name = "Pods-Chinook";
+			path = "Target Support Files/Pods-Chinook";
+			sourceTree = "<group>";
+		};
+		69F0F177D825CFDE26F811847C6C1540 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D23F925D04E87965872FBD5117EF3AAD /* Pods_Chinook.framework */,
+				839BF041C25A686C869920077F8A2392 /* Pods_ChinookTests.framework */,
+				3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77427EBC7517A59454552C70B454126B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D0561789A0534A7884370F31B2FC78F /* Pods-Chinook */,
+				D84F6D95A2BFB63A2A6ECD9C6CB12F08 /* Pods-ChinookTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				FF7839864CA78C55DDA6FF3EA82C529F /* Pods */,
+				69F0F177D825CFDE26F811847C6C1540 /* Products */,
+				77427EBC7517A59454552C70B454126B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D19B2E629068E78491091C13E48D5677 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A69D6BB31F8C9CF0E19E26F4ED740DB3 /* XMLCoder.modulemap */,
+				6F584EFDDCD8633E9239C8F9064B07AB /* XMLCoder.xcconfig */,
+				158374B3C29B60925D11BCBF3DEEB193 /* XMLCoder-dummy.m */,
+				E458A03767AB7A280E83436B7C968EA8 /* XMLCoder-Info.plist */,
+				D8B807321029426ACDDCD464B0D50CA7 /* XMLCoder-prefix.pch */,
+				9C91466795C1C00D02FA7D5E876227E9 /* XMLCoder-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XMLCoder";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D84F6D95A2BFB63A2A6ECD9C6CB12F08 /* Pods-ChinookTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB699F71AE6A6B9BD2409B22654AF127 /* Pods-ChinookTests.modulemap */,
+				1C17B0A9B265516BBA248941FAFB9D5F /* Pods-ChinookTests-acknowledgements.markdown */,
+				828EABF6CC51633C28C757770BBC93BF /* Pods-ChinookTests-acknowledgements.plist */,
+				8BAC4B181CD50BE2AD5D7728DB589717 /* Pods-ChinookTests-dummy.m */,
+				68C0307502A8C4FE80982B7DFB7BF0BF /* Pods-ChinookTests-Info.plist */,
+				70B002C303595AED13836D2B89170C12 /* Pods-ChinookTests-umbrella.h */,
+				CC9EAF64ACA44488000012CA4C9B0102 /* Pods-ChinookTests.debug.xcconfig */,
+				23BD42FF29DEFEC5B02A97D783A36696 /* Pods-ChinookTests.release.xcconfig */,
+			);
+			name = "Pods-ChinookTests";
+			path = "Target Support Files/Pods-ChinookTests";
+			sourceTree = "<group>";
+		};
+		FF7839864CA78C55DDA6FF3EA82C529F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11D1D7014034F7B3F31ACB57D6EE1D59 /* XMLCoder */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5F391E72A0693022074BB9C5857A9C9D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0BDA3EEDEFD6D0333ADEB3A7254A2B5 /* XMLCoder-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD47AB44F5685C03B31B7E8732BA64E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9655E9995760FDC451823ECA4AF29A29 /* Pods-ChinookTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5D61C277A73F94D6B7D812F3126E792 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF399678EB55EFBAA47137AA8F5191A /* Pods-Chinook-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		319ED3F8B949571B5968E61DFF06C8D6 /* Pods-Chinook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49C3235D5D603A91D7937BAD2A2C2D12 /* Build configuration list for PBXNativeTarget "Pods-Chinook" */;
+			buildPhases = (
+				F5D61C277A73F94D6B7D812F3126E792 /* Headers */,
+				21D33AC48C18266D1B68FE9587F92DD0 /* Sources */,
+				CB67E4BBBC8C67D3BFA3C6FD46E1722A /* Frameworks */,
+				CF4B43D1E7D854C8631852D525A07AEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC84D33CF71FF4A13AF052DE7D2EB618 /* PBXTargetDependency */,
+			);
+			name = "Pods-Chinook";
+			productName = "Pods-Chinook";
+			productReference = D23F925D04E87965872FBD5117EF3AAD /* Pods_Chinook.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5ACFE88DF4C1196D7BDB5BE11D25835A /* Pods-ChinookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40E08C2ED15EC8180703BEA1A9DF71CA /* Build configuration list for PBXNativeTarget "Pods-ChinookTests" */;
+			buildPhases = (
+				BD47AB44F5685C03B31B7E8732BA64E7 /* Headers */,
+				29196136AE189B2AB1B6668A46FD02A3 /* Sources */,
+				87784E277079C13084A9FBBCB7AB1BE9 /* Frameworks */,
+				D7CBBB6DBE2A2BB462A42495A797CCA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72B64A9730561BA2A358C38B2372FEA6 /* PBXTargetDependency */,
+			);
+			name = "Pods-ChinookTests";
+			productName = "Pods-ChinookTests";
+			productReference = 839BF041C25A686C869920077F8A2392 /* Pods_ChinookTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E1753B4FA19C5F745ADF56B844ACAB36 /* XMLCoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CB5D087C09FF3C926281BA56CD52988 /* Build configuration list for PBXNativeTarget "XMLCoder" */;
+			buildPhases = (
+				5F391E72A0693022074BB9C5857A9C9D /* Headers */,
+				179F0B59F5B0D0ED93E81BC0DFD896C3 /* Sources */,
+				C88A1DC7DEBBA88187F614840571C498 /* Frameworks */,
+				47AD6F57C42C30A6222379C633BB02AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XMLCoder;
+			productName = XMLCoder;
+			productReference = 3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 69F0F177D825CFDE26F811847C6C1540 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				319ED3F8B949571B5968E61DFF06C8D6 /* Pods-Chinook */,
+				5ACFE88DF4C1196D7BDB5BE11D25835A /* Pods-ChinookTests */,
+				E1753B4FA19C5F745ADF56B844ACAB36 /* XMLCoder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47AD6F57C42C30A6222379C633BB02AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF4B43D1E7D854C8631852D525A07AEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7CBBB6DBE2A2BB462A42495A797CCA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		179F0B59F5B0D0ED93E81BC0DFD896C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCF7788A23A0482DE9864011DB68D14 /* BoolBox.swift in Sources */,
+				080127DFF286793DA4996F7755D9664C /* Box.swift in Sources */,
+				9CEEFADBC0C01A03BA2EB49188022035 /* ChoiceBox.swift in Sources */,
+				E299B9AAFE616A658B888B0D993632D6 /* DataBox.swift in Sources */,
+				8E5CA0782D2A5EE65D8C8CAD24D2ADDD /* DateBox.swift in Sources */,
+				58A42F2038BCBBF88F27E1C95B07F7D8 /* DecimalBox.swift in Sources */,
+				C2DE590BF1D406B39BA891526AE70E92 /* DecodingErrorExtension.swift in Sources */,
+				275BFE81479EA0D4B1F493C8DE4C0679 /* DoubleBox.swift in Sources */,
+				98A9482E85CA36B04791AD4AF344CB0F /* DynamicNodeDecoding.swift in Sources */,
+				A053CF013B0D734F67C7513EB33A6223 /* DynamicNodeEncoding.swift in Sources */,
+				83325AC6EC526FAD4AE109EB00163ACC /* EncodingErrorExtension.swift in Sources */,
+				5A45D909FFBE93CABCE5BCD9354D28EC /* FloatBox.swift in Sources */,
+				F10687E0097BC6077F0654F7DDF79B66 /* IntBox.swift in Sources */,
+				30C5EE154D0682485865F79A020A0434 /* ISO8601DateFormatter.swift in Sources */,
+				D89921854FC609A38BC631CB5F1D5833 /* KeyedBox.swift in Sources */,
+				D1F201BF2CA1929B800D2D80480ECCAB /* KeyedStorage.swift in Sources */,
+				61D6AB9DDE5D8C42BA5767D257815389 /* Metatypes.swift in Sources */,
+				A85D3874A01F15FE847E8727EE857094 /* NullBox.swift in Sources */,
+				24FEA88A7385C295A5EB180E7EFFE5FC /* SharedBox.swift in Sources */,
+				749AB1FFF43E7BF2CD3DBB19DD083E9B /* SingleKeyedBox.swift in Sources */,
+				FAF1596E3FFE0F9F745CE2903923E539 /* SingleValueDecodingContainer.swift in Sources */,
+				4843316F32A1452074A3181B9F38D90F /* SingleValueEncodingContainer.swift in Sources */,
+				10702542EA42857F7A04FCA158C4696E /* String+Extensions.swift in Sources */,
+				A312439B91C6CF8CC9F1FDE3D11EBBCD /* StringBox.swift in Sources */,
+				9DE1449A448CC12433AB66A3DEBABF8D /* UIntBox.swift in Sources */,
+				6EED70837717E2BE8AD42D4E050C5718 /* UnkeyedBox.swift in Sources */,
+				37D779DCB47A1A3787F88BE238EBE8FF /* URLBox.swift in Sources */,
+				02DB2E386A2458ACA24265C98D97DAE6 /* ValueBox.swift in Sources */,
+				C87325C642D2092C4F11E86DB7144197 /* XMLChoiceCodingKey.swift in Sources */,
+				6399A998F57953FC186755AC01D0D892 /* XMLChoiceDecodingContainer.swift in Sources */,
+				C1A55A5D5B7CFF1BDB467AD9096C33AC /* XMLChoiceEncodingContainer.swift in Sources */,
+				4CDC87156088944B680E1EC37F1B703F /* XMLCoder-dummy.m in Sources */,
+				D3AC28C4DFCC58CCB9A159AB2AF44511 /* XMLCoderElement.swift in Sources */,
+				E625A58D195A1E334488607F032CA05A /* XMLDecoder.swift in Sources */,
+				2114F1882944B2775317FD556B77CA7D /* XMLDecoderImplementation.swift in Sources */,
+				6E3881C35A71B43F5AB86C01ED27C66E /* XMLDecodingStorage.swift in Sources */,
+				E5833DE71EC4F03B7D778F1C20E6E1EE /* XMLEncoder.swift in Sources */,
+				2D6F10F9393AFA0628529F0A7528CC93 /* XMLEncoderImplementation.swift in Sources */,
+				69F98AC8EC47AAB924A2619C2C3A8C2B /* XMLEncodingStorage.swift in Sources */,
+				9F33D754EA970D8610EE6E69B5E19521 /* XMLHeader.swift in Sources */,
+				08FB829F9C1BB02B7FD195510D0F54C7 /* XMLKey.swift in Sources */,
+				F6AFED1CF892646157E55DE19BDA7DED /* XMLKeyedDecodingContainer.swift in Sources */,
+				E6568297510A49CCB0408F60684D1093 /* XMLKeyedEncodingContainer.swift in Sources */,
+				1C66426697AF4E8CB5802A524EB6DDA2 /* XMLReferencingEncoder.swift in Sources */,
+				ED0EBE106CF45F1A6DD55D23F291B864 /* XMLStackParser.swift in Sources */,
+				EB867C980BF0D7305BD708071E99BC51 /* XMLUnkeyedDecodingContainer.swift in Sources */,
+				6FE13FE8BA1B39B0A7EE7AC866C39C60 /* XMLUnkeyedEncodingContainer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21D33AC48C18266D1B68FE9587F92DD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0F543289098EAE3D026C0611B17819 /* Pods-Chinook-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29196136AE189B2AB1B6668A46FD02A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F8BCB221CFFD3D2C0337448826C55BE /* Pods-ChinookTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72B64A9730561BA2A358C38B2372FEA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Chinook";
+			target = 319ED3F8B949571B5968E61DFF06C8D6 /* Pods-Chinook */;
+			targetProxy = 748E0AB48B10FD6A072E641FE6F0C5D0 /* PBXContainerItemProxy */;
+		};
+		AC84D33CF71FF4A13AF052DE7D2EB618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XMLCoder;
+			target = E1753B4FA19C5F745ADF56B844ACAB36 /* XMLCoder */;
+			targetProxy = A346A6588AB960924D37B56E7D9108E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		138053D0C0E6166C878071914BCB7EA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D708EEB955147EFC2FB3B711C767B240 /* Pods-Chinook.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Chinook/Pods-Chinook-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chinook/Pods-Chinook.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1534CEDE3D952D745B411C5C010912DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F584EFDDCD8633E9239C8F9064B07AB /* XMLCoder.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XMLCoder/XMLCoder-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XMLCoder/XMLCoder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XMLCoder/XMLCoder.modulemap";
+				PRODUCT_MODULE_NAME = XMLCoder;
+				PRODUCT_NAME = XMLCoder;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2D26D75E45F60CBA0CE88868E0173D8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC9EAF64ACA44488000012CA4C9B0102 /* Pods-ChinookTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChinookTests/Pods-ChinookTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ChinookTests/Pods-ChinookTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3BF3DE9B7AB5729FCF38DAE71A57BC7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F584EFDDCD8633E9239C8F9064B07AB /* XMLCoder.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XMLCoder/XMLCoder-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XMLCoder/XMLCoder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/XMLCoder/XMLCoder.modulemap";
+				PRODUCT_MODULE_NAME = XMLCoder;
+				PRODUCT_NAME = XMLCoder;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4E01E38E5659C72ED8769BBD453DC8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23BD42FF29DEFEC5B02A97D783A36696 /* Pods-ChinookTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChinookTests/Pods-ChinookTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ChinookTests/Pods-ChinookTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		ED999604B5FAD28448182F52A0269606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE62C4B9129CB433FD1904BE48F62BA8 /* Pods-Chinook.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Chinook/Pods-Chinook-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chinook/Pods-Chinook.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40E08C2ED15EC8180703BEA1A9DF71CA /* Build configuration list for PBXNativeTarget "Pods-ChinookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D26D75E45F60CBA0CE88868E0173D8C /* Debug */,
+				4E01E38E5659C72ED8769BBD453DC8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49C3235D5D603A91D7937BAD2A2C2D12 /* Build configuration list for PBXNativeTarget "Pods-Chinook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED999604B5FAD28448182F52A0269606 /* Debug */,
+				138053D0C0E6166C878071914BCB7EA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CB5D087C09FF3C926281BA56CD52988 /* Build configuration list for PBXNativeTarget "XMLCoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BF3DE9B7AB5729FCF38DAE71A57BC7D /* Debug */,
+				1534CEDE3D952D745B411C5C010912DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
