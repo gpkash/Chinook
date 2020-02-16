@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		153D6C15960B7BB66B2D5C73 /* Pods_ChinookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5296E3368E3A2D0AF112CD23 /* Pods_ChinookTests.framework */; };
-		528642FA23E65B0C00CA165F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528642F923E65B0C00CA165F /* AppDelegate.swift */; };
-		528642FE23E65B0C00CA165F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528642FD23E65B0C00CA165F /* ViewController.swift */; };
-		5286431123E65B0F00CA165F /* ChinookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286431023E65B0F00CA165F /* ChinookTests.swift */; };
 		65A2DA6E392CF08206B279BB /* Pods_Chinook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17650A8761A7DCFC5C492DF /* Pods_Chinook.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,12 +23,8 @@
 
 /* Begin PBXFileReference section */
 		47E33F31D905BE1DA941710F /* Pods-ChinookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChinookTests.release.xcconfig"; path = "Target Support Files/Pods-ChinookTests/Pods-ChinookTests.release.xcconfig"; sourceTree = "<group>"; };
-		528642F623E65B0C00CA165F /* Chinook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chinook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		528642F923E65B0C00CA165F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		528642FD23E65B0C00CA165F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5286430C23E65B0F00CA165F /* ChinookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChinookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5286431023E65B0F00CA165F /* ChinookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinookTests.swift; sourceTree = "<group>"; };
-		5286431223E65B0F00CA165F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528642F623E65B0C00CA165F /* chinook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chinook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5286430C23E65B0F00CA165F /* chinookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chinookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5296E3368E3A2D0AF112CD23 /* Pods_ChinookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChinookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56F845E8D42A188A46F8C79E /* Pods-Chinook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinook.debug.xcconfig"; path = "Target Support Files/Pods-Chinook/Pods-Chinook.debug.xcconfig"; sourceTree = "<group>"; };
 		F17650A8761A7DCFC5C492DF /* Pods_Chinook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chinook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,8 +66,6 @@
 		528642ED23E65B0C00CA165F = {
 			isa = PBXGroup;
 			children = (
-				52E427AA23F87C4800DF35CF /* Example */,
-				5286430F23E65B0F00CA165F /* Tests */,
 				528642F723E65B0C00CA165F /* Products */,
 				1DC563163459B2F04C88C497 /* Pods */,
 				53851F11C6DC23A554EF092F /* Frameworks */,
@@ -84,28 +75,10 @@
 		528642F723E65B0C00CA165F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				528642F623E65B0C00CA165F /* Chinook.app */,
-				5286430C23E65B0F00CA165F /* ChinookTests.xctest */,
+				528642F623E65B0C00CA165F /* chinook.app */,
+				5286430C23E65B0F00CA165F /* chinookTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5286430F23E65B0F00CA165F /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				5286431023E65B0F00CA165F /* ChinookTests.swift */,
-				5286431223E65B0F00CA165F /* Info.plist */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		52E427AA23F87C4800DF35CF /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				528642F923E65B0C00CA165F /* AppDelegate.swift */,
-				528642FD23E65B0C00CA165F /* ViewController.swift */,
-			);
-			path = Example;
 			sourceTree = "<group>";
 		};
 		53851F11C6DC23A554EF092F /* Frameworks */ = {
@@ -120,9 +93,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		528642F523E65B0C00CA165F /* Chinook */ = {
+		528642F523E65B0C00CA165F /* chinook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5286431523E65B0F00CA165F /* Build configuration list for PBXNativeTarget "Chinook" */;
+			buildConfigurationList = 5286431523E65B0F00CA165F /* Build configuration list for PBXNativeTarget "chinook" */;
 			buildPhases = (
 				3AA7F92B72AA35FFBE85E670 /* [CP] Check Pods Manifest.lock */,
 				528642F223E65B0C00CA165F /* Sources */,
@@ -134,14 +107,14 @@
 			);
 			dependencies = (
 			);
-			name = Chinook;
+			name = chinook;
 			productName = Chinook;
-			productReference = 528642F623E65B0C00CA165F /* Chinook.app */;
+			productReference = 528642F623E65B0C00CA165F /* chinook.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5286430B23E65B0F00CA165F /* ChinookTests */ = {
+		5286430B23E65B0F00CA165F /* chinookTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5286431823E65B0F00CA165F /* Build configuration list for PBXNativeTarget "ChinookTests" */;
+			buildConfigurationList = 5286431823E65B0F00CA165F /* Build configuration list for PBXNativeTarget "chinookTests" */;
 			buildPhases = (
 				72D3920D40C3678A6EC2FE1D /* [CP] Check Pods Manifest.lock */,
 				5286430823E65B0F00CA165F /* Sources */,
@@ -153,9 +126,9 @@
 			dependencies = (
 				5286430E23E65B0F00CA165F /* PBXTargetDependency */,
 			);
-			name = ChinookTests;
+			name = chinookTests;
 			productName = ChinookTests;
-			productReference = 5286430C23E65B0F00CA165F /* ChinookTests.xctest */;
+			productReference = 5286430C23E65B0F00CA165F /* chinookTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +150,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 528642F123E65B0C00CA165F /* Build configuration list for PBXProject "Chinook" */;
+			buildConfigurationList = 528642F123E65B0C00CA165F /* Build configuration list for PBXProject "chinook" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -190,8 +163,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				528642F523E65B0C00CA165F /* Chinook */,
-				5286430B23E65B0F00CA165F /* ChinookTests */,
+				528642F523E65B0C00CA165F /* chinook */,
+				5286430B23E65B0F00CA165F /* chinookTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,8 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528642FE23E65B0C00CA165F /* ViewController.swift in Sources */,
-				528642FA23E65B0C00CA165F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5286431123E65B0F00CA165F /* ChinookTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +270,7 @@
 /* Begin PBXTargetDependency section */
 		5286430E23E65B0F00CA165F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 528642F523E65B0C00CA165F /* Chinook */;
+			target = 528642F523E65B0C00CA165F /* chinook */;
 			targetProxy = 5286430D23E65B0F00CA165F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -462,7 +432,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB3D497061571A7CD542DC35 /* Pods-ChinookTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4433L6U9RR;
@@ -477,7 +446,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chinook.app/Chinook";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chinook.app/chinook";
 			};
 			name = Debug;
 		};
@@ -485,7 +454,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47E33F31D905BE1DA941710F /* Pods-ChinookTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4433L6U9RR;
@@ -500,14 +468,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chinook.app/Chinook";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chinook.app/chinook";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		528642F123E65B0C00CA165F /* Build configuration list for PBXProject "Chinook" */ = {
+		528642F123E65B0C00CA165F /* Build configuration list for PBXProject "chinook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5286431323E65B0F00CA165F /* Debug */,
@@ -516,7 +484,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5286431523E65B0F00CA165F /* Build configuration list for PBXNativeTarget "Chinook" */ = {
+		5286431523E65B0F00CA165F /* Build configuration list for PBXNativeTarget "chinook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5286431623E65B0F00CA165F /* Debug */,
@@ -525,7 +493,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5286431823E65B0F00CA165F /* Build configuration list for PBXNativeTarget "ChinookTests" */ = {
+		5286431823E65B0F00CA165F /* Build configuration list for PBXNativeTarget "chinookTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5286431923E65B0F00CA165F /* Debug */,
