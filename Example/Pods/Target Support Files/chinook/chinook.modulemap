@@ -1,0 +1,6 @@
+framework module chinook {
+  umbrella header "chinook-umbrella.h"
+
+  export *
+  module * { export * }
+}

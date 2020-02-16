@@ -1,0 +1,23 @@
+PODS:
+  - chinook (0.1.0):
+    - XMLParser (~> 1.0)
+  - XMLParser (1.0)
+
+DEPENDENCIES:
+  - chinook (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - XMLParser
+
+EXTERNAL SOURCES:
+  chinook:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  chinook: f4c8d1d5c971e609cf3f3ecc7ac1fe5cf9c87f8f
+  XMLParser: e737ced4d8e6486028f741fecc0523d9ba55d0ae
+
+PODFILE CHECKSUM: d11f763022c5d48c247b0e6084f525f78279f9d9
+
+COCOAPODS: 1.8.4
