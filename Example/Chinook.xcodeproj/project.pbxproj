@@ -10,10 +10,8 @@
 		526908E723F8E3DE0002A473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 526908E623F8E3DE0002A473 /* Assets.xcassets */; };
 		526908E923F8E4020002A473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526908E823F8E4020002A473 /* SceneDelegate.swift */; };
 		526908EE23F919470002A473 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526908ED23F919470002A473 /* UIViewController+Alert.swift */; };
-		526908F023F9293F0002A473 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 526908EF23F9293F0002A473 /* Podfile */; };
 		52A9397523FA590200F5473D /* SiteData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9397423FA590200F5473D /* SiteData+Extensions.swift */; };
 		52A9397823FA595900F5473D /* SiteList+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9397723FA595900F5473D /* SiteList+Extensions.swift */; };
-		52A9397C23FA5BFE00F5473D /* SiteTemperatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9397B23FA5BFE00F5473D /* SiteTemperatureCell.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -36,10 +34,8 @@
 		526908E623F8E3DE0002A473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		526908E823F8E4020002A473 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		526908ED23F919470002A473 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
-		526908EF23F9293F0002A473 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../../../Chinook/Example/Podfile; sourceTree = "<group>"; };
 		52A9397423FA590200F5473D /* SiteData+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SiteData+Extensions.swift"; sourceTree = "<group>"; };
 		52A9397723FA595900F5473D /* SiteList+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SiteList+Extensions.swift"; sourceTree = "<group>"; };
-		52A9397B23FA5BFE00F5473D /* SiteTemperatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteTemperatureCell.swift; sourceTree = "<group>"; };
 		52BD0F096C7CC96CB6AB26DC /* Pods-Chinook_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chinook_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Chinook_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chinook_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,15 +118,12 @@
 		607FACD21AFB9204008FA782 /* Example for Chinook */ = {
 			isa = PBXGroup;
 			children = (
+				607FACD31AFB9204008FA782 /* Supporting Files */,
 				52A9397623FA592B00F5473D /* Categories */,
-				526908EF23F9293F0002A473 /* Podfile */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				526908E623F8E3DE0002A473 /* Assets.xcassets */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				526908E823F8E4020002A473 /* SceneDelegate.swift */,
-				607FACD31AFB9204008FA782 /* Supporting Files */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				52A9397B23FA5BFE00F5473D /* SiteTemperatureCell.swift */,
 			);
 			name = "Example for Chinook";
 			path = Chinook;
@@ -139,6 +132,7 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				526908E623F8E3DE0002A473 /* Assets.xcassets */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -268,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				526908F023F9293F0002A473 /* Podfile in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				526908E723F8E3DE0002A473 /* Assets.xcassets in Resources */,
 			);
@@ -357,7 +350,6 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				52A9397C23FA5BFE00F5473D /* SiteTemperatureCell.swift in Sources */,
 				52A9397523FA590200F5473D /* SiteData+Extensions.swift in Sources */,
 				526908E923F8E4020002A473 /* SceneDelegate.swift in Sources */,
 				52A9397823FA595900F5473D /* SiteList+Extensions.swift in Sources */,

@@ -15,11 +15,7 @@ class ViewController: UITableViewController {
     
     private let queue = OperationQueue()
     private let numberOfRandomSites = 20
-    private var randomSiteDatas: [SiteData] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    private var randomSiteDatas: [SiteData] = []
     
     private lazy var citySiteDataOperationCompletionHandler: (_ result: Result<Any, Error>) -> Void = { [weak self] result in
         switch result {
@@ -113,4 +109,3 @@ class ViewController: UITableViewController {
         return cell
     }
 }
-
