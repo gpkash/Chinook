@@ -1,23 +1,23 @@
 PODS:
-  - chinook (0.1.0):
-    - XMLParser (~> 1.0)
-  - XMLParser (1.0)
+  - Chinook (0.1.0):
+    - XMLCoder (~> 0.9.0)
+  - XMLCoder (0.9.0)
 
 DEPENDENCIES:
-  - chinook (from `../`)
+  - Chinook (from `../`)
 
 SPEC REPOS:
   trunk:
-    - XMLParser
+    - XMLCoder
 
 EXTERNAL SOURCES:
-  chinook:
+  Chinook:
     :path: "../"
 
 SPEC CHECKSUMS:
-  chinook: f4c8d1d5c971e609cf3f3ecc7ac1fe5cf9c87f8f
-  XMLParser: e737ced4d8e6486028f741fecc0523d9ba55d0ae
+  Chinook: 978f45c14163867e5711de6c0e439cb17af5c5c1
+  XMLCoder: f812facc69ac5fb5f4af9f970a9154ad0b614014
 
-PODFILE CHECKSUM: d11f763022c5d48c247b0e6084f525f78279f9d9
+PODFILE CHECKSUM: a3aaae56b9e8e549df4bb95940c2662e38f05d25
 
 COCOAPODS: 1.8.4

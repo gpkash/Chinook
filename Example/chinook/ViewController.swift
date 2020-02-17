@@ -7,43 +7,66 @@
 //
 
 import UIKit
+import Chinook
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     
-    let queue = OperationQueue()
+    // MARK: Private Properties
     
-    lazy var citySiteDataOperationCompletionHandler: (_ result: Result<Any, Error>) -> Void = { [weak self] result in
+    private let queue = OperationQueue()
+    private let numberOfRandomSites = 20
+    private var randomSiteDatas: [SiteData] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    private lazy var citySiteDataOperationCompletionHandler: (_ result: Result<Any, Error>) -> Void = { [weak self] result in
         switch result {
         case .success(let siteData):
-            let siteData = siteData as! SiteData
-            if let temperature = siteData.currentConditions?.temperature.value {
-                print("\(temperature)C in \(siteData.location.name.value)")
-            }
-            else {
-                print("temperature unavailable in \(siteData.location.name.value)")
-            }
+            guard let self = self else { return }
             
+            let siteData = siteData as! SiteData
+            let indexPath = IndexPath(row: self.randomSiteDatas.count, section: 0)
+
+            self.tableView.beginUpdates()
+            
+            // update the datsource.
+            self.randomSiteDatas.append(siteData)
+
+            self.tableView.insertRows(at: [indexPath], with: .automatic)
+            self.tableView.endUpdates()
+
         case .failure(let error):
             self?.showAlert(forError: error)
         }
     }
+
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+
         let fetchCityPageWeatherSiteListOperation = FetchCityPageWeatherSiteListOperation()
         
         fetchCityPageWeatherSiteListOperation.completionHandler = { [weak self] result in
+            guard let self = self else { return }
+
             switch result {
             case .success(let siteList):
                 let siteList = siteList as! SiteList
                 print("\(siteList.site.count) sites fetched.")
                 
-                self?.loadSiteData(siteList)
+                self.loadRandomSiteData(siteList)
                 
             case .failure(let error):
-                self?.showAlert(forError: error)
+                self.showAlert(forError: error)
             }
         }
         
@@ -51,12 +74,43 @@ class ViewController: UIViewController {
         queue.addOperation(fetchCityPageWeatherSiteListOperation)
     }
     
-    private func loadSiteData(_ siteList: SiteList) {
-        siteList.site.forEach { site in
+    
+    // MARK: - Private Functions
+    
+    private func loadRandomSiteData(_ siteList: SiteList) {
+        // fetch random sites, for fun!
+        let randomSites = siteList.snag(someRandomSites: numberOfRandomSites)
+        
+        randomSites.forEach { site in
             let fetchCityPageWeatherSiteDataOperation = FetchCityPageWeatherSiteDataOperation(site: site)
             fetchCityPageWeatherSiteDataOperation.completionHandler = citySiteDataOperationCompletionHandler
             queue.addOperation(fetchCityPageWeatherSiteDataOperation)
         }
+    }
+
+    
+    // MARK: - Table View
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return randomSiteDatas.count
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let siteData = randomSiteDatas[indexPath.row]
+        
+        if let temperature = siteData.currentConditions?.temperature.value {
+            cell.textLabel!.text = "\(temperature)C, \(siteData.fullName)"
+        }
+        else {
+            cell.textLabel!.text = "N/A, \(siteData.fullName)"
+        }
+
+        return cell
     }
 }
 
