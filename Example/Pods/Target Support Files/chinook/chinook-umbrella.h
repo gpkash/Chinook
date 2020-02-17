@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double chinookVersionNumber;
-FOUNDATION_EXPORT const unsigned char chinookVersionString[];
+FOUNDATION_EXPORT double ChinookVersionNumber;
+FOUNDATION_EXPORT const unsigned char ChinookVersionString[];
 

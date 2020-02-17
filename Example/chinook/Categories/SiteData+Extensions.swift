@@ -9,7 +9,7 @@
 import Chinook
 
 extension SiteData {
-    var friendlyName: String {
+    var fullName: String {
         return "\(location.name.value), \(location.province)"
     }
 }

@@ -1,9 +1,9 @@
-# chinook
+# Chinook
 
-[![CI Status](https://img.shields.io/travis/gpkash/chinook.svg?style=flat)](https://travis-ci.org/gpkash/chinook)
-[![Version](https://img.shields.io/cocoapods/v/chinook.svg?style=flat)](https://cocoapods.org/pods/chinook)
-[![License](https://img.shields.io/cocoapods/l/chinook.svg?style=flat)](https://cocoapods.org/pods/chinook)
-[![Platform](https://img.shields.io/cocoapods/p/chinook.svg?style=flat)](https://cocoapods.org/pods/chinook)
+[![CI Status](https://img.shields.io/travis/gpkash/Chinook.svg?style=flat)](https://travis-ci.org/gpkash/Chinook)
+[![Version](https://img.shields.io/cocoapods/v/Chinook.svg?style=flat)](https://cocoapods.org/pods/Chinook)
+[![License](https://img.shields.io/cocoapods/l/Chinook.svg?style=flat)](https://cocoapods.org/pods/Chinook)
+[![Platform](https://img.shields.io/cocoapods/p/Chinook.svg?style=flat)](https://cocoapods.org/pods/Chinook)
 
 ## Example
 
@@ -13,11 +13,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-chinook is available through [CocoaPods](https://cocoapods.org). To install
+Chinook is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'chinook'
+pod 'Chinook'
 ```
 
 ## Author

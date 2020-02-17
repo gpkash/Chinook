@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_chinook : NSObject
+@interface PodsDummy_Chinook : NSObject
 @end
-@implementation PodsDummy_chinook
+@implementation PodsDummy_Chinook
 @end

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_chinook_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_chinook_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_Chinook_ExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Chinook_ExampleVersionString[];
 

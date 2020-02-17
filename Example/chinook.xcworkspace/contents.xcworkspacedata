@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:chinook.xcodeproj">
+      location = "group:/Users/garykash/Development/TheFloorIsLava/Chinook/Example/Chinook.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Chinook.xcodeproj">
    </FileRef>
 </Workspace>

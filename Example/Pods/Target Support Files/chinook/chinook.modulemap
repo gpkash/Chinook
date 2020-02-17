@@ -1,5 +1,5 @@
-framework module chinook {
-  umbrella header "chinook-umbrella.h"
+framework module Chinook {
+  umbrella header "Chinook-umbrella.h"
 
   export *
   module * { export * }
