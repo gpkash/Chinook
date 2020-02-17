@@ -94,7 +94,7 @@ dataLoader.request(.citypageWeatherSiteList) { result in
 
 #### City Page Weather:
 
-```
+```swift
 let endpoint = Endpoint.cityPageWeather(forSite: site)
 
 dataLoader.request(endpoint) { [weak self] result in
