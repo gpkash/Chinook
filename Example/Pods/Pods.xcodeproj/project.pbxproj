@@ -873,6 +873,38 @@
 			};
 			name = Debug;
 		};
+		0FAE0F4B1617C05AB14C52EB9F2061BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 986819D4BC9E2F09F2505C95125F4B67 /* Chinook.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Chinook/Chinook-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Chinook/Chinook-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Chinook/Chinook.modulemap";
+				PRODUCT_MODULE_NAME = Chinook;
+				PRODUCT_NAME = Chinook;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		21A3FFB27D23E5C89D4955371B584CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90957FD1F60F286FF073CAB0BA9CC6C5 /* Pods-Chinook_Tests.debug.xcconfig */;
@@ -939,37 +971,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		70E5D48486216C5ADD8059E0A9BA03A1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 986819D4BC9E2F09F2505C95125F4B67 /* Chinook.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Chinook/Chinook-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Chinook/Chinook-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Chinook/Chinook.modulemap";
-				PRODUCT_MODULE_NAME = Chinook;
-				PRODUCT_NAME = Chinook;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		8AA42CD81999120260E9EF2D559767B1 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1161,7 +1162,7 @@
 			};
 			name = Release;
 		};
-		E62329D3BD7D86B379D7102CAC6ECA28 /* Release */ = {
+		9CA6438226645547116FC741B0286E7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 986819D4BC9E2F09F2505C95125F4B67 /* Chinook.xcconfig */;
 			buildSettings = {
@@ -1185,13 +1186,12 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1235,8 +1235,8 @@
 		D7D50D53B651D8A2400166436D151990 /* Build configuration list for PBXNativeTarget "Chinook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				70E5D48486216C5ADD8059E0A9BA03A1 /* Debug */,
-				E62329D3BD7D86B379D7102CAC6ECA28 /* Release */,
+				9CA6438226645547116FC741B0286E7E /* Debug */,
+				0FAE0F4B1617C05AB14C52EB9F2061BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
