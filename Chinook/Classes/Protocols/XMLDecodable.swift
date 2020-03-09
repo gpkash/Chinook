@@ -9,12 +9,11 @@
 import Foundation
 import XMLCoder
 
-protocol XMLDecodable: Codable {
+public protocol XMLDecodable: Codable {
     static func decode(fromXML data: Data) throws -> Self
 }
 
-extension XMLDecodable {
-    
+public extension XMLDecodable {
     /// A convenience function for all objects conforming to `XMLDecodable` that automatically evokes
     /// a `XMLDecoder` to decode the data passed in.
     /// - Parameter data: XML string encoded data.

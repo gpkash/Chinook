@@ -8,22 +8,23 @@
 
 import Foundation
 
-
-/// Defines an endpoint for a network resource.
-struct Endpoint {
+/// Describes an endpoint for a resource. This may refer to either a disk resource or network resource.
+public struct Endpoint {
     /// The host in which this endpoint is on.
     let host: Host
     /// The url path. Should begin with a `/`.
     let path: String
     /// The query parameters for this endpoint.
     let queryItems: [URLQueryItem]?
-    
+        
     init(host: Host, path: String, queryItems: [URLQueryItem]? = nil) {
         self.host = host
         self.path = path
         self.queryItems = queryItems
     }
 }
+
+// MARK: - Network Extensions
 
 extension Endpoint {
     // We still have to keep 'url' as an optional, since we're
@@ -37,4 +38,9 @@ extension Endpoint {
 
         return components.url
     }
+}
+
+// MARK: - Disk Extensions
+
+extension Endpoint {
 }
