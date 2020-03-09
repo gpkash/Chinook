@@ -10,13 +10,13 @@
 
 import Foundation
 
-public class ConcurrentOperation: Operation {
+open class ConcurrentOperation<T>: Operation, ProgressReporting {
 
     // MARK: Public Properties
     
-    public typealias OperationCompletionHandler = (_ result: Result<Any, Error>) -> Void
+    public typealias OperationCompletionHandler<T> = (_ result: Result<T, Error>) -> Void
 
-    public var completionHandler: (OperationCompletionHandler)?
+    public var completionHandler: (OperationCompletionHandler<T>)?
 
     public enum State: String {
         case ready = "isReady"
@@ -35,6 +35,8 @@ public class ConcurrentOperation: Operation {
         }
     }
     
+    public var progress = Progress(totalUnitCount: 1)
+    
     
     // MARK: Property Overrides
 
@@ -51,9 +53,11 @@ public class ConcurrentOperation: Operation {
     }
     
     
+    // MARK: - Lifecycle
+    
     // MARK: - Function Overrides
     
-    override public func start() {
+    override open func start() {
         guard !isCancelled else {
             finish()
             return
@@ -66,7 +70,7 @@ public class ConcurrentOperation: Operation {
         main()
     }
     
-    override public func cancel() {
+    override open func cancel() {
         super.cancel()
 
         finish()
@@ -75,13 +79,15 @@ public class ConcurrentOperation: Operation {
     
     // MARK: - Public Functions
         
-    public func finish() {
+    open func finish() {
         if isExecuting {
             state = .finished
         }
+        
+        progress.completedUnitCount = progress.totalUnitCount
     }
     
-    public func complete(result: Result<Any, Error>) {
+    open func complete(result: Result<T, Error>) {
         finish()
 
         if !isCancelled {
