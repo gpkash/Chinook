@@ -66,8 +66,6 @@ public class FetchCityPageWeatherSiteDataOperation: ConcurrentOperation<SiteData
                         self?.complete(result: .failure(error))
                     }
                 }
-                
-                self?.finish()
             }
         }
         

@@ -50,8 +50,6 @@ public class DiskLoaderOperation: ConcurrentOperation<DataResponse> {
                 case .failure(let error):
                     self?.complete(result: .failure(error))
                 }
-                
-                self?.finish()
             }
         }
         
