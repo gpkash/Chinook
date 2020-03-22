@@ -32,7 +32,6 @@ public struct IdentificationElements: XMLDecodable {
     public let element: [IdentificationElement]
 }
 
-
 public struct Observation: XMLDecodable {
     public struct Metadata: XMLDecodable {
         public struct MetadataSet: XMLDecodable {
