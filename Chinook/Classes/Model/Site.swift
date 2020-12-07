@@ -8,16 +8,30 @@
 
 import Foundation
 
-public struct Site: XMLDecodable {
+public struct Site: XMLDecodable, Hashable {
     public let code: String
     public let nameEn: String
     public let nameFr: String
     public let provinceCode: String
+    
+    public init(code: String, nameEn: String, nameFr: String, provinceCode: String) {
+        self.code = code
+        self.nameEn = nameEn
+        self.nameFr = nameFr
+        self.provinceCode = provinceCode
+    }
 }
 
 extension Site: Equatable {
     /// Environment Canada gives each site a code. This assumes these codes will remain unique.
     public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.code == rhs.code
+    }
+}
+
+public extension Site {
+    /// Returns either `nameEn` or `nameFr` depending on the locale of the system.
+    var name: String {
+        return NSLocale.isFrench ? nameFr : nameEn
     }
 }

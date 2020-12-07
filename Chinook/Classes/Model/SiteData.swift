@@ -36,12 +36,6 @@ public struct SiteData: XMLDecodable {
         public let dateTime: [DateTime]
     }
 
-    public struct Almanac: XMLDecodable {
-        public let temperature: [Measurement]
-        public let precipitation: [Measurement]
-        public let pop: Measurement
-    }
-    
     public struct Warnings: XMLDecodable {
         
         public struct Event: XMLDecodable {
@@ -60,10 +54,16 @@ public struct SiteData: XMLDecodable {
     public let location: Location
     public let warnings: Warnings?
     public let currentConditions: CurrentConditions?
-    public let forcastGroup: ForecastGroup?
+    public let forecastGroup: ForecastGroup?
     public let yesterdayConditions: YesterdayConditions?
     public let riseSet: RiseSet?
     public let almanac: Almanac?
+}
+
+public struct Almanac: XMLDecodable {
+    public let temperature: [Measurement]
+    public let precipitation: [Measurement]
+    public let pop: Measurement
 }
 
 public struct DateTime: XMLDecodable {
@@ -132,6 +132,7 @@ public struct CurrentConditions: XMLDecodable {
     public let visibility: Measurement
     public let relativeHumidity: Measurement
     public let windChill: Measurement?
+    public let humidex: Measurement?
     public let wind: Wind
 }
 
@@ -142,9 +143,9 @@ public struct ForecastGroup: XMLDecodable {
         public let temperature: [Measurement]
     }
 
-    public let dateTime: [DateTime]
-    public let regionalNormals: RegionalNormals
-    public let forecast: [Forecast]
+    public let dateTime: [DateTime]?
+    public let regionalNormals: RegionalNormals?
+    public let forecast: [Forecast]?
 }
 
 public struct Forecast: XMLDecodable {
@@ -184,10 +185,10 @@ public struct Forecast: XMLDecodable {
     public let cloudPrecip: CloudPrecip
     public let abbreviatedForecast: AbbreviatedForecast
     public let temperatures: Temperatures
-    public let winds: Winds
-    public let humidex: String // This needs to be clarified.
+    public let winds: Winds?
+    public let humidex: String? // This needs to be clarified.
     public let precipitation: Precipitation
-    public let windChill: WindChill
+    public let windChill: WindChill?
     public let relativeHumidity: Measurement
 }
 
