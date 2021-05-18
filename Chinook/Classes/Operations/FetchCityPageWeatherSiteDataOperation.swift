@@ -28,11 +28,7 @@ public class FetchCityPageWeatherSiteDataOperation: ConcurrentOperation<SiteData
         super.init()
     }
 
-    
-    // MARK: - Function Overrides
-    
-    // MARK: - Public Functions
-    
+
     // MARK: - Private Functions
 
     override public func start() {

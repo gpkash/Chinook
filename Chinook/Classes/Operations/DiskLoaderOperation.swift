@@ -29,10 +29,6 @@ public class DiskLoaderOperation: ConcurrentOperation<DataResponse> {
     
     // MARK: - Function Overrides
     
-    // MARK: - Public Functions
-    
-    // MARK: - Private Functions
-
     override public func start() {
         super.start()
         

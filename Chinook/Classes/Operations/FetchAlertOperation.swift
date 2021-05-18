@@ -1,33 +1,30 @@
 //
-//  FetchObservationCollectionOperation.swift
+//  FetchAlertOperation.swift
 //  Chinook
 //
-//  Created by Gary Kash on 2020-03-21.
+//  Created by Gary Kash on 2020-12-20.
 //
 
 import Foundation
-import XMLCoder
 
-public class FetchObservationCollectionOperation: ConcurrentOperation<ObservationCollection> {
-    
-    // MARK: Public Properties
+public class FetchAlertOperation: ConcurrentOperation<Alert> {
     
     // MARK: Private Properties
-    
-    private let dataLoader: DataLoader
-    private let provinceCode: String
 
+    private let dataLoader: DataLoader
+    private let url: URL
+    
     
     // MARK: Property Overrides
-
+    
     // MARK: - Lifecycle
     
-    public init(provinceCode: String, strategy: DataLoaderStrategy) {
-        self.provinceCode = provinceCode
+    public init(url: URL, strategy: DataLoaderStrategy) {
+        self.url = url
         self.dataLoader = DataLoader(strategy: strategy)
         super.init()
     }
-
+    
     
     // MARK: - Function Overrides
     
@@ -39,16 +36,21 @@ public class FetchObservationCollectionOperation: ConcurrentOperation<Observatio
             return
         }
         
-        let endpoint = Endpoint.observationCollection(forProvinceWithCode: provinceCode)
-        
-        let dataLoaderProgress = dataLoader.request(endpoint) { [weak self] result in
+        let endpoint = Endpoint.alert(url: url)
+        let dataLoaderProgress = dataLoader.request(endpoint) { [weak self] result in            
             DispatchQueue.main.async {
                 switch result {
                 case .success(let dataResponse):
                     do {
-                        let observationCollection = try ObservationCollection.decode(fromXML: dataResponse.data, keyDecodingStrategy: XMLDecoder.KeyDecodingStrategy.observationCollectionCustomStrategy)
+                        if let responseString = String(data: dataResponse.data, encoding: .utf8) {
+                            if responseString.contains("Barrie") {
+                                print("\(self!.url.absoluteString)")
+                            }
+                        }
+                        
+                        let alert = try Alert.decode(fromXML: dataResponse.data)
                         DispatchQueue.main.async {
-                            self?.complete(result: .success(observationCollection))
+                            self?.complete(result: .success(alert))
                         }
                     }
                     catch {
@@ -56,7 +58,7 @@ public class FetchObservationCollectionOperation: ConcurrentOperation<Observatio
                             self?.complete(result: .failure(error))
                         }
                     }
-                    
+
                 case .failure(let error):
                     DispatchQueue.main.async {
                         self?.complete(result: .failure(error))
@@ -64,8 +66,8 @@ public class FetchObservationCollectionOperation: ConcurrentOperation<Observatio
                 }
             }
         }
-        
-        progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
+
+        progress = dataLoaderProgress
     }
     
     override public func cancel() {

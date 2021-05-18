@@ -22,6 +22,13 @@ public struct Site: XMLDecodable, Hashable {
     }
 }
 
+public extension Site {
+    /// Returns either `nameEn` or `nameFr` depending on the locale of the system.
+    var name: String {
+        return NSLocale.language == .french ? nameFr : nameEn
+    }
+}
+
 extension Site: Equatable {
     /// Environment Canada gives each site a code. This assumes these codes will remain unique.
     public static func == (lhs: Self, rhs: Self) -> Bool {
@@ -29,9 +36,3 @@ extension Site: Equatable {
     }
 }
 
-public extension Site {
-    /// Returns either `nameEn` or `nameFr` depending on the locale of the system.
-    var name: String {
-        return NSLocale.isFrench ? nameFr : nameEn
-    }
-}

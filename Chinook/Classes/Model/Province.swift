@@ -13,9 +13,9 @@ public struct Province: Hashable {
     public var nameFr: String
     
     public var name: String {
-        return NSLocale.isFrench ? nameFr : nameEn
+        return NSLocale.language == .french ? nameFr : nameEn
     }
-
+    
     public init(abbreviation: String, nameEn: String, nameFr: String) {
         self.abbreviation = abbreviation
         self.nameEn = nameEn

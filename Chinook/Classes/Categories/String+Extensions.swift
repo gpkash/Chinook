@@ -43,3 +43,7 @@ extension StringProtocol {
         self = lowercasingFirstLetter()
     }
 }
+
+extension String {
+    var numbers: String { filter { "0"..."9" ~= $0 } }
+}

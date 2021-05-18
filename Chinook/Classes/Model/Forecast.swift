@@ -14,8 +14,8 @@ public struct Forecast: XMLDecodable {
     public let abbreviatedForecast: AbbreviatedForecast
     public let temperatures: Temperatures
     public let winds: Winds?
-    public let humidex: String? // This needs to be clarified.
+    public let humidex: Measurement? // This needs to be clarified.
     public let precipitation: Precipitation
     public let windChill: WindChill?
-    public let relativeHumidity: Measurement
+    public let relativeHumidity: Measurement?
 }

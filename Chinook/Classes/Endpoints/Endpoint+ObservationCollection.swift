@@ -1,6 +1,6 @@
 //
 //  Endpoint+Yesterday.swift
-//  Bagel
+//  Retro Weather
 //
 //  Created by Gary Kash on 2020-03-21.
 //
@@ -15,7 +15,7 @@ extension Endpoint {
     }
     
     public static func observationCollection(forProvinceWithCode provinceCode: String) -> Endpoint {
-        let languageComponent = NSLocale.isFrench ? "f" : "e"
+        let languageComponent = NSLocale.language == .french ? "f" : "e"
         let path = "/observations/xml/\(provinceCode.uppercased())/yesterday/yesterday_\(provinceCode.lowercased())_\(timestamp)_\(languageComponent).xml"
         return Endpoint(host: .datamart, path: path)
     }
