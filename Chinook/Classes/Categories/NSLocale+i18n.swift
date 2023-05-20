@@ -8,9 +8,17 @@
 
 import Foundation
 
-extension NSLocale {
-    static var isFrench: Bool {
-        guard let currentLanguageCode = NSLocale.current.languageCode else { return false } // Fall-back to English
-        return currentLanguageCode.starts(with: "fr")
+public extension NSLocale {
+    static var language: Language {
+        for languageCode in NSLocale.preferredLanguages {
+            if languageCode.starts(with: "fr") {
+                return .french
+            }
+            else if languageCode.starts(with: "en") {
+                return .english
+            }
+        }
+        
+        return .english
     }
 }

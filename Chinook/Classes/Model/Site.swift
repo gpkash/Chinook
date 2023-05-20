@@ -8,11 +8,25 @@
 
 import Foundation
 
-public struct Site: XMLDecodable {
+public struct Site: XMLDecodable, Hashable {
     public let code: String
     public let nameEn: String
     public let nameFr: String
     public let provinceCode: String
+    
+    public init(code: String, nameEn: String, nameFr: String, provinceCode: String) {
+        self.code = code
+        self.nameEn = nameEn
+        self.nameFr = nameFr
+        self.provinceCode = provinceCode
+    }
+}
+
+public extension Site {
+    /// Returns either `nameEn` or `nameFr` depending on the locale of the system.
+    var name: String {
+        return NSLocale.language == .french ? nameFr : nameEn
+    }
 }
 
 extension Site: Equatable {
@@ -21,3 +35,4 @@ extension Site: Equatable {
         return lhs.code == rhs.code
     }
 }
+

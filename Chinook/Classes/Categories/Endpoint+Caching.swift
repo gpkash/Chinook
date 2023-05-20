@@ -15,8 +15,11 @@ extension Endpoint {
         var appendablePath = path.copy() as! String
         appendablePath.remove(at: appendablePath.startIndex)
         
-        let fileURL = documentDirectory.appendingPathComponent(appendablePath)
+        // Prevents directories and files of the same name to conflict with each other.
+        appendablePath += ".cache"
 
+        let fileURL = documentDirectory.appendingPathComponent(appendablePath)
+        
         return fileURL
     }
     

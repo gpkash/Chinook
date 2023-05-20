@@ -22,6 +22,12 @@ public struct Endpoint {
         self.path = path
         self.queryItems = queryItems
     }
+    
+    init(url: URL) {
+        self.host = Host(hostname: url.host!)
+        self.path = url.path
+        self.queryItems = nil
+    }
 }
 
 // MARK: - Network Extensions

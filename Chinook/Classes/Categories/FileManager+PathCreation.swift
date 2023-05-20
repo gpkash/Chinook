@@ -23,9 +23,9 @@ extension FileManager {
             if lastComponentIsAFile { pathComponents.removeLast() }
             
             var workingPath = URL(fileURLWithPath: documentDirectoryPath)
+            
             // Now, iterate and create each directory one at a time.
             for pathComponent in pathComponents {
-                
                 workingPath.appendPathComponent(pathComponent)
                 if !FileManager.default.directoryExists(at: workingPath) {
                     try FileManager.default.createDirectory(at: workingPath, withIntermediateDirectories: false, attributes: nil)

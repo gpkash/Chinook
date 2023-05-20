@@ -1,36 +1,36 @@
 //
-//  FetchCityPageWeatherSiteDataOperation.swift
+//  FetchObservationCollectionOperation.swift
 //  Chinook
 //
-//  Created by Gary Kash on 2020-02-09.
-//  Copyright © 2020 Gary Kash. All rights reserved.
+//  Created by Gary Kash on 2020-03-21.
 //
 
 import Foundation
+import XMLCoder
 
-public class FetchCityPageWeatherSiteDataOperation: ConcurrentOperation<SiteData> {
+public class FetchObservationCollectionOperation: ConcurrentOperation<ObservationCollection> {
     
     // MARK: Public Properties
     
     // MARK: Private Properties
     
     private let dataLoader: DataLoader
-    private let site: Site
+    private let provinceCode: String
 
     
     // MARK: Property Overrides
 
     // MARK: - Lifecycle
     
-    public init(site: Site, strategy: DataLoaderStrategy) {
-        self.site = site
+    public init(provinceCode: String, strategy: DataLoaderStrategy) {
+        self.provinceCode = provinceCode
         self.dataLoader = DataLoader(strategy: strategy)
         super.init()
     }
 
-
-    // MARK: - Private Functions
-
+    
+    // MARK: - Function Overrides
+    
     override public func start() {
         super.start()
         
@@ -39,16 +39,16 @@ public class FetchCityPageWeatherSiteDataOperation: ConcurrentOperation<SiteData
             return
         }
         
-        let endpoint = Endpoint.cityPageWeather(forSite: site)
+        let endpoint = Endpoint.observationCollection(forProvinceWithCode: provinceCode)
         
         let dataLoaderProgress = dataLoader.request(endpoint) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let dataResponse):
                     do {
-                        let siteData = try SiteData.decode(fromXML: dataResponse.data)
+                        let observationCollection = try ObservationCollection.decode(fromXML: dataResponse.data, keyDecodingStrategy: XMLDecoder.KeyDecodingStrategy.observationCollectionCustomStrategy)
                         DispatchQueue.main.async {
-                            self?.complete(result: .success(siteData))
+                            self?.complete(result: .success(observationCollection))
                         }
                     }
                     catch {

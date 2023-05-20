@@ -13,10 +13,7 @@ import Foundation
 class NetworkLoader: NSObject {
     
     // MARK: Private Properties
-    private lazy var urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: .main)
-    
-    // MARK: - Public Functions
-        
+    private lazy var urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: .main)    
 }
 
 
@@ -40,7 +37,8 @@ extension NetworkLoader: DataLoading {
         }
 
         task.resume()
-        
+        urlSession.finishTasksAndInvalidate()
+
         return task.progress
     }
     
@@ -53,5 +51,3 @@ extension NetworkLoader: DataLoading {
 // MARK: - URLSessionDelegate
 
 extension NetworkLoader: URLSessionDelegate { }
-
-

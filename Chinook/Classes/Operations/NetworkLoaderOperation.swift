@@ -27,10 +27,6 @@ public class NetworkLoaderOperation: ConcurrentOperation<DataResponse> {
     }
 
     
-    // MARK: - Function Overrides
-    
-    // MARK: - Public Functions
-    
     // MARK: - Private Functions
 
     override public func start() {
@@ -50,8 +46,6 @@ public class NetworkLoaderOperation: ConcurrentOperation<DataResponse> {
                 case .failure(let error):
                     self?.complete(result: .failure(error))
                 }
-                
-                self?.finish()
             }
         }
         

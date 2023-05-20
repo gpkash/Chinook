@@ -44,14 +44,6 @@ public class DataLoader: NSObject {
         
         super.init()        
     }
-    
-    
-    // MARK: - Function Overrides
-    
-    // MARK: - Public Functions
-    
-    // MARK: - Private Functions
-    
 }
 
 extension DataLoader: DataLoading {

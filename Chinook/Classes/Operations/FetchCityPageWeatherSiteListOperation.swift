@@ -57,8 +57,6 @@ public class FetchCityPageWeatherSiteListOperation: ConcurrentOperation<SiteList
                     self?.complete(result: .failure(error))
                 }
             }
-            
-            self?.finish()
         }
         
         progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
