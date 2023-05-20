@@ -8,5 +8,5 @@
 import Foundation
 
 public struct CloudPrecip: XMLDecodable {
-    public let textSummary: String
+    public let textSummary: String?
 }

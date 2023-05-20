@@ -9,5 +9,5 @@ import Foundation
 
 public struct AlertParameter: XMLDecodable, Hashable {
     public let valueName: String
-    public let value: String
+    public let value: String?
 }

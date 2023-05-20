@@ -12,5 +12,5 @@ public struct Pressure: XMLDecodable {
     public let unitType: String
     public let units: String
     public let change: String
-    public let tendency: String
+    public let tendency: String?
 }
