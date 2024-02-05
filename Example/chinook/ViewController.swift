@@ -17,12 +17,11 @@ class ViewController: UITableViewController {
     private let numberOfRandomSites = 20
     private var randomSiteDatas: [SiteData] = []
     
-    private lazy var citySiteDataOperationCompletionHandler: (_ result: Result<Any, Error>) -> Void = { [weak self] result in
+    private lazy var citySiteDataOperationCompletionHandler: (_ result: Result<SiteData, Error>) -> Void = { [weak self] result in
         switch result {
         case .success(let siteData):
-            guard let self = self else { return }
+            guard let self else { return }
             
-            let siteData = siteData as! SiteData
             let indexPath = IndexPath(row: self.randomSiteDatas.count, section: 0)
 
             self.tableView.beginUpdates()
@@ -49,14 +48,13 @@ class ViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
-        let fetchCityPageWeatherSiteListOperation = FetchCityPageWeatherSiteListOperation()
+        let fetchCityPageWeatherSiteListOperation = FetchCityPageWeatherSiteListOperation(strategy: .diskThenNetwork)
         
         fetchCityPageWeatherSiteListOperation.completionHandler = { [weak self] result in
-            guard let self = self else { return }
+            guard let self else { return }
 
             switch result {
             case .success(let siteList):
-                let siteList = siteList as! SiteList
                 print("\(siteList.site.count) sites fetched.")
                 
                 self.loadRandomSiteData(siteList)
@@ -78,7 +76,7 @@ class ViewController: UITableViewController {
         let randomSites = siteList.snag(someRandomSites: numberOfRandomSites)
         
         randomSites.forEach { site in
-            let fetchCityPageWeatherSiteDataOperation = FetchCityPageWeatherSiteDataOperation(site: site)
+            let fetchCityPageWeatherSiteDataOperation = FetchCityPageWeatherSiteDataOperation(site: site, strategy: .diskThenNetwork)
             fetchCityPageWeatherSiteDataOperation.completionHandler = citySiteDataOperationCompletionHandler
             queue.addOperation(fetchCityPageWeatherSiteDataOperation)
         }

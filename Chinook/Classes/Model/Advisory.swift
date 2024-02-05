@@ -10,30 +10,22 @@ import Foundation
 public struct Advisory {
 
     // MARK: Public Properties
-    
     public let designationCode: String
-    public let effective: Date
-    public let expires: Date
+    public let effective: Date?
+    public let expires: Date?
     public let urgency: String
     public let severity: String
     public let headline: String?
     public let description: String
     public let areas: Set<AlertArea>
     public let shortDescription: String
-
-
-    // MARK: Private Properties
-    
-    // MARK: Property Overrides
-
     
     // MARK: - Lifecycle
-    
     public init(designationCode: String, alertInfos: [AlertInfo]) {
         self.designationCode = designationCode
         
-        var mutableEffective = Date(timeIntervalSince1970: 0)
-        var mutableExpires = Date(timeIntervalSince1970: 0)
+        var mutableEffective: Date?
+        var mutableExpires: Date?
         var mutableUrgency: String = ""
         var mutableSeverity: String = ""
         var mutableHeadline: String?
@@ -73,13 +65,4 @@ public struct Advisory {
         shortDescription = description.components(separatedBy: "\n\n###\n\n")[0]
         areas = mutableAreas
     }
-    
-    // MARK: - Function Overrides
-    
-    
-    // MARK: - Public Functions
-    
-    
-    // MARK: - Private Functions
-
 }
