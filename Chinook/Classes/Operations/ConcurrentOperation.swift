@@ -14,7 +14,7 @@ open class ConcurrentOperation<T>: Operation, ProgressReporting {
 
     // MARK: Public Properties
     
-    public typealias OperationCompletionHandler<T> = (_ result: Result<T, Error>) -> Void
+    public typealias OperationCompletionHandler<U> = (_ result: Result<U, Error>) -> Void
 
     public var completionHandler: (OperationCompletionHandler<T>)?
 

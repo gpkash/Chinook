@@ -15,8 +15,8 @@ public struct AlertInfo: XMLDecodable, Hashable {
     public let severity: String
     public let certainty: String
     public let audience: String
-    public let effective: String
-    public let expires: String
+    public let effective: String?
+    public let expires: String?
     public let headline: String?
     public let description: String
     public let web: String
@@ -36,7 +36,7 @@ public struct AlertInfo: XMLDecodable, Hashable {
     }
     
     public static func == (lhs: AlertInfo, rhs: AlertInfo) -> Bool {
-        return lhs.language+lhs.event+lhs.responseType+lhs.effective+lhs.expires+lhs.description == rhs.language+rhs.event+rhs.responseType+rhs.effective+rhs.expires+rhs.description
+        return lhs.language+lhs.event+lhs.responseType+(lhs.effective ?? "")+(lhs.expires ?? "")+lhs.description == rhs.language+rhs.event+rhs.responseType+(rhs.effective ?? "")+(rhs.expires ?? "")+rhs.description
     }
 }
 
@@ -48,12 +48,20 @@ extension AlertInfo {
         return dateFormatter
     }
 
-    public var effectiveDate: Date { Self.dateFormatter.date(from: effective)! }
-    public var expiresDate: Date { Self.dateFormatter.date(from: expires)!  }
+    public var effectiveDate: Date? {
+        guard let effective else { return nil }
+        return Self.dateFormatter.date(from: effective)
+    }
+    
+    public var expiresDate: Date? {
+        guard let expires else { return nil }
+        return Self.dateFormatter.date(from: expires)
+    }
 
     /// Returns whether the alert is effective and not expired.
     public var isActive: Bool {
-        effectiveDate <= Date() && !isExpired
+        guard let effectiveDate else { return true }
+        return effectiveDate <= Date() && !isExpired
     }
     
     /// Returns whether the alert is still going. Aka: active, not clear and not past.
@@ -62,5 +70,8 @@ extension AlertInfo {
     }
     
     
-    public var isExpired: Bool { expiresDate < Date() }
+    public var isExpired: Bool {
+        guard let expiresDate else { return false }
+        return expiresDate < Date()
+    }
 }

@@ -1,6 +1,6 @@
 {
   "name": "Chinook",
-  "version": "0.2.0",
+  "version": "0.0.3",
   "summary": "Simplified interactions to Environment Canada weather API.",
   "homepage": "https://github.com/gpkash/Chinook",
   "license": {
@@ -11,15 +11,14 @@
     "Gary Kash": "capikaw@gmail.com"
   },
   "source": {
-    "git": "https://github.com/gpkash/Chinook.git",
-    "tag": "0.2.0"
+    "git": "git@github.com:gpkash/Chinook.git",
+    "tag": "0.0.3"
   },
   "source_files": "Chinook/Classes/**/*.swift",
   "swift_versions": "5.0",
   "platforms": {
-    "ios": "9.0",
-    "osx": "10.9",
-    "tvos": "9.0"
+    "ios": "11.0",
+    "tvos": "11.0"
   },
   "dependencies": {
     "XMLCoder": [
