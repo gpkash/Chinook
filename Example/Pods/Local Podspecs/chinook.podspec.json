@@ -1,6 +1,6 @@
 {
   "name": "Chinook",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "summary": "Simplified interactions to Environment Canada weather API.",
   "homepage": "https://github.com/gpkash/Chinook",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "git@github.com:gpkash/Chinook.git",
-    "tag": "0.0.3"
+    "tag": "0.0.5"
   },
   "source_files": "Chinook/Classes/**/*.swift",
   "swift_versions": "5.0",
