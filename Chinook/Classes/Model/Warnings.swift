@@ -8,6 +8,6 @@
 import Foundation
 
 public struct Warnings: XMLDecodable {
-    public let url: String
+    public let url: String?
     public let event: [Event]
 }

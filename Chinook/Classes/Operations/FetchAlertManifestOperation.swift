@@ -8,21 +8,14 @@
 import Foundation
 
 public class FetchAlertManifestOperation: ConcurrentOperation<[URL]> {
-    
     // MARK: Private Properties
-
     private let doubleQuoteCharacterSet = CharacterSet(charactersIn: "\"")
-
     private let dataLoader: DataLoader
     private let stationCode: String
     private let day: String
     private let hour: String
     
-    
-    // MARK: Property Overrides
-    
     // MARK: - Lifecycle
-    
     public init(stationCode: String, day: String, hour: String, strategy: DataLoaderStrategy) {
         self.stationCode = stationCode
         self.day = day
@@ -31,9 +24,7 @@ public class FetchAlertManifestOperation: ConcurrentOperation<[URL]> {
         super.init()
     }
     
-    
     // MARK: - Function Overrides
-    
     override public func start() {
         super.start()
         

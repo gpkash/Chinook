@@ -33,7 +33,7 @@ public class FetchAdvisoriesOperation: ConcurrentOperation<[Advisory]> {
         queue.maxConcurrentOperationCount = 20
         
         queue.operationQueueFinished = { [weak self] in
-            guard let self = self else { return }
+            guard let self else { return }
             
             let advisories = self.makeAdvisories(self.alerts)
             self.complete(result: .success(advisories))
