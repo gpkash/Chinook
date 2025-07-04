@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Province: Hashable {
+public struct Province: Hashable, Sendable {
     public var abbreviation: String
     public var nameEn: String
     public var nameFr: String
@@ -43,17 +43,17 @@ public struct Province: Hashable {
         return nil
     }
     
-    public static var britishColumbia = Province(abbreviation: "BC", nameEn: "British Columbia", nameFr: "Colombie-Britannique")
-    public static var alberta = Province(abbreviation: "AB", nameEn: "Alberta", nameFr: "Alberta")
-    public static var saskatchewan = Province(abbreviation: "SK", nameEn: "Saskatchewan", nameFr: "Saskatchewan")
-    public static var manitoba = Province(abbreviation: "MB", nameEn: "Manitoba", nameFr: "Manitoba")
-    public static var ontario = Province(abbreviation: "ON", nameEn: "Ontario", nameFr: "Ontario")
-    public static var quebec = Province(abbreviation: "QC", nameEn: "Quebec", nameFr: "Québec")
-    public static var newBrunswick = Province(abbreviation: "NB", nameEn: "New Brunswick", nameFr: "Nouveau-Brunswick")
-    public static var novaScotia = Province(abbreviation: "NS", nameEn: "Nova Scotia", nameFr: "Nouvelle-Écosse")
-    public static var priceEdwardIsland = Province(abbreviation: "PE", nameEn: "Price Edward Island", nameFr: "Île-du-Prince-Édouard")
-    public static var newfoundlandAndLabrador = Province(abbreviation: "NL", nameEn: "Newfoundland and Labrador", nameFr: "Terre-Neuve-et-Labrador")
-    public static var nunavut = Province(abbreviation: "NU", nameEn: "Nunavut", nameFr: "Nunavut")
-    public static var northwestTerritories = Province(abbreviation: "NT", nameEn: "Northwest Territories", nameFr: "Territoires du Nord-Ouest")
-    public static var yukon = Province(abbreviation: "YT", nameEn: "Yukon", nameFr: "Yukon")
+    public static let britishColumbia = Province(abbreviation: "BC", nameEn: "British Columbia", nameFr: "Colombie-Britannique")
+    public static let alberta = Province(abbreviation: "AB", nameEn: "Alberta", nameFr: "Alberta")
+    public static let saskatchewan = Province(abbreviation: "SK", nameEn: "Saskatchewan", nameFr: "Saskatchewan")
+    public static let manitoba = Province(abbreviation: "MB", nameEn: "Manitoba", nameFr: "Manitoba")
+    public static let ontario = Province(abbreviation: "ON", nameEn: "Ontario", nameFr: "Ontario")
+    public static let quebec = Province(abbreviation: "QC", nameEn: "Quebec", nameFr: "Québec")
+    public static let newBrunswick = Province(abbreviation: "NB", nameEn: "New Brunswick", nameFr: "Nouveau-Brunswick")
+    public static let novaScotia = Province(abbreviation: "NS", nameEn: "Nova Scotia", nameFr: "Nouvelle-Écosse")
+    public static let priceEdwardIsland = Province(abbreviation: "PE", nameEn: "Price Edward Island", nameFr: "Île-du-Prince-Édouard")
+    public static let newfoundlandAndLabrador = Province(abbreviation: "NL", nameEn: "Newfoundland and Labrador", nameFr: "Terre-Neuve-et-Labrador")
+    public static let nunavut = Province(abbreviation: "NU", nameEn: "Nunavut", nameFr: "Nunavut")
+    public static let northwestTerritories = Province(abbreviation: "NT", nameEn: "Northwest Territories", nameFr: "Territoires du Nord-Ouest")
+    public static let yukon = Province(abbreviation: "YT", nameEn: "Yukon", nameFr: "Yukon")
 }

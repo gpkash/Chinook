@@ -8,5 +8,5 @@
 import Foundation
 
 extension Endpoint {
-    public static let citypageWeatherSiteList = Endpoint(host: .datamart, path: "/citypage_weather/xml/siteList.xml")
+    @MainActor public static let citypageWeatherSiteList = Endpoint(host: .datamart, path: "/citypage_weather/siteList.xml")
 }

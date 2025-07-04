@@ -46,7 +46,8 @@ public class DataLoader: NSObject {
     }
 }
 
-extension DataLoader: DataLoading {
+extension DataLoader: @preconcurrency DataLoading {
+    @MainActor
     public func request(_ endpoint: Endpoint, completion: @escaping (Result<DataResponse, Error>) -> Void) -> Progress {
         let progress = Progress(totalUnitCount: 1)
         

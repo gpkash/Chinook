@@ -9,7 +9,7 @@
 import Foundation
 
 /// Describes an endpoint for a resource. This may refer to either a disk resource or network resource.
-public struct Endpoint {
+public struct Endpoint: Sendable {
     /// The host in which this endpoint is on.
     let host: Host
     /// The url path. Should begin with a `/`.

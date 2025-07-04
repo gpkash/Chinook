@@ -7,28 +7,19 @@
 
 import Foundation
 
+@MainActor
 public class NetworkLoaderOperation: ConcurrentOperation<DataResponse> {
-    
-    // MARK: Public Properties
-    
     // MARK: Private Properties
-    
     private let endpoint: Endpoint
     private let networkLoader = NetworkLoader()
 
-    
-    // MARK: Property Overrides
-
     // MARK: - Lifecycle
-    
     public init(endpoint: Endpoint) {
         self.endpoint = endpoint
         super.init()
     }
 
-    
     // MARK: - Private Functions
-
     override public func start() {
         super.start()
         
@@ -38,14 +29,14 @@ public class NetworkLoaderOperation: ConcurrentOperation<DataResponse> {
         }
         
         let networkLoaderProgress = networkLoader.request(endpoint) { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let dataResponse):
-                    self?.complete(result: .success(dataResponse))
-                    
-                case .failure(let error):
-                    self?.complete(result: .failure(error))
-                }
+            guard let self else { return }
+
+            switch result {
+            case .success(let dataResponse):
+                self.complete(result: .success(dataResponse))
+
+            case .failure(let error):
+                self.complete(result: .failure(error))
             }
         }
         

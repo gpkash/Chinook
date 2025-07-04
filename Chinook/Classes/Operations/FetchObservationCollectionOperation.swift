@@ -8,7 +8,7 @@
 import Foundation
 import XMLCoder
 
-public class FetchObservationCollectionOperation: ConcurrentOperation<ObservationCollection> {
+public class FetchObservationCollectionOperation: ConcurrentOperation<ObservationCollection>, @unchecked Sendable {
     
     // MARK: Public Properties
     
@@ -40,32 +40,30 @@ public class FetchObservationCollectionOperation: ConcurrentOperation<Observatio
         }
         
         let endpoint = Endpoint.observationCollection(forProvinceWithCode: provinceCode)
-        
-        let dataLoaderProgress = dataLoader.request(endpoint) { [weak self] result in
-            DispatchQueue.main.async {
+
+        Task { @MainActor in
+            let dataLoaderProgress = dataLoader.request(endpoint) { [weak self] result in
+                guard let self else { return }
+
                 switch result {
                 case .success(let dataResponse):
                     do {
-                        let observationCollection = try ObservationCollection.decode(fromXML: dataResponse.data, keyDecodingStrategy: XMLDecoder.KeyDecodingStrategy.observationCollectionCustomStrategy)
-                        DispatchQueue.main.async {
-                            self?.complete(result: .success(observationCollection))
-                        }
+                        let observationCollection = try ObservationCollection.decode(
+                            fromXML: dataResponse.data,
+                            keyDecodingStrategy: .observationCollectionCustomStrategy
+                        )
+                        self.complete(result: .success(observationCollection))
+                    } catch {
+                        self.complete(result: .failure(error))
                     }
-                    catch {
-                        DispatchQueue.main.async {
-                            self?.complete(result: .failure(error))
-                        }
-                    }
-                    
+
                 case .failure(let error):
-                    DispatchQueue.main.async {
-                        self?.complete(result: .failure(error))
-                    }
+                    self.complete(result: .failure(error))
                 }
             }
+
+            self.progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
         }
-        
-        progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
     }
     
     override public func cancel() {

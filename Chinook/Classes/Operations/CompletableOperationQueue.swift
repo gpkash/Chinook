@@ -26,7 +26,7 @@ public class CompletableOperationQueue: OperationQueue {
         super.init()
         
         operationsObserver = observe(\.operations, changeHandler: { [weak self] _, _ in
-            guard let self = self else { return }
+            guard let self else { return }
             guard self.operations.isEmpty else { return }
             self.operationQueueFinished?()
         })

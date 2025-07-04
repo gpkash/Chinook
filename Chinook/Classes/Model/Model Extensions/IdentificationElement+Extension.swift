@@ -9,14 +9,14 @@ import Foundation
 
 extension IdentificationElements {
     private struct ElementKeys {
-        static var stationNameKey = "station_name";
-        static var latitudeKey = "latitude";
-        static var longitudeKey = "longitude";
-        static var transportCanadaIDKey = "transport_canada_id";
-        static var observationDateUTCKey = "observation_date_utc";
-        static var observationDateLocalTimeKey = "observation_date_local_time";
-        static var climateStationNumberKey = "climate_station_number";
-        static var wmoStationNumberKey = "wmo_station_number";
+        static let stationNameKey = "station_name"
+        static let latitudeKey = "latitude"
+        static let longitudeKey = "longitude"
+        static let transportCanadaIDKey = "transport_canada_id"
+        static let observationDateUTCKey = "observation_date_utc"
+        static let observationDateLocalTimeKey = "observation_date_local_time"
+        static let climateStationNumberKey = "climate_station_number"
+        static let wmoStationNumberKey = "wmo_station_number"
     }
     
     var stationName: String? { return element.filter({ $0.name == ElementKeys.stationNameKey }).first?.value }

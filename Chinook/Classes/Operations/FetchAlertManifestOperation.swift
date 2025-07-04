@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class FetchAlertManifestOperation: ConcurrentOperation<[URL]> {
+public class FetchAlertManifestOperation: ConcurrentOperation<[URL]>, @unchecked Sendable {
     // MARK: Private Properties
     private let doubleQuoteCharacterSet = CharacterSet(charactersIn: "\"")
     private let dataLoader: DataLoader
@@ -34,10 +34,10 @@ public class FetchAlertManifestOperation: ConcurrentOperation<[URL]> {
         }
         
         let endpoint = Endpoint.alertsManifest(stationCode: stationCode, day: day, hour: hour)
-        let dataLoaderProgress = dataLoader.request(endpoint) { [weak self] result in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
+        Task { @MainActor in
+            let dataLoaderProgress = dataLoader.request(endpoint) { [weak self] result in
+                guard let self else { return }
+                
                 switch result {
                 case .success(let dataResponse):
                     var alertCapFileURLs: [URL] = []
@@ -63,14 +63,13 @@ public class FetchAlertManifestOperation: ConcurrentOperation<[URL]> {
                     
                     self.complete(result: .success(alertCapFileURLs))
                     
-                    
                 case .failure(let error):
                     self.complete(result: .failure(error))
                 }
             }
-        }
 
-        progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
+            progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
+        }
     }
     
     override public func cancel() {

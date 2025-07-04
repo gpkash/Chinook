@@ -8,66 +8,51 @@
 
 import Foundation
 
-public class FetchCityPageWeatherSiteListOperation: ConcurrentOperation<SiteList> {
-    
-    // MARK: Public Properties
-    
+public class FetchCityPageWeatherSiteListOperation: ConcurrentOperation<SiteList>, @unchecked Sendable {
     // MARK: Private Properties
-    
     private let dataLoader: DataLoader
     
-    
-    // MARK: Property Overrides
-
     // MARK: - Lifecycle
-    
     public init(strategy: DataLoaderStrategy) {
         self.dataLoader = DataLoader(strategy: strategy)
         super.init()
     }
     
-    
     // MARK: - Function Overrides
-    
     override public func start() {
         super.start()
-        
+
         guard !isCancelled else {
             finish()
             return
         }
-        
-        let dataLoaderProgress = dataLoader.request(.citypageWeatherSiteList) { [weak self] result in
-            switch result {
-            case .success(let dataResponse):
-                do {
-                    let siteList = try SiteList.decode(fromXML: dataResponse.data)
-                    DispatchQueue.main.async {
-                        self?.complete(result: .success(siteList))
+
+        Task { @MainActor in
+            let endpoint = Endpoint.citypageWeatherSiteList
+
+            let dataLoaderProgress = dataLoader.request(endpoint) { [weak self] result in
+                guard let self else { return }
+
+                switch result {
+                case .success(let dataResponse):
+                    do {
+                        let siteList = try SiteList.decode(fromXML: dataResponse.data)
+                        self.complete(result: .success(siteList))
+                    } catch {
+                        self.complete(result: .failure(error))
                     }
-                }
-                catch {
-                    DispatchQueue.main.async {
-                        self?.complete(result: .failure(error))
-                    }
-                }
-                
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self?.complete(result: .failure(error))
+
+                case .failure(let error):
+                    self.complete(result: .failure(error))
                 }
             }
+
+            self.progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
         }
-        
-        progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
     }
     
     override public func cancel() {
         dataLoader.cancel()
         super.cancel()
     }
-    
-    // MARK: - Public Functions
-    
-    // MARK: - Private Functions
 }

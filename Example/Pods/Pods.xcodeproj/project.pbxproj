@@ -219,8 +219,8 @@
 		3C4450B8653AD5844D4E989DE7AE4465 /* XMLCoderElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLCoderElement.swift; path = Sources/XMLCoder/Auxiliaries/XMLCoderElement.swift; sourceTree = "<group>"; };
 		3CA0F381265E0F430D472933430C75E7 /* DateTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
 		3CE71930D3F73670947086B6B8ACA03E /* Pods-Chinook_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chinook_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3F02B25075D6C5D2467BB73A614809C7 /* Pods-Chinook_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Chinook_Tests"; path = Pods_Chinook_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XMLCoder; path = XMLCoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F02B25075D6C5D2467BB73A614809C7 /* Pods_Chinook_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chinook_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMLCoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEB2659C0D38BAF3C92C8A433B9CC35 /* AlertaArea.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertaArea.swift; sourceTree = "<group>"; };
 		44E93414F14982171DDB3A9BDC16D806 /* Endpoint+ObservationCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Endpoint+ObservationCollection.swift"; sourceTree = "<group>"; };
 		4AB2A69583B20EBCFF8F437406BE30BC /* AlertInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
@@ -232,10 +232,10 @@
 		58B719A0EC09E68DC07586E29885A207 /* XMLChoiceEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLChoiceEncodingContainer.swift; path = Sources/XMLCoder/Encoder/XMLChoiceEncodingContainer.swift; sourceTree = "<group>"; };
 		58FAB0B71778EEFDB18748670F44B537 /* HourlyForecastGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HourlyForecastGroup.swift; sourceTree = "<group>"; };
 		5CB54D83EDF3F008BD13C33A53F4D84F /* XMLEncodingStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLEncodingStorage.swift; path = Sources/XMLCoder/Encoder/XMLEncodingStorage.swift; sourceTree = "<group>"; };
-		5DF2FDAD281DC46F86F4626C2B8538AD /* Chinook.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Chinook.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5DF2FDAD281DC46F86F4626C2B8538AD /* Chinook.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Chinook.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5E128D70F98E2C801D99A8D8C103804B /* KeyedStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedStorage.swift; path = Sources/XMLCoder/Auxiliaries/KeyedStorage.swift; sourceTree = "<group>"; };
 		5EE39FAF0047DE8D02862E31F429EC99 /* XMLDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLDecoder.swift; path = Sources/XMLCoder/Decoder/XMLDecoder.swift; sourceTree = "<group>"; };
-		61CB6C7B04DC8BC2E0318D4359709997 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		61CB6C7B04DC8BC2E0318D4359709997 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		62021CA734F86FF8520016C5AF41AE77 /* DataLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		62F5CB6922AB7AE69DA215C036EB82D5 /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		62FA40F611836786C677277995828C14 /* WindChill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WindChill.swift; sourceTree = "<group>"; };
@@ -273,13 +273,13 @@
 		90957FD1F60F286FF073CAB0BA9CC6C5 /* Pods-Chinook_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chinook_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		90C580158A23DF5D5EAEFCA6E1FFCA52 /* Chinook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Chinook.debug.xcconfig; sourceTree = "<group>"; };
 		91F65CDEF62EA13B10F512F1CEC410F9 /* Winds.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Winds.swift; sourceTree = "<group>"; };
-		94CE2013093978DC8E8C248CB5E53460 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		94CE2013093978DC8E8C248CB5E53460 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		953AE058AD2FAA54161534979AC91900 /* ChoiceBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChoiceBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/ChoiceBox.swift; sourceTree = "<group>"; };
 		9965119DB991AEA4831DAB95CA13976C /* SingleKeyedBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleKeyedBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/SingleKeyedBox.swift; sourceTree = "<group>"; };
 		998797CE302C8284BF37472F79AEFAF2 /* AlertGeocode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertGeocode.swift; sourceTree = "<group>"; };
 		9BD6F02AC5D7A5F294CA2F2992E6AEB4 /* XMLCoder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMLCoder.debug.xcconfig; sourceTree = "<group>"; };
 		9BE59A29501BD21004B6CB19F1D86324 /* XMLDecodingStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLDecodingStorage.swift; path = Sources/XMLCoder/Decoder/XMLDecodingStorage.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EDE721DB91822FC725854C16BA8B202 /* Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		9FBB10F7D18000A2ACF3ADEC7B41A841 /* Endpoint+Caching.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Endpoint+Caching.swift"; sourceTree = "<group>"; };
 		A2F07B4914B11637849907AC0A513137 /* URLBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/URLBox.swift; sourceTree = "<group>"; };
@@ -326,14 +326,14 @@
 		E4032C6F4608A38645A2586A9D067246 /* XMLStackParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLStackParser.swift; path = Sources/XMLCoder/Auxiliaries/XMLStackParser.swift; sourceTree = "<group>"; };
 		E5C2A880D4A83403F880A482750ABE8D /* Measurement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 		E76545F50835CAD7D4E93B8C2EC03764 /* Language.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Chinook; path = Chinook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Chinook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6E0322434DAC34816553B5D2B7A605 /* AbbreviatedForecast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AbbreviatedForecast.swift; sourceTree = "<group>"; };
 		EE9CA26C55FFF5A8DAD37CC60FA0D796 /* FileManager+PathCreation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "FileManager+PathCreation.swift"; sourceTree = "<group>"; };
 		F06EAE0509F05A08AB9711860A6B90FE /* FetchCityPageWeatherSiteDataOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FetchCityPageWeatherSiteDataOperation.swift; sourceTree = "<group>"; };
 		F1057D1D56A4106C95FDEF616C447E1F /* Pods-Chinook_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Chinook_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F18C321324BEB8F1E51677D3B63FFC61 /* Pods-Chinook_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chinook_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		F9117F2390AF9C1D5B00EB3E95C2858A /* Forecast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
-		F9167B0C72A351739FAF8196420D7E42 /* Pods-Chinook_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Chinook_Example"; path = Pods_Chinook_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9167B0C72A351739FAF8196420D7E42 /* Pods_Chinook_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chinook_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F920024797F874793DF7F126F02BA905 /* DataResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		F9383A15388BC42263E28E3D36284101 /* SingleValueDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueDecodingContainer.swift; path = Sources/XMLCoder/Decoder/SingleValueDecodingContainer.swift; sourceTree = "<group>"; };
 		F9B67B33446BF28D175E01768217E5A1 /* CurrentConditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrentConditions.swift; sourceTree = "<group>"; };
@@ -384,7 +384,6 @@
 				10AB32DD1E535E1C2771C188F28CCA7D /* NetworkLoader.swift */,
 				4ECC35B3EE0CAC17424759B98E202353 /* Hosts */,
 			);
-			name = Network;
 			path = Network;
 			sourceTree = "<group>";
 		};
@@ -439,7 +438,6 @@
 			children = (
 				B3CC30FD50FBA0A37FD273E13073125D /* DiskLoader.swift */,
 			);
-			name = Disk;
 			path = Disk;
 			sourceTree = "<group>";
 		};
@@ -500,7 +498,6 @@
 				5124D6872B2E894EF17215466130F66D /* Host.swift */,
 				26FF5B41649011E85E558657E52C6A82 /* Host+Datamart.swift */,
 			);
-			name = Hosts;
 			path = Hosts;
 			sourceTree = "<group>";
 		};
@@ -509,7 +506,6 @@
 			children = (
 				AA7BBFE8C9C09210F8EB3F74B5A61FD9 /* IdentificationElement+Extension.swift */,
 			);
-			name = "Model Extensions";
 			path = "Model Extensions";
 			sourceTree = "<group>";
 		};
@@ -528,7 +524,6 @@
 				E1900FF961766F82B5039AB2B2F5D29B /* DataLoading.swift */,
 				F920024797F874793DF7F126F02BA905 /* DataResponse.swift */,
 			);
-			name = Data;
 			path = Data;
 			sourceTree = "<group>";
 		};
@@ -612,10 +607,10 @@
 		B6829E8325543E644C7910089A5686A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook */,
-				F9167B0C72A351739FAF8196420D7E42 /* Pods-Chinook_Example */,
-				3F02B25075D6C5D2467BB73A614809C7 /* Pods-Chinook_Tests */,
-				3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder */,
+				E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook.framework */,
+				F9167B0C72A351739FAF8196420D7E42 /* Pods_Chinook_Example.framework */,
+				3F02B25075D6C5D2467BB73A614809C7 /* Pods_Chinook_Tests.framework */,
+				3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -671,7 +666,6 @@
 				0A7B0A65C5B155226571BB3231E7D30A /* XMLUnkeyedEncodingContainer.swift */,
 				4B6A78BDB8EDAA28C0740EA8D22216EA /* Support Files */,
 			);
-			name = XMLCoder;
 			path = XMLCoder;
 			sourceTree = "<group>";
 		};
@@ -752,7 +746,6 @@
 				114FE0700F15F73DFB8BEB8B21FCA779 /* AnyCodingKey.swift */,
 				1E3C9B38B786D73AC8C91D155F531295 /* KeyDecodingStrategy+ObservationCollection.swift */,
 			);
-			name = "Decoding Strategies";
 			path = "Decoding Strategies";
 			sourceTree = "<group>";
 		};
@@ -819,7 +812,7 @@
 			);
 			name = "Pods-Chinook_Example";
 			productName = Pods_Chinook_Example;
-			productReference = F9167B0C72A351739FAF8196420D7E42 /* Pods-Chinook_Example */;
+			productReference = F9167B0C72A351739FAF8196420D7E42 /* Pods_Chinook_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		49DD06EC36198694EE925791D3CD8744 /* Chinook */ = {
@@ -838,7 +831,7 @@
 			);
 			name = Chinook;
 			productName = Chinook;
-			productReference = E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook */;
+			productReference = E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E1753B4FA19C5F745ADF56B844ACAB36 /* XMLCoder */ = {
@@ -856,7 +849,7 @@
 			);
 			name = XMLCoder;
 			productName = XMLCoder;
-			productReference = 3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder */;
+			productReference = 3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FA22AEC4030344945273B6D586B32387 /* Pods-Chinook_Tests */ = {
@@ -875,7 +868,7 @@
 			);
 			name = "Pods-Chinook_Tests";
 			productName = Pods_Chinook_Tests;
-			productReference = 3F02B25075D6C5D2467BB73A614809C7 /* Pods-Chinook_Tests */;
+			productReference = 3F02B25075D6C5D2467BB73A614809C7 /* Pods_Chinook_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1209,7 +1202,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1237,7 +1230,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example.modulemap";
@@ -1299,7 +1292,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example.modulemap";
@@ -1332,7 +1325,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests.modulemap";
@@ -1400,13 +1393,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1428,7 +1420,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Chinook/Chinook-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Chinook/Chinook-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Chinook/Chinook.modulemap";
 				PRODUCT_MODULE_NAME = Chinook;
@@ -1458,7 +1450,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests.modulemap";
@@ -1491,7 +1483,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Chinook/Chinook-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Chinook/Chinook-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Chinook/Chinook.modulemap";
 				PRODUCT_MODULE_NAME = Chinook;

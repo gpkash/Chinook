@@ -69,7 +69,7 @@ public class FetchAdvisoriesOperation: ConcurrentOperation<[Advisory]> {
     private func makeFetchAlertOperation(url: URL) -> FetchAlertOperation {
         let operation = FetchAlertOperation(url: url, strategy: dataLoader.strategy)
         operation.completionHandler = { [weak self] result in
-            guard let self = self else { return }
+            guard let self else { return }
             self.progress.completedUnitCount = Int64(self.urlsManifest.count - self.queue.operationCount)
             
             switch result {

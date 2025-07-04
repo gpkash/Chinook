@@ -10,44 +10,50 @@ import Foundation
 
 
 /// Handles network requests.
-class NetworkLoader: NSObject {
-    
+final class NetworkLoader: NSObject, DataLoading, @unchecked Sendable {
     // MARK: Private Properties
-    private lazy var urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: .main)    
-}
+    private var activeTask: URLSessionDataTask?
 
-
-// MARK: - DataLoading
-
-extension NetworkLoader: DataLoading {
     func request(_ endpoint: Endpoint, completion: @escaping (Result<DataResponse, Error>) -> Void) -> Progress {
-        guard let url = endpoint.url else {
+        let urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: .main)
+        
+        guard let url = endpoint.url
+        else {
             completion(.failure(NetworkError.badURL))
             return Progress(totalUnitCount: 1)
         }
 
-        let task = urlSession.dataTask(with: url) { data, _, error in
-            if let error = error {
+        activeTask = urlSession.dataTask(with: url) { data, response, error in
+            if let error {
                 completion(.failure(error))
+                return
             }
-            else if let data = data {
+
+            if let httpResponse = response as? HTTPURLResponse,
+               !(200...299).contains(httpResponse.statusCode) {
+                completion(.failure(NetworkError.httpError(statusCode: httpResponse.statusCode)))
+                return
+            }
+
+            if let data {
                 let dataResponse = DataResponse(data: data, source: .network)
                 completion(.success(dataResponse))
+            } else {
+                completion(.failure(NetworkError.emptyResponse))
             }
         }
-
-        task.resume()
+        
+        activeTask?.resume()
         urlSession.finishTasksAndInvalidate()
 
-        return task.progress
+        return activeTask?.progress ?? Progress()
     }
     
     func cancel() {
-        urlSession.invalidateAndCancel()
+        activeTask?.cancel()
     }
 }
 
 
 // MARK: - URLSessionDelegate
-
 extension NetworkLoader: URLSessionDelegate { }

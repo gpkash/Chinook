@@ -23,7 +23,36 @@ public extension XMLDecodable {
     static func decode(fromXML data: Data, keyDecodingStrategy: XMLDecoder.KeyDecodingStrategy = .useDefaultKeys) throws -> Self {
         let xmlDecoder = XMLDecoder()
         xmlDecoder.keyDecodingStrategy = keyDecodingStrategy
-        
-        return try xmlDecoder.decode(Self.self, from: data)
+
+        do {
+            return try xmlDecoder.decode(Self.self, from: data)
+        }
+        catch {
+            let snippet = String(data: data, encoding: .utf8)?.prefix(500) ?? "Unable to decode XML to string."
+            let contextDescription: String
+
+            if let decodingError = error as? DecodingError {
+                switch decodingError {
+                case .dataCorrupted(let context),
+                     .keyNotFound(_, let context),
+                     .typeMismatch(_, let context),
+                     .valueNotFound(_, let context):
+                    contextDescription = "\(decodingError)\nContext: \(context.debugDescription)\nCodingPath: \(context.codingPath)"
+                @unknown default:
+                    contextDescription = "Unknown decoding error"
+                }
+            } else {
+                contextDescription = error.localizedDescription
+            }
+
+            let enhancedError = NSError(
+                domain: "XMLDecodableError",
+                code: 1,
+                userInfo: [
+                    NSLocalizedDescriptionKey: "Failed to decode XML:\n\(contextDescription)\n\nXML Snippet:\n\(snippet)"
+                ]
+            )
+            throw enhancedError
+        }
     }
 }

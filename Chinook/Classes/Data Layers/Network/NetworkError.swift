@@ -12,4 +12,8 @@ import Foundation
 enum NetworkError: Error {
     /// The URL cannot be constructed as provided.
     case badURL
+    /// A non-200 response will throw this error.
+    case httpError(statusCode: Int)
+    /// An empty response will throw this error.
+    case emptyResponse
 }

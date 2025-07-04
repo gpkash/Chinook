@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class FetchCityPageWeatherSiteDataOperation: ConcurrentOperation<SiteData> {
+public class FetchCityPageWeatherSiteDataOperation: ConcurrentOperation<SiteData>, @unchecked Sendable {
     
     // MARK: Public Properties
     
@@ -32,40 +32,51 @@ public class FetchCityPageWeatherSiteDataOperation: ConcurrentOperation<SiteData
     // MARK: - Private Functions
 
     override public func start() {
-        super.start()
-        
-        guard !isCancelled else {
-            finish()
-            return
-        }
-        
-        let endpoint = Endpoint.cityPageWeather(forSite: site)
-        
-        let dataLoaderProgress = dataLoader.request(endpoint) { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let dataResponse):
-                    do {
-                        let siteData = try SiteData.decode(fromXML: dataResponse.data)
-                        DispatchQueue.main.async {
-                            self?.complete(result: .success(siteData))
-                        }
-                    }
-                    catch {
-                        DispatchQueue.main.async {
-                            self?.complete(result: .failure(error))
-                        }
-                    }
+        Task {
+            do {
+                super.start()
+                
+                guard !isCancelled else {
+                    finish()
+                    return
+                }
+                
+                let endpoint = try await Endpoint.latestCityPageWeather(forSite: site)
+                
+                let dataLoaderProgress = await dataLoader.request(endpoint) { [weak self] result in
+                    guard let self else { return }
                     
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        self?.complete(result: .failure(error))
+                    switch result {
+                    case .success(let dataResponse):
+                        
+                        do {
+                            let siteData = try SiteData.decode(fromXML: dataResponse.data)
+                            DispatchQueue.main.async {
+                                self.complete(result: .success(siteData))
+                            }
+                        }
+                        catch {
+                            DispatchQueue.main.async {
+                                self.complete(result: .failure(error))
+                            }
+                        }
+                        
+                        
+                    case .failure(let error):
+                        DispatchQueue.main.async {
+                            self.complete(result: .failure(error))
+                        }
                     }
+                }
+                
+                progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
+            }
+            catch {
+                DispatchQueue.main.async {
+                    self.complete(result: .failure(error))
                 }
             }
         }
-        
-        progress.addChild(dataLoaderProgress, withPendingUnitCount: 1)
     }
     
     override public func cancel() {
