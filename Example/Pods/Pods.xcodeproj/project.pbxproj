@@ -7,166 +7,166 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00691C007959152DE215068103D6BA92 /* Advisory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCCE7D7680F7BAFAF98AD07C748D00D /* Advisory.swift */; };
-		01CE719EEAE36DD9B578CA5C4EE7A9F8 /* XMLKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522800F2F821552789C3642CAD5345B /* XMLKeyedEncodingContainer.swift */; };
-		0306FF8B35826A842AE2B68FA4D11FA7 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4A12991096E1FEA1F138B319209B0 /* Station.swift */; };
-		07AE12855D4F625397D577D2C44A925A /* Endpoint+SiteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5D3C972DB77A19B7D5B02FC3A8123 /* Endpoint+SiteList.swift */; };
-		087CA98B91846655007F3581C3A9534B /* XMLDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59A29501BD21004B6CB19F1D86324 /* XMLDecodingStorage.swift */; };
-		08BB8CC9B482A9FCF8A79B4C7B0AE870 /* Host+Datamart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF5B41649011E85E558657E52C6A82 /* Host+Datamart.swift */; };
-		0A243E488392A1245130E920E4566E22 /* URLBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F07B4914B11637849907AC0A513137 /* URLBox.swift */; };
-		0A533758B1FBB356E814A3617D17721F /* SharedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64E680C97EFB1BEA654F4B2A2BDE16 /* SharedBox.swift */; };
-		0AA36890AF5EDDAED210B431E5301DBC /* Metatypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316515D2761014FA38E8CB6F1AAA1994 /* Metatypes.swift */; };
-		0DCB5E2D79CE9F0F5B9523FD9AEA054F /* XMLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DBB3CBFAC5BA78536B9C537C65C75 /* XMLEncoder.swift */; };
-		110E2F81E06CA30465DCD978E910BF6C /* XMLStackParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4032C6F4608A38645A2586A9D067246 /* XMLStackParser.swift */; };
-		11DB21B7D6B4EEE78130A14CF68DDC28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		120B5D7DA530CDC5C23A36668D44995D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE721DB91822FC725854C16BA8B202 /* Alert.swift */; };
-		128D4ADCEB530D4975425CF1E287E377 /* DiskLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC30FD50FBA0A37FD273E13073125D /* DiskLoader.swift */; };
-		15495D581A47F0754046411FD96F5906 /* Pods-Chinook_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BF57C4F613706FFB481E5CAC7104FE /* Pods-Chinook_Tests-dummy.m */; };
-		177C36045D7B5E2D9DCEDC71827BD79B /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F920024797F874793DF7F126F02BA905 /* DataResponse.swift */; };
-		18D1F204046E7F086572C40FD0352D83 /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD28C0A01EBA026FE8E42F6EBDF21024 /* Site.swift */; };
-		1CF147B780E761CB0C520C9BF2732F06 /* Alert+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833F9890365E614C4657AD841C4BCBAA /* Alert+Contains.swift */; };
-		1D44882D273F50B1835DACA8FF82B5EC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363DE60D4D4A29A2CA9DDAD9835ED22F /* String+Extensions.swift */; };
-		1DB05CE6E67FC678507156ECB2EA4EE5 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E1E0B7D5CC38F79582BA8066B42F4 /* Wind.swift */; };
-		1ECD1129380EF1D54C1D06EAAE082CD8 /* DynamicNodeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72984DD50180BF852CEE462B40BF15 /* DynamicNodeEncoding.swift */; };
-		2509783DBE6EBC29EBE704CE55E08596 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF249D307ABD2CF45A447723C36A81C /* Name.swift */; };
-		26906A21AFC2B94EA5948BEE446DE27A /* FetchAdvisoriesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E14CC9D475EBC6519A6147B2B8137AE /* FetchAdvisoriesOperation.swift */; };
-		26FDDDBEBA9EAF1CB889031E1ACB6573 /* KeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831996D70D085C9750367838F7D3D4E9 /* KeyedBox.swift */; };
-		275252AA6999A4F310FF8CF132442C53 /* DecodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27F28D0703F11790E0614684473CAF /* DecodingErrorExtension.swift */; };
-		28D8EBFCA6AC45ECCDCA3FFCFDE05B80 /* Chinook-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5372C25745E55962357D8A3923B83C8C /* Chinook-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2919923223FAAF5982AC01D61AC9BC98 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9117F2390AF9C1D5B00EB3E95C2858A /* Forecast.swift */; };
-		292305A32ED9BE64F69B6C50F8929A60 /* DiskLoaderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB43AA8426BC682EA3784D0B7DCC6 /* DiskLoaderOperation.swift */; };
-		2A5083FC9546D35A5A9E86AD6EE1D8CE /* Endpoint+ObservationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E93414F14982171DDB3A9BDC16D806 /* Endpoint+ObservationCollection.swift */; };
-		2AB16398439C855FD55CAE48BC75D99B /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C692445CDEFD14D1925E6F0C74E5E02 /* Box.swift */; };
-		2B3FAA0C175E2DCAD1E0421E880D13CB /* Endpoint+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB10F7D18000A2ACF3ADEC7B41A841 /* Endpoint+Caching.swift */; };
-		2C0C7826305989B7960CFBCB43008729 /* StringBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A60B5B782DE788A6BD619074ACCF8 /* StringBox.swift */; };
-		2C4564CB1A2C01AED4BB53F223AD8722 /* XMLEncoderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B05C4CC5C38D9047B5598B769657F8 /* XMLEncoderImplementation.swift */; };
-		2CE67FA6D6A66F1D8833F61950FE2583 /* Pods-Chinook_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B82339BEB100D4AD89AFF3759B412DE2 /* Pods-Chinook_Example-dummy.m */; };
-		2E99E1F169AD7C19EA1B0A9E10664864 /* CompletableOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABC511D9CF711A11CD67FD374602C7 /* CompletableOperationQueue.swift */; };
-		2FEE2C6B236427DD6D686699F6373EF8 /* SiteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E46447E6C3853E8EFB1D52A021A809 /* SiteList.swift */; };
-		32A59A8A6CDC1C58451004CFC333D5AE /* AlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2A69583B20EBCFF8F437406BE30BC /* AlertInfo.swift */; };
-		368BABC358236C06A48934A332711DB6 /* XMLChoiceCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C6432E6349AF1BECB1F60791F5D08 /* XMLChoiceCodingKey.swift */; };
-		37244143D80D3BFE1BF728FBD07E898B /* Pressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88B246594B2BCACD11A850D02983B07 /* Pressure.swift */; };
-		3B3D07CC4A79E30E1BC02EEC6843CED7 /* XMLDecoderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A2DBB6E30AD2DDCD622B24D838D70A /* XMLDecoderImplementation.swift */; };
-		3BA297F84AEB4C5A31EFB3E56462D14E /* ObservationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8FA140DEFFEF7638B6C0503C006AD /* ObservationCollection.swift */; };
-		3C39142036E9680258C8E1E030B2F265 /* Precipitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D6DAE65602B5D1BAE8319814A7291 /* Precipitation.swift */; };
-		3C6A6E00701D556011D642714CFADF28 /* StationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81B58B43939F473854B35BD744DF76 /* StationCode.swift */; };
-		4131705BF9C1367C38E87879811A0AD3 /* XMLUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B0A65C5B155226571BB3231E7D30A /* XMLUnkeyedEncodingContainer.swift */; };
-		444E8CAB6356DC5004A349CD3D08D6A7 /* Province.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7008ED6C9D3F3659B443F9B7DE6B3128 /* Province.swift */; };
-		47D47628105CE4DBCDBAF858DAB60542 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62021CA734F86FF8520016C5AF41AE77 /* DataLoader.swift */; };
-		48ABDCED0C6D7E48D775D427C45CDA7C /* NetworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB32DD1E535E1C2771C188F28CCA7D /* NetworkLoader.swift */; };
-		4B376123FC6BAAF63899A72CEF60E210 /* Date+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295B6BB4AB77CDFDEEE8ADF2EEF4726C /* Date+Sugar.swift */; };
-		4BA86D37B96BE1A018D5460C3BB8C7C5 /* XMLHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC564A11C02234665D30D1CEAA24ABB7 /* XMLHeader.swift */; };
-		4CD879E5F3501EC9401AB183D4A13362 /* YesterdayConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4FC726C80BBB8061CB401521DB030 /* YesterdayConditions.swift */; };
-		4D33F5BFD0F02EA65768870E01F6E7DE /* XMLChoiceDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548521CF36C3C8FB276A51BDBF6F612E /* XMLChoiceDecodingContainer.swift */; };
-		4FD5BF67CBC286B84B1BEE1AD9EB63E1 /* XMLEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54D83EDF3F008BD13C33A53F4D84F /* XMLEncodingStorage.swift */; };
-		527F8D1604FBE7A57024A6FD7F241CA7 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB7E8AEAE5051892D3FA4FA40C5F3B3 /* String+Extensions.swift */; };
-		540CB948D55C2EE1CB999F6F5386FF4D /* FetchAlertManifestsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781DE7B3B7C71A5D98C88CC8105F340 /* FetchAlertManifestsOperation.swift */; };
-		594F76C9C0A3CC5A04617537C15F0B08 /* XMLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D514F2E8560128F250682D9AFE352E0 /* XMLUnkeyedDecodingContainer.swift */; };
-		5AA55BD3FA6E0DCE9573F1F9C436B062 /* IconCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B16CE841E1F1F3C054D657A9F2C212 /* IconCode.swift */; };
-		5F991DFE25BA5C321FBA7D34AD36F06B /* AlertGeocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998797CE302C8284BF37472F79AEFAF2 /* AlertGeocode.swift */; };
-		617F614F7C96C7C9FEE93B1EEA89DE82 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B5168BB317C6C4299676F068B9CDEA /* String+Substring.swift */; };
-		63BA77E6E21506EE5B94C4DAAAF1963C /* XMLChoiceEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B719A0EC09E68DC07586E29885A207 /* XMLChoiceEncodingContainer.swift */; };
-		63CBE6E42EADB3AEC818B643D93C0543 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274243D71713DA9ADC82F920CFB855F8 /* Direction.swift */; };
-		65F47928BC1E63B64D91CEB85CAFB507 /* IntBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC502D0996912E06258A43833D9BE4 /* IntBox.swift */; };
-		6701D93B5B2B45C982C3D836673A589F /* DateBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2736154D4857604517FC8B98D965A305 /* DateBox.swift */; };
-		69289F42633F54BCF4278AD74594F031 /* Pods-Chinook_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79DC0BF5DA1B440DFD17FBDDA1DBA5EA /* Pods-Chinook_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69A7F6B249C2B87D32D307D3EAE7091D /* SiteData+CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39D814616FAE58546948962DECF707 /* SiteData+CGPoint.swift */; };
-		6B9450A39343F2ED005E3B06050F0549 /* FetchCityPageWeatherSiteListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95C91B1A91B489FE6059173D21B4FC8 /* FetchCityPageWeatherSiteListOperation.swift */; };
-		6C03F9BBC02E6E131553EF26E435C749 /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DE17E3C4A622403766E0FB8FBF89E /* ConcurrentOperation.swift */; };
-		6DF50D6F6EC10062383581DEF1CCD0C3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F5CB6922AB7AE69DA215C036EB82D5 /* Endpoint.swift */; };
-		6E1FBC8673077BB903E1ACF4D46CD6B1 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0F381265E0F430D472933430C75E7 /* DateTime.swift */; };
-		714E29CA7365371014A51E1A1C81A81C /* ValueBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4715E0E7F98BFE5318A87E563708367 /* ValueBox.swift */; };
-		7313D7C240BEAB015A4DC0CE34EF2DD1 /* XMLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15268C125C926BBFE0284F59523859AC /* XMLKeyedDecodingContainer.swift */; };
-		74FA6587208FE779BB5D82988317485D /* KeyedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E128D70F98E2C801D99A8D8C103804B /* KeyedStorage.swift */; };
-		75D87768376BC4CD0C44E221336858C2 /* SingleKeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9965119DB991AEA4831DAB95CA13976C /* SingleKeyedBox.swift */; };
-		76CDA658EEC64CBA312156B67F7B549E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		7952ED641B1FBEB34E86B1988BD8079C /* XMLCoder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA64C77867A8E2B72A91AEA8EAD8EE2 /* XMLCoder-dummy.m */; };
-		7AC69FB309B99AB04B05EDB6DB257440 /* RiseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED7C1E41C747BA979828E79881B599 /* RiseSet.swift */; };
-		7DADCFCD474F9352429A441D7B57CFFC /* XMLCoderElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4450B8653AD5844D4E989DE7AE4465 /* XMLCoderElement.swift */; };
-		7E085C05943AD96F63832FBC592D2033 /* XMLKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2197A0A1EF0B244CA772E80BBFA0F759 /* XMLKey.swift */; };
-		82C6C0DCEE65185083671853B7C82132 /* NSLocale+i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81EC3AA461BE9314E6F7B5B23973AAB /* NSLocale+i18n.swift */; };
-		82CBC35F682AA7BFDD6352D8B68118ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		83748F1495CC16C2998E25E88723B86B /* NullBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F4753DED2F1B296B5F4BE228520AC /* NullBox.swift */; };
-		889637217D8FE19C3FF50A2290436554 /* WindChill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FA40F611836786C677277995828C14 /* WindChill.swift */; };
-		89BA62B880A66295CD4688FB2B1F3791 /* PrecipType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB73C760B78328589DB23F4A41C9FD6 /* PrecipType.swift */; };
-		8ABE86F68544F2E3D42CC39CF05C1AB9 /* FetchObservationCollectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA49EC444BB1750B98019EFAEEA42E5 /* FetchObservationCollectionOperation.swift */; };
-		8BF71B99A442DA15A62A1DDA579B5AB0 /* ForecastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A2D5E4677D970BD78AFEF5CC0EB3C0 /* ForecastGroup.swift */; };
-		8C0D0D37F770F5A6EFE5CFA7D35AA7B0 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340DC3877DC21128D3DC35D28022E3F1 /* Period.swift */; };
-		90A9565561666158451C32BE5CFFC118 /* FetchAlertManifestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBFE27DEF5D923A5552B624D86FA075 /* FetchAlertManifestOperation.swift */; };
-		92697C3058D278283B541E4B89B3519B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A258355FEA428A851A056ADD3543B /* Event.swift */; };
-		935225920F6C521D4EC78BFC8A5D6FCE /* UIntBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D9AC6DE42E43C16C2B9AF838FCF15 /* UIntBox.swift */; };
-		94C15656310CCF7B58A42375643DDA43 /* NetworkLoaderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B803A64867B467B299C949ED235D4 /* NetworkLoaderOperation.swift */; };
-		95374F828F7B75325B5694F6184FACE2 /* UnkeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD7D1A2C4CB6223FBA0EA910463425 /* UnkeyedBox.swift */; };
-		9F3E63C823F78E6D37BC12CECDF7AE4E /* DecimalBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E279EA2A289BE552E63AF9B09E7D8 /* DecimalBox.swift */; };
-		9FE2FAB2C372B34D1386565F0F847FDB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D66EA0C0BC244DDC80035AEDF55E1 /* Location.swift */; };
-		A0C62C557510E30CD947E29D70E3585E /* AlertParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462300C5F00D7500508C1D869389F07 /* AlertParameter.swift */; };
-		A48B3F8DCA50BE797AEED2D087FAAF05 /* DoubleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9381DBC548EEDF7CB0AA53C9DD066 /* DoubleBox.swift */; };
-		A4F9A0E397C73FEFA70142BCB3E26ACC /* XMLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D0A21E2AA42A053D7719A123AC452 /* XMLReferencingEncoder.swift */; };
-		A52391082C9BEC6B01B599E714DAD036 /* AlertaArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB2659C0D38BAF3C92C8A433B9CC35 /* AlertaArea.swift */; };
-		A5BDC243FE1810FD2A27E539BCFAFD7C /* SingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261CA297929F07F360B1DD3BD9D07ABA /* SingleValueEncodingContainer.swift */; };
-		A6121F73ABF0A485CA23D9EF44BD26F3 /* KeyDecodingStrategy+ObservationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3C9B38B786D73AC8C91D155F531295 /* KeyDecodingStrategy+ObservationCollection.swift */; };
-		A6268C44C7E2C449C94D6903445B0FD0 /* IdentificationElement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BBFE8C9C09210F8EB3F74B5A61FD9 /* IdentificationElement+Extension.swift */; };
-		A8A710F3A41D942DAB7D39F1B4CEB32C /* FileManager+PathCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA26C55FFF5A8DAD37CC60FA0D796 /* FileManager+PathCreation.swift */; };
-		A9BBFADB6E8A6703463D5FC3A60EFFF4 /* HourlyForecastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAB0B71778EEFDB18748670F44B537 /* HourlyForecastGroup.swift */; };
-		AB6C83EC4465433D4766BED7F0E1974B /* Endpoint+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCC850FEC6DB799D69203883B658AA /* Endpoint+Alerts.swift */; };
-		AFE539F52AD4525847D34472A3F703B6 /* SingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9383A15388BC42263E28E3D36284101 /* SingleValueDecodingContainer.swift */; };
-		B154A7A2DD9B44D498216BC9B79211E8 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5124D6872B2E894EF17215466130F66D /* Host.swift */; };
-		B1A550259F419B27FECF776CAFDD919F /* DataBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F270A26B63585285E7469C8C093ECDA /* DataBox.swift */; };
-		B22057A03266D8A91770C5A6D165D5A1 /* DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1900FF961766F82B5039AB2B2F5D29B /* DataLoading.swift */; };
-		B5E912D6E09652EE3D220E2D77429CDA /* Temperatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3F7C90A581C3E71198919B912DF52 /* Temperatures.swift */; };
-		BA48E850C4D9EC0B3ADF1FA09ACFC17B /* FetchCityPageWeatherSiteDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06EAE0509F05A08AB9711860A6B90FE /* FetchCityPageWeatherSiteDataOperation.swift */; };
-		BCFEE8D73E671F68C760067CA6462708 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F0ECC17DD5BC33FCB3CCB01D008B9 /* ISO8601DateFormatter.swift */; };
-		C0E16A4D7DE1831899BF391E70EC4979 /* FloatBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6808318F8C2A91BEEEAFCEB0357D4F /* FloatBox.swift */; };
-		C1240788D10560662B39BB21AA099E7D /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76545F50835CAD7D4E93B8C2EC03764 /* Language.swift */; };
-		C4A4D31419103EBAB0B253E72B18A1E1 /* XMLCoder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88A5ADDCEFA589D6885DF1CDB0B3047F /* XMLCoder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4CA34D3D7EFD4DA9DA41DC1C929837D /* Pods-Chinook_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1057D1D56A4106C95FDEF616C447E1F /* Pods-Chinook_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C6552920576BE414E4CEB036655CF068 /* SiteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA5F1878A728D6746218FE30A04E2F1 /* SiteData.swift */; };
-		C784AE1AED29B5B1697341AE5D811228 /* Winds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F65CDEF62EA13B10F512F1CEC410F9 /* Winds.swift */; };
-		CC2AE7B79C7E5EFD6DB26269EACE0C94 /* ChoiceBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953AE058AD2FAA54161534979AC91900 /* ChoiceBox.swift */; };
-		CFD4C773609942F8CFD78309219D269B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47255747C2BC563690277DC80B4A5D8 /* NetworkError.swift */; };
-		D16492D73BF49F4ECFC56480830B5B4C /* RegionalNormals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87A458E6C750737CF3BA7A7F8A35BB9 /* RegionalNormals.swift */; };
-		D1C2773AA280B032BF37B53A5A8B095B /* AnyCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114FE0700F15F73DFB8BEB8B21FCA779 /* AnyCodingKey.swift */; };
-		D44F6900542ED4FDB850EF9E6BED4BD5 /* XMLDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17438287BDC20EC4F58716ECB28D0F21 /* XMLDecodable.swift */; };
-		D5F1A1144824266D35F1D770901E6F0A /* Endpoint+SiteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB12A13F6DC06F9F4CD09B204C9D37 /* Endpoint+SiteData.swift */; };
-		D6AAFD3FDADB9808883A9550C1B99474 /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FBD6111168B87F5831C9353C82440 /* HourlyForecast.swift */; };
-		D770E2E196E2F702055B84EFD2A16FE9 /* XMLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE39FAF0047DE8D02862E31F429EC99 /* XMLDecoder.swift */; };
-		E0FC23C3713808902CDA8A76B10A2722 /* Almanac.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F1ACA54B3C1906AEA3E871E7D33D9 /* Almanac.swift */; };
-		E82B74777FE138CA7A8048ADE24F5AFC /* CloudPrecip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95046564112CFBFFC96F01A1D13B552 /* CloudPrecip.swift */; };
-		ECBAC604F832EA1A68FAB860E8F08C9A /* FetchAlertOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4AFAA6C4034976E1EF316434A98D8 /* FetchAlertOperation.swift */; };
-		ED8E6CDABC1FC7EDC6BB02BBAA5F3EA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		EFC4C79381777822FB1B981B20C5788A /* Chinook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC78C26B15792C1C8C387B4090987C4F /* Chinook-dummy.m */; };
-		F487593D7A075658E65D82879C47DD38 /* CurrentConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B67B33446BF28D175E01768217E5A1 /* CurrentConditions.swift */; };
-		F7A21D114C268309A350C345EE72A691 /* DynamicNodeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C0CAEC8375CD2E73DFB990D750B77 /* DynamicNodeDecoding.swift */; };
-		F8F11FCF7EE0424CF175DCFDC3D2660B /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2A880D4A83403F880A482750ABE8D /* Measurement.swift */; };
-		F98447D08C03537C09711BC83181E3C6 /* AbbreviatedForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6E0322434DAC34816553B5D2B7A605 /* AbbreviatedForecast.swift */; };
-		FB64FEB591145C4DBB1AFE516C5A7047 /* BoolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F8A70292AAD4A0342FDF5574ED5BD /* BoolBox.swift */; };
-		FD29699418F5124F1AE4A8A1742EE2BB /* EncodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84764E0C208B69F37085A0FFDB1B0751 /* EncodingErrorExtension.swift */; };
-		FF56ED7A8E37E18E3B0BD185B3B1C0B2 /* Warnings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4521A11EB5FF3096C7338F8C838BEF9 /* Warnings.swift */; };
+		0352290C47102FA14C9489F808FA43F0 /* XMLChoiceEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B719A0EC09E68DC07586E29885A207 /* XMLChoiceEncodingContainer.swift */; };
+		03EDA8FCB51E12BA4433E328833970FA /* SharedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64E680C97EFB1BEA654F4B2A2BDE16 /* SharedBox.swift */; };
+		0A9C4B18CC1C30E519DF8E585A7E53D7 /* SiteData+CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB39D814616FAE58546948962DECF707 /* SiteData+CGPoint.swift */; };
+		0DB8A91C7E98C2B3ABC7D6E26F774429 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9117F2390AF9C1D5B00EB3E95C2858A /* Forecast.swift */; };
+		132834829B2F34BF403AFAF327B87AA7 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE721DB91822FC725854C16BA8B202 /* Alert.swift */; };
+		135EDD548F1ACB2A5DC8521BF16057B4 /* NetworkLoaderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054B803A64867B467B299C949ED235D4 /* NetworkLoaderOperation.swift */; };
+		1A5225EA3B31DE617AF0AFAABCE7D6DD /* UIntBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34D9AC6DE42E43C16C2B9AF838FCF15 /* UIntBox.swift */; };
+		1ACF31A1CA78E49684ACD3BB232650BC /* DateBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2736154D4857604517FC8B98D965A305 /* DateBox.swift */; };
+		1B317CE36EA30133B1605E04D20E0559 /* XMLEncoderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B05C4CC5C38D9047B5598B769657F8 /* XMLEncoderImplementation.swift */; };
+		1D4B5218BCAF36A8477D4F6F18D973AC /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF249D307ABD2CF45A447723C36A81C /* Name.swift */; };
+		1D5FB4DF78911290D27DFEB47F5F4DCE /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3E1E0B7D5CC38F79582BA8066B42F4 /* Wind.swift */; };
+		1EA52F720B9B025B63BA3879C9CCA6DA /* Chinook-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5372C25745E55962357D8A3923B83C8C /* Chinook-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F0EFBED78475EF2A59BCAADA0279621 /* FetchAlertOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4AFAA6C4034976E1EF316434A98D8 /* FetchAlertOperation.swift */; };
+		22238E1CCC91B2DE5FEA19AD00962B5E /* AnyCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114FE0700F15F73DFB8BEB8B21FCA779 /* AnyCodingKey.swift */; };
+		22865BEDFC888384568A172299D8A277 /* XMLKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2197A0A1EF0B244CA772E80BBFA0F759 /* XMLKey.swift */; };
+		2316A4E89512BF28BFAC8BA5153B7D4A /* UnkeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD7D1A2C4CB6223FBA0EA910463425 /* UnkeyedBox.swift */; };
+		23A0206BBD4A95244E232278C8F73CD1 /* Winds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F65CDEF62EA13B10F512F1CEC410F9 /* Winds.swift */; };
+		248A79FCDBACF47F3DB6A0DD9A611F2B /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA0F381265E0F430D472933430C75E7 /* DateTime.swift */; };
+		25FBB21D70AE1120D0186A1F46CC1A32 /* XMLEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB54D83EDF3F008BD13C33A53F4D84F /* XMLEncodingStorage.swift */; };
+		279F65AF2052FFED21E1D683CA9F26AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		281F13B80C1A6EADD197B9075E17B27A /* PrecipType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB73C760B78328589DB23F4A41C9FD6 /* PrecipType.swift */; };
+		2B27A471386C638E49ECF8E7D02D6DD6 /* DecodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27F28D0703F11790E0614684473CAF /* DecodingErrorExtension.swift */; };
+		2C21FBF6D8BFAADEFAD790D8E8D2C8D2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6D66EA0C0BC244DDC80035AEDF55E1 /* Location.swift */; };
+		2D59D6CBE7276040195F04A637C4CA94 /* YesterdayConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4FC726C80BBB8061CB401521DB030 /* YesterdayConditions.swift */; };
+		2ED4CF29F478CC41C3B29B1C5BF11923 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2A880D4A83403F880A482750ABE8D /* Measurement.swift */; };
+		2F4E8331DF7E642049874DFE5538784F /* BoolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F8A70292AAD4A0342FDF5574ED5BD /* BoolBox.swift */; };
+		2F7D7C180A7E44A476A68B78F98304B8 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76545F50835CAD7D4E93B8C2EC03764 /* Language.swift */; };
+		30CAD50AE42FF948111080FA44D7AC27 /* AlertGeocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998797CE302C8284BF37472F79AEFAF2 /* AlertGeocode.swift */; };
+		30D32D95DB1B8FE582C99FE28D09C422 /* DataBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F270A26B63585285E7469C8C093ECDA /* DataBox.swift */; };
+		31FA12C678C911E49787FBD5A8D2BF55 /* CurrentConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B67B33446BF28D175E01768217E5A1 /* CurrentConditions.swift */; };
+		3219509B8BB15FE9A0FF996F2737B71D /* Pods-Chinook_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79DC0BF5DA1B440DFD17FBDDA1DBA5EA /* Pods-Chinook_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		336622CDEA2FF412DFB02D52B98EB186 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680A258355FEA428A851A056ADD3543B /* Event.swift */; };
+		376E89F5E43A7FEDFB4BB8C22F0E8869 /* FetchAlertManifestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBFE27DEF5D923A5552B624D86FA075 /* FetchAlertManifestOperation.swift */; };
+		38E4093716D0748DFF64A7BE5BFBFE3F /* XMLCoder-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88A5ADDCEFA589D6885DF1CDB0B3047F /* XMLCoder-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EAFA001BAD9D1D1E142BB12506E4897 /* KeyDecodingStrategy+ObservationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3C9B38B786D73AC8C91D155F531295 /* KeyDecodingStrategy+ObservationCollection.swift */; };
+		3ED2A935D3EA741A8F562B7305DC026D /* NetworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB32DD1E535E1C2771C188F28CCA7D /* NetworkLoader.swift */; };
+		3EE1B43D08DC866A8B8E41A82E6B012D /* Chinook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC78C26B15792C1C8C387B4090987C4F /* Chinook-dummy.m */; };
+		3F9EEF31AA0EC7B35225EBCF0717A463 /* DiskLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC30FD50FBA0A37FD273E13073125D /* DiskLoader.swift */; };
+		43973A19F28C8DC2DE848B0E8AD32DAE /* ChoiceBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953AE058AD2FAA54161534979AC91900 /* ChoiceBox.swift */; };
+		4738205DF6349CE4003F60E107ACB9A5 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340DC3877DC21128D3DC35D28022E3F1 /* Period.swift */; };
+		4A1598A76BBA326522449F80057C9818 /* Endpoint+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBB10F7D18000A2ACF3ADEC7B41A841 /* Endpoint+Caching.swift */; };
+		4CBFD8D19386FE3C9A53B027F7FF9CE6 /* IdentificationElement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BBFE8C9C09210F8EB3F74B5A61FD9 /* IdentificationElement+Extension.swift */; };
+		4F1E1610507087171801E425C5B41FD5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47255747C2BC563690277DC80B4A5D8 /* NetworkError.swift */; };
+		4F61EC27A6D5E16A3E005AE36930A986 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363DE60D4D4A29A2CA9DDAD9835ED22F /* String+Extensions.swift */; };
+		4F8D603F0690AF8C2D0E987E9B1847AF /* XMLDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE59A29501BD21004B6CB19F1D86324 /* XMLDecodingStorage.swift */; };
+		504DA7324FD595C84862874E1FAE8CA9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB7E8AEAE5051892D3FA4FA40C5F3B3 /* String+Extensions.swift */; };
+		5375DE4E8E3DF5583F0B70F5E534AE12 /* XMLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D0A21E2AA42A053D7719A123AC452 /* XMLReferencingEncoder.swift */; };
+		546D2379A18F2216EDF28151333280C0 /* DynamicNodeEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E72984DD50180BF852CEE462B40BF15 /* DynamicNodeEncoding.swift */; };
+		59CAEA6522FAC66ADFBCD6F967C92D1D /* XMLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D514F2E8560128F250682D9AFE352E0 /* XMLUnkeyedDecodingContainer.swift */; };
+		59F7A7D65A930488DE3D016473288FCC /* DoubleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC9381DBC548EEDF7CB0AA53C9DD066 /* DoubleBox.swift */; };
+		5A061FC1E55C18F203CB08D60AB1698D /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4A12991096E1FEA1F138B319209B0 /* Station.swift */; };
+		6227546E24583EDB0337EC7DC74C0B77 /* FetchObservationCollectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA49EC444BB1750B98019EFAEEA42E5 /* FetchObservationCollectionOperation.swift */; };
+		633904DA7919D547F7EF8AFAD5172C6A /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274243D71713DA9ADC82F920CFB855F8 /* Direction.swift */; };
+		638FB3145BD2E62249B55B1EAE479685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		6397FBDFF98331724171D80111001BF0 /* AbbreviatedForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6E0322434DAC34816553B5D2B7A605 /* AbbreviatedForecast.swift */; };
+		64A7B6D5ADF0019E78C171F706B6A7D1 /* SiteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA5F1878A728D6746218FE30A04E2F1 /* SiteData.swift */; };
+		66BD641133C0208E9A11F487A463B4F7 /* Warnings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4521A11EB5FF3096C7338F8C838BEF9 /* Warnings.swift */; };
+		68ECF9990DA085C0A8D61F54E70297C8 /* IntBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEC502D0996912E06258A43833D9BE4 /* IntBox.swift */; };
+		6948DF89CA08D9561BFFDBE5952BCAAB /* DiskLoaderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECB43AA8426BC682EA3784D0B7DCC6 /* DiskLoaderOperation.swift */; };
+		69C97DD87F54CB4331C0CC5E1BC10CF3 /* RiseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED7C1E41C747BA979828E79881B599 /* RiseSet.swift */; };
+		6BD6B41560978B15F8120F2BFE88E888 /* DynamicNodeDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9C0CAEC8375CD2E73DFB990D750B77 /* DynamicNodeDecoding.swift */; };
+		6F35737DAB71BBE6F9DC257749C1F9BC /* CloudPrecip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95046564112CFBFFC96F01A1D13B552 /* CloudPrecip.swift */; };
+		6F81E1E19EBC2219674D027AC36484DA /* FloatBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6808318F8C2A91BEEEAFCEB0357D4F /* FloatBox.swift */; };
+		7079BB6AC3DBA8ADEA45ECF0118C9F01 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B5168BB317C6C4299676F068B9CDEA /* String+Substring.swift */; };
+		722717957A2FE95A2B031EF677B4B788 /* SingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9383A15388BC42263E28E3D36284101 /* SingleValueDecodingContainer.swift */; };
+		72EEF6C976365A90D3C9689822C92594 /* RegionalNormals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87A458E6C750737CF3BA7A7F8A35BB9 /* RegionalNormals.swift */; };
+		73545ED607762FF89E8339DAB54C333D /* XMLChoiceDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548521CF36C3C8FB276A51BDBF6F612E /* XMLChoiceDecodingContainer.swift */; };
+		73A9D0E9E18D98419628BED467A5C2EA /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD28C0A01EBA026FE8E42F6EBDF21024 /* Site.swift */; };
+		7460CF83F9B7EA058183B765CDC19451 /* NSLocale+i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81EC3AA461BE9314E6F7B5B23973AAB /* NSLocale+i18n.swift */; };
+		777A6BDFEB0201AF96BB7E689AF63AFC /* AlertaArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEB2659C0D38BAF3C92C8A433B9CC35 /* AlertaArea.swift */; };
+		788A8A00F640B36D0C2E4718E691297C /* ForecastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A2D5E4677D970BD78AFEF5CC0EB3C0 /* ForecastGroup.swift */; };
+		7ACB0053E5B9DE001B7CD43C4A900A93 /* IconCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B16CE841E1F1F3C054D657A9F2C212 /* IconCode.swift */; };
+		7B5B9EDE0E0BB2DEC3268E76CB7F4E90 /* Pods-Chinook_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BF57C4F613706FFB481E5CAC7104FE /* Pods-Chinook_Tests-dummy.m */; };
+		7CFCA47EF5016961414CF0422EBC72E0 /* HourlyForecastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAB0B71778EEFDB18748670F44B537 /* HourlyForecastGroup.swift */; };
+		7D5CD3BBC4DB8C166298357D190E5E71 /* SingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261CA297929F07F360B1DD3BD9D07ABA /* SingleValueEncodingContainer.swift */; };
+		7DC97A88B22C05C88D55F3705020A213 /* WindChill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FA40F611836786C677277995828C14 /* WindChill.swift */; };
+		7DF02E593030883F39949DBC41E26DFA /* KeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831996D70D085C9750367838F7D3D4E9 /* KeyedBox.swift */; };
+		828C0A604E32E5969123629C617C520A /* Alert+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833F9890365E614C4657AD841C4BCBAA /* Alert+Contains.swift */; };
+		842A16AAF996CC3786E2779434464539 /* Endpoint+SiteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CB12A13F6DC06F9F4CD09B204C9D37 /* Endpoint+SiteData.swift */; };
+		85BB959CA6F66DDD9A8F19F9F9F57468 /* XMLDecoderImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A2DBB6E30AD2DDCD622B24D838D70A /* XMLDecoderImplementation.swift */; };
+		865D4F7D33E4CA374A3E6EB278297122 /* URLBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F07B4914B11637849907AC0A513137 /* URLBox.swift */; };
+		874653BD0BDF6963B80471DD2FD7B9FC /* Date+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295B6BB4AB77CDFDEEE8ADF2EEF4726C /* Date+Sugar.swift */; };
+		8B884FE6005C8766F3F4B76CF3033079 /* Advisory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCCE7D7680F7BAFAF98AD07C748D00D /* Advisory.swift */; };
+		8D9E84E125B024435ED2AE8A68E00783 /* FileManager+PathCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9CA26C55FFF5A8DAD37CC60FA0D796 /* FileManager+PathCreation.swift */; };
+		8E37F8B8C530D66D913AA414D98785F6 /* AlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2A69583B20EBCFF8F437406BE30BC /* AlertInfo.swift */; };
+		8FBAD6925AD08CC2112600D280205D04 /* XMLHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC564A11C02234665D30D1CEAA24ABB7 /* XMLHeader.swift */; };
+		90C6D78552C83705CA0ABE13FEC3B33D /* NullBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133F4753DED2F1B296B5F4BE228520AC /* NullBox.swift */; };
+		92B5E06FE22FDE53C4A0A7DC592B52CC /* Host+Datamart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FF5B41649011E85E558657E52C6A82 /* Host+Datamart.swift */; };
+		936B44395E05CC3CAA546B076B118E39 /* EncodingErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84764E0C208B69F37085A0FFDB1B0751 /* EncodingErrorExtension.swift */; };
+		93A4D388AD0835F7F6C9182F55351CCB /* Metatypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316515D2761014FA38E8CB6F1AAA1994 /* Metatypes.swift */; };
+		970679C71E7FA10F9590464FC8A8DDC2 /* FetchCityPageWeatherSiteDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06EAE0509F05A08AB9711860A6B90FE /* FetchCityPageWeatherSiteDataOperation.swift */; };
+		9842F129948A5F20B0EA4D3CE58D9335 /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DE17E3C4A622403766E0FB8FBF89E /* ConcurrentOperation.swift */; };
+		986EA1A10DF0B668ED6DC1AF6E4F1A40 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5124D6872B2E894EF17215466130F66D /* Host.swift */; };
+		99979ED56632BE63CFFC491EA10885A9 /* Pods-Chinook_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B82339BEB100D4AD89AFF3759B412DE2 /* Pods-Chinook_Example-dummy.m */; };
+		9A07B09A51287972BE045318BB851229 /* XMLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15268C125C926BBFE0284F59523859AC /* XMLKeyedDecodingContainer.swift */; };
+		9B30A30294465DA0361A4594A4DBC0F7 /* Almanac.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F1ACA54B3C1906AEA3E871E7D33D9 /* Almanac.swift */; };
+		A02C76D03A16352B67981F3EB8988397 /* XMLChoiceCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C6432E6349AF1BECB1F60791F5D08 /* XMLChoiceCodingKey.swift */; };
+		A3E18DA1E1ACDDAB0E367DC0581B9529 /* KeyedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E128D70F98E2C801D99A8D8C103804B /* KeyedStorage.swift */; };
+		A51123097EAF28F77158B70B26648219 /* XMLKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B522800F2F821552789C3642CAD5345B /* XMLKeyedEncodingContainer.swift */; };
+		A57143824666DFDD12F089521333D115 /* DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1900FF961766F82B5039AB2B2F5D29B /* DataLoading.swift */; };
+		A908730E3594635BA0505B59CA61B51B /* SingleKeyedBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9965119DB991AEA4831DAB95CA13976C /* SingleKeyedBox.swift */; };
+		ABE71F83C32A1BC58BA5A08CFF8D81C0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F5CB6922AB7AE69DA215C036EB82D5 /* Endpoint.swift */; };
+		AD897DDD7F4FA1932C478FF65576AA00 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034F0ECC17DD5BC33FCB3CCB01D008B9 /* ISO8601DateFormatter.swift */; };
+		AE2B18DFD1DFB5B9C3FC9794A3B8BE83 /* XMLStackParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4032C6F4608A38645A2586A9D067246 /* XMLStackParser.swift */; };
+		B08D63EBBC904BB4065D749B2BC7CCF3 /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6FBD6111168B87F5831C9353C82440 /* HourlyForecast.swift */; };
+		B33260B932D79BAA63760B2A2E7B11E3 /* Pods-Chinook_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1057D1D56A4106C95FDEF616C447E1F /* Pods-Chinook_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B36E188C0FF26C74DDDAD345A9AA6ADD /* CompletableOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BABC511D9CF711A11CD67FD374602C7 /* CompletableOperationQueue.swift */; };
+		B45B9715BBCE0B2A01DD2793AE3C8B02 /* StringBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A60B5B782DE788A6BD619074ACCF8 /* StringBox.swift */; };
+		B77F6A57A223633DF7BB460BF2DE91B5 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62021CA734F86FF8520016C5AF41AE77 /* DataLoader.swift */; };
+		B7FFE103444DAB45A93C5124D17042A4 /* StationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A81B58B43939F473854B35BD744DF76 /* StationCode.swift */; };
+		C087798CDEA043441619F68E45162FF9 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C692445CDEFD14D1925E6F0C74E5E02 /* Box.swift */; };
+		C318697F2C7E215B6D9C1BD79FAFAFDD /* AlertParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2462300C5F00D7500508C1D869389F07 /* AlertParameter.swift */; };
+		C60516057A6BAE7DD432E9B9A24A569B /* DecimalBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5E279EA2A289BE552E63AF9B09E7D8 /* DecimalBox.swift */; };
+		C66A6174298C8923405EBCCDE5480625 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F920024797F874793DF7F126F02BA905 /* DataResponse.swift */; };
+		D54CE5F5A934FA6FC382E2C363483F87 /* Endpoint+ObservationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E93414F14982171DDB3A9BDC16D806 /* Endpoint+ObservationCollection.swift */; };
+		DA035C02FB08FE068D69AACAF4A24BB6 /* XMLDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17438287BDC20EC4F58716ECB28D0F21 /* XMLDecodable.swift */; };
+		DA141B59C53B90C512DCB53348C846AC /* FetchCityPageWeatherSiteListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95C91B1A91B489FE6059173D21B4FC8 /* FetchCityPageWeatherSiteListOperation.swift */; };
+		DC37C66835F9B640BB248B175502AF5A /* FetchAlertManifestsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781DE7B3B7C71A5D98C88CC8105F340 /* FetchAlertManifestsOperation.swift */; };
+		E01458C3F9F022E9B5EA3411BD85228A /* XMLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE39FAF0047DE8D02862E31F429EC99 /* XMLDecoder.swift */; };
+		E4010CC6426E4C4EF4C972C58368D204 /* Endpoint+SiteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5D3C972DB77A19B7D5B02FC3A8123 /* Endpoint+SiteList.swift */; };
+		E5D92805908BB9422C3F4ABA44639A26 /* Temperatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3F7C90A581C3E71198919B912DF52 /* Temperatures.swift */; };
+		E61ECDD98722DA6C56E98C4B0009FA4B /* ObservationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8FA140DEFFEF7638B6C0503C006AD /* ObservationCollection.swift */; };
+		E64661B12482DE204EFB5E05413E21C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		E7CF171D9489BCA83C328AB7A561170A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		EEE0BDD70D87541DDA28B32401D648F0 /* Pressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88B246594B2BCACD11A850D02983B07 /* Pressure.swift */; };
+		F4F2BD8CDAAE4EE7F34B1030BAD49ABD /* ValueBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4715E0E7F98BFE5318A87E563708367 /* ValueBox.swift */; };
+		F6CB03B138C1E26788CB1CBFD149CCC0 /* FetchAdvisoriesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E14CC9D475EBC6519A6147B2B8137AE /* FetchAdvisoriesOperation.swift */; };
+		F6CB5262175298BA7DACBABD7C045D92 /* XMLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DBB3CBFAC5BA78536B9C537C65C75 /* XMLEncoder.swift */; };
+		F7DE7CAF6D66DE10FC8DAA2C7A68C4F2 /* SiteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E46447E6C3853E8EFB1D52A021A809 /* SiteList.swift */; };
+		F9586C3D91A487220F864F1F8B37843B /* Province.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7008ED6C9D3F3659B443F9B7DE6B3128 /* Province.swift */; };
+		F960B3C4BDB86B4824D8EF41D0126A20 /* XMLUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7B0A65C5B155226571BB3231E7D30A /* XMLUnkeyedEncodingContainer.swift */; };
+		FA7601BFE3DD81941DB09E91C377D486 /* Endpoint+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCC850FEC6DB799D69203883B658AA /* Endpoint+Alerts.swift */; };
+		FBE65A0FCBC7193A4F22630AAD33BDDC /* Precipitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D6DAE65602B5D1BAE8319814A7291 /* Precipitation.swift */; };
+		FCE7B9F39AEA91C3788F9314C15CAB2C /* XMLCoderElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4450B8653AD5844D4E989DE7AE4465 /* XMLCoderElement.swift */; };
+		FFFB9457AB0A88464DD89691E9603398 /* XMLCoder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA64C77867A8E2B72A91AEA8EAD8EE2 /* XMLCoder-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9B30760B7520991F40ABBB6A921680ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49DD06EC36198694EE925791D3CD8744;
-			remoteInfo = Chinook;
-		};
-		C073F3428D423230BA4A32C46BBC90B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1BB0F53974866806E6D8A741D70028EE;
-			remoteInfo = "Pods-Chinook_Example";
-		};
-		D740C462DEEFF1D1ACB7BAE3B13DDB90 /* PBXContainerItemProxy */ = {
+		1EC411E797CE73C0F2B5D516EE268A90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E1753B4FA19C5F745ADF56B844ACAB36;
 			remoteInfo = XMLCoder;
 		};
-		F4C0775337B9F738CD9DCA36CA371B4C /* PBXContainerItemProxy */ = {
+		505FE08A023047E6A1CC649452B1FCCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49DD06EC36198694EE925791D3CD8744;
+			remoteInfo = Chinook;
+		};
+		6A1DABE89263E4C428BE97D21430FC43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BB0F53974866806E6D8A741D70028EE;
+			remoteInfo = "Pods-Chinook_Example";
+		};
+		C193677C4D5FFC6FB436B211806CA3A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -213,14 +213,15 @@
 		340DC3877DC21128D3DC35D28022E3F1 /* Period.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		363DE60D4D4A29A2CA9DDAD9835ED22F /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Sources/XMLCoder/Auxiliaries/String+Extensions.swift"; sourceTree = "<group>"; };
 		37B4A12991096E1FEA1F138B319209B0 /* Station.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		39E46447E6C3853E8EFB1D52A021A809 /* SiteList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SiteList.swift; sourceTree = "<group>"; };
 		3A81B58B43939F473854B35BD744DF76 /* StationCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StationCode.swift; sourceTree = "<group>"; };
 		3AECB43AA8426BC682EA3784D0B7DCC6 /* DiskLoaderOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DiskLoaderOperation.swift; sourceTree = "<group>"; };
 		3C4450B8653AD5844D4E989DE7AE4465 /* XMLCoderElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLCoderElement.swift; path = Sources/XMLCoder/Auxiliaries/XMLCoderElement.swift; sourceTree = "<group>"; };
 		3CA0F381265E0F430D472933430C75E7 /* DateTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
 		3CE71930D3F73670947086B6B8ACA03E /* Pods-Chinook_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chinook_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3F02B25075D6C5D2467BB73A614809C7 /* Pods_Chinook_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chinook_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMLCoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F02B25075D6C5D2467BB73A614809C7 /* Pods-Chinook_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Chinook_Tests"; path = Pods_Chinook_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XMLCoder; path = XMLCoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEB2659C0D38BAF3C92C8A433B9CC35 /* AlertaArea.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertaArea.swift; sourceTree = "<group>"; };
 		44E93414F14982171DDB3A9BDC16D806 /* Endpoint+ObservationCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Endpoint+ObservationCollection.swift"; sourceTree = "<group>"; };
 		4AB2A69583B20EBCFF8F437406BE30BC /* AlertInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
@@ -232,10 +233,10 @@
 		58B719A0EC09E68DC07586E29885A207 /* XMLChoiceEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLChoiceEncodingContainer.swift; path = Sources/XMLCoder/Encoder/XMLChoiceEncodingContainer.swift; sourceTree = "<group>"; };
 		58FAB0B71778EEFDB18748670F44B537 /* HourlyForecastGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HourlyForecastGroup.swift; sourceTree = "<group>"; };
 		5CB54D83EDF3F008BD13C33A53F4D84F /* XMLEncodingStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLEncodingStorage.swift; path = Sources/XMLCoder/Encoder/XMLEncodingStorage.swift; sourceTree = "<group>"; };
-		5DF2FDAD281DC46F86F4626C2B8538AD /* Chinook.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Chinook.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5DF2FDAD281DC46F86F4626C2B8538AD /* Chinook.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Chinook.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5E128D70F98E2C801D99A8D8C103804B /* KeyedStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedStorage.swift; path = Sources/XMLCoder/Auxiliaries/KeyedStorage.swift; sourceTree = "<group>"; };
 		5EE39FAF0047DE8D02862E31F429EC99 /* XMLDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLDecoder.swift; path = Sources/XMLCoder/Decoder/XMLDecoder.swift; sourceTree = "<group>"; };
-		61CB6C7B04DC8BC2E0318D4359709997 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		61CB6C7B04DC8BC2E0318D4359709997 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		62021CA734F86FF8520016C5AF41AE77 /* DataLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		62F5CB6922AB7AE69DA215C036EB82D5 /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		62FA40F611836786C677277995828C14 /* WindChill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WindChill.swift; sourceTree = "<group>"; };
@@ -245,7 +246,6 @@
 		6DB73C760B78328589DB23F4A41C9FD6 /* PrecipType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrecipType.swift; sourceTree = "<group>"; };
 		7008ED6C9D3F3659B443F9B7DE6B3128 /* Province.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Province.swift; sourceTree = "<group>"; };
 		7217B47C1B55162C4E2ECF678D4661D1 /* Chinook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Chinook-prefix.pch"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7348F189CDD6A87EF81C85179EEB493B /* Chinook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Chinook.release.xcconfig; sourceTree = "<group>"; };
 		74B16CE841E1F1F3C054D657A9F2C212 /* IconCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IconCode.swift; sourceTree = "<group>"; };
 		78176AC3B9130736AB5CB3257819C825 /* Pods-Chinook_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chinook_Example-Info.plist"; sourceTree = "<group>"; };
@@ -273,13 +273,13 @@
 		90957FD1F60F286FF073CAB0BA9CC6C5 /* Pods-Chinook_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chinook_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		90C580158A23DF5D5EAEFCA6E1FFCA52 /* Chinook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Chinook.debug.xcconfig; sourceTree = "<group>"; };
 		91F65CDEF62EA13B10F512F1CEC410F9 /* Winds.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Winds.swift; sourceTree = "<group>"; };
-		94CE2013093978DC8E8C248CB5E53460 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		94CE2013093978DC8E8C248CB5E53460 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		953AE058AD2FAA54161534979AC91900 /* ChoiceBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChoiceBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/ChoiceBox.swift; sourceTree = "<group>"; };
 		9965119DB991AEA4831DAB95CA13976C /* SingleKeyedBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleKeyedBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/SingleKeyedBox.swift; sourceTree = "<group>"; };
 		998797CE302C8284BF37472F79AEFAF2 /* AlertGeocode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlertGeocode.swift; sourceTree = "<group>"; };
 		9BD6F02AC5D7A5F294CA2F2992E6AEB4 /* XMLCoder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMLCoder.debug.xcconfig; sourceTree = "<group>"; };
 		9BE59A29501BD21004B6CB19F1D86324 /* XMLDecodingStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLDecodingStorage.swift; path = Sources/XMLCoder/Decoder/XMLDecodingStorage.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EDE721DB91822FC725854C16BA8B202 /* Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		9FBB10F7D18000A2ACF3ADEC7B41A841 /* Endpoint+Caching.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Endpoint+Caching.swift"; sourceTree = "<group>"; };
 		A2F07B4914B11637849907AC0A513137 /* URLBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLBox.swift; path = Sources/XMLCoder/Auxiliaries/Box/URLBox.swift; sourceTree = "<group>"; };
@@ -326,14 +326,14 @@
 		E4032C6F4608A38645A2586A9D067246 /* XMLStackParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XMLStackParser.swift; path = Sources/XMLCoder/Auxiliaries/XMLStackParser.swift; sourceTree = "<group>"; };
 		E5C2A880D4A83403F880A482750ABE8D /* Measurement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 		E76545F50835CAD7D4E93B8C2EC03764 /* Language.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Chinook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Chinook; path = Chinook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6E0322434DAC34816553B5D2B7A605 /* AbbreviatedForecast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AbbreviatedForecast.swift; sourceTree = "<group>"; };
 		EE9CA26C55FFF5A8DAD37CC60FA0D796 /* FileManager+PathCreation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "FileManager+PathCreation.swift"; sourceTree = "<group>"; };
 		F06EAE0509F05A08AB9711860A6B90FE /* FetchCityPageWeatherSiteDataOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FetchCityPageWeatherSiteDataOperation.swift; sourceTree = "<group>"; };
 		F1057D1D56A4106C95FDEF616C447E1F /* Pods-Chinook_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Chinook_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F18C321324BEB8F1E51677D3B63FFC61 /* Pods-Chinook_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chinook_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		F9117F2390AF9C1D5B00EB3E95C2858A /* Forecast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
-		F9167B0C72A351739FAF8196420D7E42 /* Pods_Chinook_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chinook_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9167B0C72A351739FAF8196420D7E42 /* Pods-Chinook_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Chinook_Example"; path = Pods_Chinook_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F920024797F874793DF7F126F02BA905 /* DataResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		F9383A15388BC42263E28E3D36284101 /* SingleValueDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueDecodingContainer.swift; path = Sources/XMLCoder/Decoder/SingleValueDecodingContainer.swift; sourceTree = "<group>"; };
 		F9B67B33446BF28D175E01768217E5A1 /* CurrentConditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CurrentConditions.swift; sourceTree = "<group>"; };
@@ -342,35 +342,35 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00B4D1C67CA2EFF7C3DF81A31879D271 /* Frameworks */ = {
+		12EC009544DAFD3C0FFCCFCF9B247A7E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76CDA658EEC64CBA312156B67F7B549E /* Foundation.framework in Frameworks */,
+				638FB3145BD2E62249B55B1EAE479685 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		034C14BAB6B21326462B9F254A8B2EE6 /* Frameworks */ = {
+		85D8DB1258B1CA36BAA0AA518C925986 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11DB21B7D6B4EEE78130A14CF68DDC28 /* Foundation.framework in Frameworks */,
+				E64661B12482DE204EFB5E05413E21C9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		465194F1BEBBDD4CFF88A7AC763045C0 /* Frameworks */ = {
+		D53E29B8A6D0EACFFD6FD228AFDB4EB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED8E6CDABC1FC7EDC6BB02BBAA5F3EA6 /* Foundation.framework in Frameworks */,
+				279F65AF2052FFED21E1D683CA9F26AE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80C07878C577CAB8DF250B4F08F04F65 /* Frameworks */ = {
+		D5472E243FBA938A3F3D0A4203EC05EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82CBC35F682AA7BFDD6352D8B68118ED /* Foundation.framework in Frameworks */,
+				E7CF171D9489BCA83C328AB7A561170A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +384,7 @@
 				10AB32DD1E535E1C2771C188F28CCA7D /* NetworkLoader.swift */,
 				4ECC35B3EE0CAC17424759B98E202353 /* Hosts */,
 			);
+			name = Network;
 			path = Network;
 			sourceTree = "<group>";
 		};
@@ -438,6 +439,7 @@
 			children = (
 				B3CC30FD50FBA0A37FD273E13073125D /* DiskLoader.swift */,
 			);
+			name = Disk;
 			path = Disk;
 			sourceTree = "<group>";
 		};
@@ -498,6 +500,7 @@
 				5124D6872B2E894EF17215466130F66D /* Host.swift */,
 				26FF5B41649011E85E558657E52C6A82 /* Host+Datamart.swift */,
 			);
+			name = Hosts;
 			path = Hosts;
 			sourceTree = "<group>";
 		};
@@ -506,15 +509,8 @@
 			children = (
 				AA7BBFE8C9C09210F8EB3F74B5A61FD9 /* IdentificationElement+Extension.swift */,
 			);
+			name = "Model Extensions";
 			path = "Model Extensions";
-			sourceTree = "<group>";
-		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		779D1497E1BC9AFCCB5A7B1EF0F11871 /* Data */ = {
@@ -524,6 +520,7 @@
 				E1900FF961766F82B5039AB2B2F5D29B /* DataLoading.swift */,
 				F920024797F874793DF7F126F02BA905 /* DataResponse.swift */,
 			);
+			name = Data;
 			path = Data;
 			sourceTree = "<group>";
 		};
@@ -607,10 +604,10 @@
 		B6829E8325543E644C7910089A5686A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook.framework */,
-				F9167B0C72A351739FAF8196420D7E42 /* Pods_Chinook_Example.framework */,
-				3F02B25075D6C5D2467BB73A614809C7 /* Pods_Chinook_Tests.framework */,
-				3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder.framework */,
+				E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook */,
+				F9167B0C72A351739FAF8196420D7E42 /* Pods-Chinook_Example */,
+				3F02B25075D6C5D2467BB73A614809C7 /* Pods-Chinook_Tests */,
+				3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -666,6 +663,7 @@
 				0A7B0A65C5B155226571BB3231E7D30A /* XMLUnkeyedEncodingContainer.swift */,
 				4B6A78BDB8EDAA28C0740EA8D22216EA /* Support Files */,
 			);
+			name = XMLCoder;
 			path = XMLCoder;
 			sourceTree = "<group>";
 		};
@@ -684,7 +682,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -746,7 +744,16 @@
 				114FE0700F15F73DFB8BEB8B21FCA779 /* AnyCodingKey.swift */,
 				1E3C9B38B786D73AC8C91D155F531295 /* KeyDecodingStrategy+ObservationCollection.swift */,
 			);
+			name = "Decoding Strategies";
 			path = "Decoding Strategies";
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		FF7839864CA78C55DDA6FF3EA82C529F /* Pods */ = {
@@ -760,35 +767,35 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2A9F13B5665F1BD2F25F722E5CCE2C0A /* Headers */ = {
+		1DF18A202A7A8AF8AF490118440743AA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D8EBFCA6AC45ECCDCA3FFCFDE05B80 /* Chinook-umbrella.h in Headers */,
+				1EA52F720B9B025B63BA3879C9CCA6DA /* Chinook-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8CA7801B275D18000E8E603C86362518 /* Headers */ = {
+		429EC669668FCE852B2EE30ECB36EBD2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4CA34D3D7EFD4DA9DA41DC1C929837D /* Pods-Chinook_Tests-umbrella.h in Headers */,
+				38E4093716D0748DFF64A7BE5BFBFE3F /* XMLCoder-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD84D28EA6ECEEFE22C7955F0E2089AA /* Headers */ = {
+		8D728A6730B81B6807B6F692CADE2809 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69289F42633F54BCF4278AD74594F031 /* Pods-Chinook_Example-umbrella.h in Headers */,
+				3219509B8BB15FE9A0FF996F2737B71D /* Pods-Chinook_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEAEB86AE229E9CFDA582495932EF8BC /* Headers */ = {
+		9EAF2A771EC8774B4BF044B4A67C97DC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4A4D31419103EBAB0B253E72B18A1E1 /* XMLCoder-umbrella.h in Headers */,
+				B33260B932D79BAA63760B2A2E7B11E3 /* Pods-Chinook_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,51 +804,51 @@
 /* Begin PBXNativeTarget section */
 		1BB0F53974866806E6D8A741D70028EE /* Pods-Chinook_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9D1C537BD6B74557428286CA257533E /* Build configuration list for PBXNativeTarget "Pods-Chinook_Example" */;
+			buildConfigurationList = 4BCEE024B4C5F9F13D9BE9CF1AE2AAE0 /* Build configuration list for PBXNativeTarget "Pods-Chinook_Example" */;
 			buildPhases = (
-				AD84D28EA6ECEEFE22C7955F0E2089AA /* Headers */,
-				BF3FE8B031AA26EB9E4F5F7F21EE2C1C /* Sources */,
-				465194F1BEBBDD4CFF88A7AC763045C0 /* Frameworks */,
-				4E89DB868BA4C266D38DCF89FFAADCBF /* Resources */,
+				8D728A6730B81B6807B6F692CADE2809 /* Headers */,
+				0B527B4C0A65E7162A83542E8C072D00 /* Sources */,
+				D5472E243FBA938A3F3D0A4203EC05EF /* Frameworks */,
+				B61E76235D0B42CE45975C742D88B09C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				17F3B5ED3B6EE6EC3F391A224A81E668 /* PBXTargetDependency */,
-				42AEF73806671A74D6AA6CCF758FBCEE /* PBXTargetDependency */,
+				3062C99EA3ABBB1E85A68BF040A0D564 /* PBXTargetDependency */,
+				FD9436E384ECB5EBF8D7EF2E8C807EB7 /* PBXTargetDependency */,
 			);
 			name = "Pods-Chinook_Example";
 			productName = Pods_Chinook_Example;
-			productReference = F9167B0C72A351739FAF8196420D7E42 /* Pods_Chinook_Example.framework */;
+			productReference = F9167B0C72A351739FAF8196420D7E42 /* Pods-Chinook_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		49DD06EC36198694EE925791D3CD8744 /* Chinook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 345A2511363006FD8A692FEE32C4738F /* Build configuration list for PBXNativeTarget "Chinook" */;
+			buildConfigurationList = A85EDF34559BCD912670B86E898BD73B /* Build configuration list for PBXNativeTarget "Chinook" */;
 			buildPhases = (
-				2A9F13B5665F1BD2F25F722E5CCE2C0A /* Headers */,
-				49658CFE2E6527C8598D019BE1B82605 /* Sources */,
-				034C14BAB6B21326462B9F254A8B2EE6 /* Frameworks */,
-				37AFFFC2993AFD1A681C765D48A14949 /* Resources */,
+				1DF18A202A7A8AF8AF490118440743AA /* Headers */,
+				0E1ACEF584B3EA5369E416EA857BD11E /* Sources */,
+				D53E29B8A6D0EACFFD6FD228AFDB4EB2 /* Frameworks */,
+				7B2DCD0021B0A0C3701E155653317FBE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				851405C0FEE101948755B2937D434B0B /* PBXTargetDependency */,
+				913BE8865434AD6C9B8E6984405F680F /* PBXTargetDependency */,
 			);
 			name = Chinook;
 			productName = Chinook;
-			productReference = E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook.framework */;
+			productReference = E98607A0D143EDEEE30A2C4C754B13A4 /* Chinook */;
 			productType = "com.apple.product-type.framework";
 		};
 		E1753B4FA19C5F745ADF56B844ACAB36 /* XMLCoder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F80855B88CA7625D4E1AC425686B207 /* Build configuration list for PBXNativeTarget "XMLCoder" */;
+			buildConfigurationList = 012515B948C0F820C20D5AE5EDD26B06 /* Build configuration list for PBXNativeTarget "XMLCoder" */;
 			buildPhases = (
-				FEAEB86AE229E9CFDA582495932EF8BC /* Headers */,
-				A6271C39060D080959052013F6F0470F /* Sources */,
-				00B4D1C67CA2EFF7C3DF81A31879D271 /* Frameworks */,
-				AD4470E4A4089FECC6EC947FCF5BE1B7 /* Resources */,
+				429EC669668FCE852B2EE30ECB36EBD2 /* Headers */,
+				14C3E644121EE3795FFFEEDB94D6B1FB /* Sources */,
+				85D8DB1258B1CA36BAA0AA518C925986 /* Frameworks */,
+				06339602A250CD7495A30AD120CB8E7C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -849,26 +856,26 @@
 			);
 			name = XMLCoder;
 			productName = XMLCoder;
-			productReference = 3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder.framework */;
+			productReference = 3F616D3E24543D97C200EBBCFDF225D0 /* XMLCoder */;
 			productType = "com.apple.product-type.framework";
 		};
 		FA22AEC4030344945273B6D586B32387 /* Pods-Chinook_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43D82850B6498E56AFFD5C5E69968365 /* Build configuration list for PBXNativeTarget "Pods-Chinook_Tests" */;
+			buildConfigurationList = 867BF94E74B282B2C1ED7F47AA80B2D8 /* Build configuration list for PBXNativeTarget "Pods-Chinook_Tests" */;
 			buildPhases = (
-				8CA7801B275D18000E8E603C86362518 /* Headers */,
-				D1798262EDE03C27EB31D14CFED8A88F /* Sources */,
-				80C07878C577CAB8DF250B4F08F04F65 /* Frameworks */,
-				92DA1B760FAB3320920731EBA089EF63 /* Resources */,
+				9EAF2A771EC8774B4BF044B4A67C97DC /* Headers */,
+				FDCCB45012F929F149D1A518921339DC /* Sources */,
+				12EC009544DAFD3C0FFCCFCF9B247A7E /* Frameworks */,
+				BDB147C3C8DEA4FB25DEC77D9CDC2BFB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AF2B5390FA2E04BE8B9CB2D0F3F5773D /* PBXTargetDependency */,
+				F7FF8C7E58DE67CAEA6A7B212B05F58A /* PBXTargetDependency */,
 			);
 			name = "Pods-Chinook_Tests";
 			productName = Pods_Chinook_Tests;
-			productReference = 3F02B25075D6C5D2467BB73A614809C7 /* Pods_Chinook_Tests.framework */;
+			productReference = 3F02B25075D6C5D2467BB73A614809C7 /* Pods-Chinook_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -877,8 +884,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -889,6 +896,8 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = B6829E8325543E644C7910089A5686A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -902,28 +911,28 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		37AFFFC2993AFD1A681C765D48A14949 /* Resources */ = {
+		06339602A250CD7495A30AD120CB8E7C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E89DB868BA4C266D38DCF89FFAADCBF /* Resources */ = {
+		7B2DCD0021B0A0C3701E155653317FBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92DA1B760FAB3320920731EBA089EF63 /* Resources */ = {
+		B61E76235D0B42CE45975C742D88B09C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD4470E4A4089FECC6EC947FCF5BE1B7 /* Resources */ = {
+		BDB147C3C8DEA4FB25DEC77D9CDC2BFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -933,195 +942,196 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		49658CFE2E6527C8598D019BE1B82605 /* Sources */ = {
+		0B527B4C0A65E7162A83542E8C072D00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F98447D08C03537C09711BC83181E3C6 /* AbbreviatedForecast.swift in Sources */,
-				00691C007959152DE215068103D6BA92 /* Advisory.swift in Sources */,
-				120B5D7DA530CDC5C23A36668D44995D /* Alert.swift in Sources */,
-				1CF147B780E761CB0C520C9BF2732F06 /* Alert+Contains.swift in Sources */,
-				A52391082C9BEC6B01B599E714DAD036 /* AlertaArea.swift in Sources */,
-				5F991DFE25BA5C321FBA7D34AD36F06B /* AlertGeocode.swift in Sources */,
-				32A59A8A6CDC1C58451004CFC333D5AE /* AlertInfo.swift in Sources */,
-				A0C62C557510E30CD947E29D70E3585E /* AlertParameter.swift in Sources */,
-				E0FC23C3713808902CDA8A76B10A2722 /* Almanac.swift in Sources */,
-				D1C2773AA280B032BF37B53A5A8B095B /* AnyCodingKey.swift in Sources */,
-				EFC4C79381777822FB1B981B20C5788A /* Chinook-dummy.m in Sources */,
-				E82B74777FE138CA7A8048ADE24F5AFC /* CloudPrecip.swift in Sources */,
-				2E99E1F169AD7C19EA1B0A9E10664864 /* CompletableOperationQueue.swift in Sources */,
-				6C03F9BBC02E6E131553EF26E435C749 /* ConcurrentOperation.swift in Sources */,
-				F487593D7A075658E65D82879C47DD38 /* CurrentConditions.swift in Sources */,
-				47D47628105CE4DBCDBAF858DAB60542 /* DataLoader.swift in Sources */,
-				B22057A03266D8A91770C5A6D165D5A1 /* DataLoading.swift in Sources */,
-				177C36045D7B5E2D9DCEDC71827BD79B /* DataResponse.swift in Sources */,
-				4B376123FC6BAAF63899A72CEF60E210 /* Date+Sugar.swift in Sources */,
-				6E1FBC8673077BB903E1ACF4D46CD6B1 /* DateTime.swift in Sources */,
-				63CBE6E42EADB3AEC818B643D93C0543 /* Direction.swift in Sources */,
-				128D4ADCEB530D4975425CF1E287E377 /* DiskLoader.swift in Sources */,
-				292305A32ED9BE64F69B6C50F8929A60 /* DiskLoaderOperation.swift in Sources */,
-				6DF50D6F6EC10062383581DEF1CCD0C3 /* Endpoint.swift in Sources */,
-				AB6C83EC4465433D4766BED7F0E1974B /* Endpoint+Alerts.swift in Sources */,
-				2B3FAA0C175E2DCAD1E0421E880D13CB /* Endpoint+Caching.swift in Sources */,
-				2A5083FC9546D35A5A9E86AD6EE1D8CE /* Endpoint+ObservationCollection.swift in Sources */,
-				D5F1A1144824266D35F1D770901E6F0A /* Endpoint+SiteData.swift in Sources */,
-				07AE12855D4F625397D577D2C44A925A /* Endpoint+SiteList.swift in Sources */,
-				92697C3058D278283B541E4B89B3519B /* Event.swift in Sources */,
-				26906A21AFC2B94EA5948BEE446DE27A /* FetchAdvisoriesOperation.swift in Sources */,
-				90A9565561666158451C32BE5CFFC118 /* FetchAlertManifestOperation.swift in Sources */,
-				540CB948D55C2EE1CB999F6F5386FF4D /* FetchAlertManifestsOperation.swift in Sources */,
-				ECBAC604F832EA1A68FAB860E8F08C9A /* FetchAlertOperation.swift in Sources */,
-				BA48E850C4D9EC0B3ADF1FA09ACFC17B /* FetchCityPageWeatherSiteDataOperation.swift in Sources */,
-				6B9450A39343F2ED005E3B06050F0549 /* FetchCityPageWeatherSiteListOperation.swift in Sources */,
-				8ABE86F68544F2E3D42CC39CF05C1AB9 /* FetchObservationCollectionOperation.swift in Sources */,
-				A8A710F3A41D942DAB7D39F1B4CEB32C /* FileManager+PathCreation.swift in Sources */,
-				2919923223FAAF5982AC01D61AC9BC98 /* Forecast.swift in Sources */,
-				8BF71B99A442DA15A62A1DDA579B5AB0 /* ForecastGroup.swift in Sources */,
-				B154A7A2DD9B44D498216BC9B79211E8 /* Host.swift in Sources */,
-				08BB8CC9B482A9FCF8A79B4C7B0AE870 /* Host+Datamart.swift in Sources */,
-				D6AAFD3FDADB9808883A9550C1B99474 /* HourlyForecast.swift in Sources */,
-				A9BBFADB6E8A6703463D5FC3A60EFFF4 /* HourlyForecastGroup.swift in Sources */,
-				5AA55BD3FA6E0DCE9573F1F9C436B062 /* IconCode.swift in Sources */,
-				A6268C44C7E2C449C94D6903445B0FD0 /* IdentificationElement+Extension.swift in Sources */,
-				A6121F73ABF0A485CA23D9EF44BD26F3 /* KeyDecodingStrategy+ObservationCollection.swift in Sources */,
-				C1240788D10560662B39BB21AA099E7D /* Language.swift in Sources */,
-				9FE2FAB2C372B34D1386565F0F847FDB /* Location.swift in Sources */,
-				F8F11FCF7EE0424CF175DCFDC3D2660B /* Measurement.swift in Sources */,
-				2509783DBE6EBC29EBE704CE55E08596 /* Name.swift in Sources */,
-				CFD4C773609942F8CFD78309219D269B /* NetworkError.swift in Sources */,
-				48ABDCED0C6D7E48D775D427C45CDA7C /* NetworkLoader.swift in Sources */,
-				94C15656310CCF7B58A42375643DDA43 /* NetworkLoaderOperation.swift in Sources */,
-				82C6C0DCEE65185083671853B7C82132 /* NSLocale+i18n.swift in Sources */,
-				3BA297F84AEB4C5A31EFB3E56462D14E /* ObservationCollection.swift in Sources */,
-				8C0D0D37F770F5A6EFE5CFA7D35AA7B0 /* Period.swift in Sources */,
-				3C39142036E9680258C8E1E030B2F265 /* Precipitation.swift in Sources */,
-				89BA62B880A66295CD4688FB2B1F3791 /* PrecipType.swift in Sources */,
-				37244143D80D3BFE1BF728FBD07E898B /* Pressure.swift in Sources */,
-				444E8CAB6356DC5004A349CD3D08D6A7 /* Province.swift in Sources */,
-				D16492D73BF49F4ECFC56480830B5B4C /* RegionalNormals.swift in Sources */,
-				7AC69FB309B99AB04B05EDB6DB257440 /* RiseSet.swift in Sources */,
-				18D1F204046E7F086572C40FD0352D83 /* Site.swift in Sources */,
-				C6552920576BE414E4CEB036655CF068 /* SiteData.swift in Sources */,
-				69A7F6B249C2B87D32D307D3EAE7091D /* SiteData+CGPoint.swift in Sources */,
-				2FEE2C6B236427DD6D686699F6373EF8 /* SiteList.swift in Sources */,
-				0306FF8B35826A842AE2B68FA4D11FA7 /* Station.swift in Sources */,
-				3C6A6E00701D556011D642714CFADF28 /* StationCode.swift in Sources */,
-				527F8D1604FBE7A57024A6FD7F241CA7 /* String+Extensions.swift in Sources */,
-				617F614F7C96C7C9FEE93B1EEA89DE82 /* String+Substring.swift in Sources */,
-				B5E912D6E09652EE3D220E2D77429CDA /* Temperatures.swift in Sources */,
-				FF56ED7A8E37E18E3B0BD185B3B1C0B2 /* Warnings.swift in Sources */,
-				1DB05CE6E67FC678507156ECB2EA4EE5 /* Wind.swift in Sources */,
-				889637217D8FE19C3FF50A2290436554 /* WindChill.swift in Sources */,
-				C784AE1AED29B5B1697341AE5D811228 /* Winds.swift in Sources */,
-				D44F6900542ED4FDB850EF9E6BED4BD5 /* XMLDecodable.swift in Sources */,
-				4CD879E5F3501EC9401AB183D4A13362 /* YesterdayConditions.swift in Sources */,
+				99979ED56632BE63CFFC491EA10885A9 /* Pods-Chinook_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6271C39060D080959052013F6F0470F /* Sources */ = {
+		0E1ACEF584B3EA5369E416EA857BD11E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB64FEB591145C4DBB1AFE516C5A7047 /* BoolBox.swift in Sources */,
-				2AB16398439C855FD55CAE48BC75D99B /* Box.swift in Sources */,
-				CC2AE7B79C7E5EFD6DB26269EACE0C94 /* ChoiceBox.swift in Sources */,
-				B1A550259F419B27FECF776CAFDD919F /* DataBox.swift in Sources */,
-				6701D93B5B2B45C982C3D836673A589F /* DateBox.swift in Sources */,
-				9F3E63C823F78E6D37BC12CECDF7AE4E /* DecimalBox.swift in Sources */,
-				275252AA6999A4F310FF8CF132442C53 /* DecodingErrorExtension.swift in Sources */,
-				A48B3F8DCA50BE797AEED2D087FAAF05 /* DoubleBox.swift in Sources */,
-				F7A21D114C268309A350C345EE72A691 /* DynamicNodeDecoding.swift in Sources */,
-				1ECD1129380EF1D54C1D06EAAE082CD8 /* DynamicNodeEncoding.swift in Sources */,
-				FD29699418F5124F1AE4A8A1742EE2BB /* EncodingErrorExtension.swift in Sources */,
-				C0E16A4D7DE1831899BF391E70EC4979 /* FloatBox.swift in Sources */,
-				65F47928BC1E63B64D91CEB85CAFB507 /* IntBox.swift in Sources */,
-				BCFEE8D73E671F68C760067CA6462708 /* ISO8601DateFormatter.swift in Sources */,
-				26FDDDBEBA9EAF1CB889031E1ACB6573 /* KeyedBox.swift in Sources */,
-				74FA6587208FE779BB5D82988317485D /* KeyedStorage.swift in Sources */,
-				0AA36890AF5EDDAED210B431E5301DBC /* Metatypes.swift in Sources */,
-				83748F1495CC16C2998E25E88723B86B /* NullBox.swift in Sources */,
-				0A533758B1FBB356E814A3617D17721F /* SharedBox.swift in Sources */,
-				75D87768376BC4CD0C44E221336858C2 /* SingleKeyedBox.swift in Sources */,
-				AFE539F52AD4525847D34472A3F703B6 /* SingleValueDecodingContainer.swift in Sources */,
-				A5BDC243FE1810FD2A27E539BCFAFD7C /* SingleValueEncodingContainer.swift in Sources */,
-				1D44882D273F50B1835DACA8FF82B5EC /* String+Extensions.swift in Sources */,
-				2C0C7826305989B7960CFBCB43008729 /* StringBox.swift in Sources */,
-				935225920F6C521D4EC78BFC8A5D6FCE /* UIntBox.swift in Sources */,
-				95374F828F7B75325B5694F6184FACE2 /* UnkeyedBox.swift in Sources */,
-				0A243E488392A1245130E920E4566E22 /* URLBox.swift in Sources */,
-				714E29CA7365371014A51E1A1C81A81C /* ValueBox.swift in Sources */,
-				368BABC358236C06A48934A332711DB6 /* XMLChoiceCodingKey.swift in Sources */,
-				4D33F5BFD0F02EA65768870E01F6E7DE /* XMLChoiceDecodingContainer.swift in Sources */,
-				63BA77E6E21506EE5B94C4DAAAF1963C /* XMLChoiceEncodingContainer.swift in Sources */,
-				7952ED641B1FBEB34E86B1988BD8079C /* XMLCoder-dummy.m in Sources */,
-				7DADCFCD474F9352429A441D7B57CFFC /* XMLCoderElement.swift in Sources */,
-				D770E2E196E2F702055B84EFD2A16FE9 /* XMLDecoder.swift in Sources */,
-				3B3D07CC4A79E30E1BC02EEC6843CED7 /* XMLDecoderImplementation.swift in Sources */,
-				087CA98B91846655007F3581C3A9534B /* XMLDecodingStorage.swift in Sources */,
-				0DCB5E2D79CE9F0F5B9523FD9AEA054F /* XMLEncoder.swift in Sources */,
-				2C4564CB1A2C01AED4BB53F223AD8722 /* XMLEncoderImplementation.swift in Sources */,
-				4FD5BF67CBC286B84B1BEE1AD9EB63E1 /* XMLEncodingStorage.swift in Sources */,
-				4BA86D37B96BE1A018D5460C3BB8C7C5 /* XMLHeader.swift in Sources */,
-				7E085C05943AD96F63832FBC592D2033 /* XMLKey.swift in Sources */,
-				7313D7C240BEAB015A4DC0CE34EF2DD1 /* XMLKeyedDecodingContainer.swift in Sources */,
-				01CE719EEAE36DD9B578CA5C4EE7A9F8 /* XMLKeyedEncodingContainer.swift in Sources */,
-				A4F9A0E397C73FEFA70142BCB3E26ACC /* XMLReferencingEncoder.swift in Sources */,
-				110E2F81E06CA30465DCD978E910BF6C /* XMLStackParser.swift in Sources */,
-				594F76C9C0A3CC5A04617537C15F0B08 /* XMLUnkeyedDecodingContainer.swift in Sources */,
-				4131705BF9C1367C38E87879811A0AD3 /* XMLUnkeyedEncodingContainer.swift in Sources */,
+				6397FBDFF98331724171D80111001BF0 /* AbbreviatedForecast.swift in Sources */,
+				8B884FE6005C8766F3F4B76CF3033079 /* Advisory.swift in Sources */,
+				132834829B2F34BF403AFAF327B87AA7 /* Alert.swift in Sources */,
+				828C0A604E32E5969123629C617C520A /* Alert+Contains.swift in Sources */,
+				777A6BDFEB0201AF96BB7E689AF63AFC /* AlertaArea.swift in Sources */,
+				30CAD50AE42FF948111080FA44D7AC27 /* AlertGeocode.swift in Sources */,
+				8E37F8B8C530D66D913AA414D98785F6 /* AlertInfo.swift in Sources */,
+				C318697F2C7E215B6D9C1BD79FAFAFDD /* AlertParameter.swift in Sources */,
+				9B30A30294465DA0361A4594A4DBC0F7 /* Almanac.swift in Sources */,
+				22238E1CCC91B2DE5FEA19AD00962B5E /* AnyCodingKey.swift in Sources */,
+				3EE1B43D08DC866A8B8E41A82E6B012D /* Chinook-dummy.m in Sources */,
+				6F35737DAB71BBE6F9DC257749C1F9BC /* CloudPrecip.swift in Sources */,
+				B36E188C0FF26C74DDDAD345A9AA6ADD /* CompletableOperationQueue.swift in Sources */,
+				9842F129948A5F20B0EA4D3CE58D9335 /* ConcurrentOperation.swift in Sources */,
+				31FA12C678C911E49787FBD5A8D2BF55 /* CurrentConditions.swift in Sources */,
+				B77F6A57A223633DF7BB460BF2DE91B5 /* DataLoader.swift in Sources */,
+				A57143824666DFDD12F089521333D115 /* DataLoading.swift in Sources */,
+				C66A6174298C8923405EBCCDE5480625 /* DataResponse.swift in Sources */,
+				874653BD0BDF6963B80471DD2FD7B9FC /* Date+Sugar.swift in Sources */,
+				248A79FCDBACF47F3DB6A0DD9A611F2B /* DateTime.swift in Sources */,
+				633904DA7919D547F7EF8AFAD5172C6A /* Direction.swift in Sources */,
+				3F9EEF31AA0EC7B35225EBCF0717A463 /* DiskLoader.swift in Sources */,
+				6948DF89CA08D9561BFFDBE5952BCAAB /* DiskLoaderOperation.swift in Sources */,
+				ABE71F83C32A1BC58BA5A08CFF8D81C0 /* Endpoint.swift in Sources */,
+				FA7601BFE3DD81941DB09E91C377D486 /* Endpoint+Alerts.swift in Sources */,
+				4A1598A76BBA326522449F80057C9818 /* Endpoint+Caching.swift in Sources */,
+				D54CE5F5A934FA6FC382E2C363483F87 /* Endpoint+ObservationCollection.swift in Sources */,
+				842A16AAF996CC3786E2779434464539 /* Endpoint+SiteData.swift in Sources */,
+				E4010CC6426E4C4EF4C972C58368D204 /* Endpoint+SiteList.swift in Sources */,
+				336622CDEA2FF412DFB02D52B98EB186 /* Event.swift in Sources */,
+				F6CB03B138C1E26788CB1CBFD149CCC0 /* FetchAdvisoriesOperation.swift in Sources */,
+				376E89F5E43A7FEDFB4BB8C22F0E8869 /* FetchAlertManifestOperation.swift in Sources */,
+				DC37C66835F9B640BB248B175502AF5A /* FetchAlertManifestsOperation.swift in Sources */,
+				1F0EFBED78475EF2A59BCAADA0279621 /* FetchAlertOperation.swift in Sources */,
+				970679C71E7FA10F9590464FC8A8DDC2 /* FetchCityPageWeatherSiteDataOperation.swift in Sources */,
+				DA141B59C53B90C512DCB53348C846AC /* FetchCityPageWeatherSiteListOperation.swift in Sources */,
+				6227546E24583EDB0337EC7DC74C0B77 /* FetchObservationCollectionOperation.swift in Sources */,
+				8D9E84E125B024435ED2AE8A68E00783 /* FileManager+PathCreation.swift in Sources */,
+				0DB8A91C7E98C2B3ABC7D6E26F774429 /* Forecast.swift in Sources */,
+				788A8A00F640B36D0C2E4718E691297C /* ForecastGroup.swift in Sources */,
+				986EA1A10DF0B668ED6DC1AF6E4F1A40 /* Host.swift in Sources */,
+				92B5E06FE22FDE53C4A0A7DC592B52CC /* Host+Datamart.swift in Sources */,
+				B08D63EBBC904BB4065D749B2BC7CCF3 /* HourlyForecast.swift in Sources */,
+				7CFCA47EF5016961414CF0422EBC72E0 /* HourlyForecastGroup.swift in Sources */,
+				7ACB0053E5B9DE001B7CD43C4A900A93 /* IconCode.swift in Sources */,
+				4CBFD8D19386FE3C9A53B027F7FF9CE6 /* IdentificationElement+Extension.swift in Sources */,
+				3EAFA001BAD9D1D1E142BB12506E4897 /* KeyDecodingStrategy+ObservationCollection.swift in Sources */,
+				2F7D7C180A7E44A476A68B78F98304B8 /* Language.swift in Sources */,
+				2C21FBF6D8BFAADEFAD790D8E8D2C8D2 /* Location.swift in Sources */,
+				2ED4CF29F478CC41C3B29B1C5BF11923 /* Measurement.swift in Sources */,
+				1D4B5218BCAF36A8477D4F6F18D973AC /* Name.swift in Sources */,
+				4F1E1610507087171801E425C5B41FD5 /* NetworkError.swift in Sources */,
+				3ED2A935D3EA741A8F562B7305DC026D /* NetworkLoader.swift in Sources */,
+				135EDD548F1ACB2A5DC8521BF16057B4 /* NetworkLoaderOperation.swift in Sources */,
+				7460CF83F9B7EA058183B765CDC19451 /* NSLocale+i18n.swift in Sources */,
+				E61ECDD98722DA6C56E98C4B0009FA4B /* ObservationCollection.swift in Sources */,
+				4738205DF6349CE4003F60E107ACB9A5 /* Period.swift in Sources */,
+				FBE65A0FCBC7193A4F22630AAD33BDDC /* Precipitation.swift in Sources */,
+				281F13B80C1A6EADD197B9075E17B27A /* PrecipType.swift in Sources */,
+				EEE0BDD70D87541DDA28B32401D648F0 /* Pressure.swift in Sources */,
+				F9586C3D91A487220F864F1F8B37843B /* Province.swift in Sources */,
+				72EEF6C976365A90D3C9689822C92594 /* RegionalNormals.swift in Sources */,
+				69C97DD87F54CB4331C0CC5E1BC10CF3 /* RiseSet.swift in Sources */,
+				73A9D0E9E18D98419628BED467A5C2EA /* Site.swift in Sources */,
+				64A7B6D5ADF0019E78C171F706B6A7D1 /* SiteData.swift in Sources */,
+				0A9C4B18CC1C30E519DF8E585A7E53D7 /* SiteData+CGPoint.swift in Sources */,
+				F7DE7CAF6D66DE10FC8DAA2C7A68C4F2 /* SiteList.swift in Sources */,
+				5A061FC1E55C18F203CB08D60AB1698D /* Station.swift in Sources */,
+				B7FFE103444DAB45A93C5124D17042A4 /* StationCode.swift in Sources */,
+				504DA7324FD595C84862874E1FAE8CA9 /* String+Extensions.swift in Sources */,
+				7079BB6AC3DBA8ADEA45ECF0118C9F01 /* String+Substring.swift in Sources */,
+				E5D92805908BB9422C3F4ABA44639A26 /* Temperatures.swift in Sources */,
+				66BD641133C0208E9A11F487A463B4F7 /* Warnings.swift in Sources */,
+				1D5FB4DF78911290D27DFEB47F5F4DCE /* Wind.swift in Sources */,
+				7DC97A88B22C05C88D55F3705020A213 /* WindChill.swift in Sources */,
+				23A0206BBD4A95244E232278C8F73CD1 /* Winds.swift in Sources */,
+				DA035C02FB08FE068D69AACAF4A24BB6 /* XMLDecodable.swift in Sources */,
+				2D59D6CBE7276040195F04A637C4CA94 /* YesterdayConditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF3FE8B031AA26EB9E4F5F7F21EE2C1C /* Sources */ = {
+		14C3E644121EE3795FFFEEDB94D6B1FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CE67FA6D6A66F1D8833F61950FE2583 /* Pods-Chinook_Example-dummy.m in Sources */,
+				2F4E8331DF7E642049874DFE5538784F /* BoolBox.swift in Sources */,
+				C087798CDEA043441619F68E45162FF9 /* Box.swift in Sources */,
+				43973A19F28C8DC2DE848B0E8AD32DAE /* ChoiceBox.swift in Sources */,
+				30D32D95DB1B8FE582C99FE28D09C422 /* DataBox.swift in Sources */,
+				1ACF31A1CA78E49684ACD3BB232650BC /* DateBox.swift in Sources */,
+				C60516057A6BAE7DD432E9B9A24A569B /* DecimalBox.swift in Sources */,
+				2B27A471386C638E49ECF8E7D02D6DD6 /* DecodingErrorExtension.swift in Sources */,
+				59F7A7D65A930488DE3D016473288FCC /* DoubleBox.swift in Sources */,
+				6BD6B41560978B15F8120F2BFE88E888 /* DynamicNodeDecoding.swift in Sources */,
+				546D2379A18F2216EDF28151333280C0 /* DynamicNodeEncoding.swift in Sources */,
+				936B44395E05CC3CAA546B076B118E39 /* EncodingErrorExtension.swift in Sources */,
+				6F81E1E19EBC2219674D027AC36484DA /* FloatBox.swift in Sources */,
+				68ECF9990DA085C0A8D61F54E70297C8 /* IntBox.swift in Sources */,
+				AD897DDD7F4FA1932C478FF65576AA00 /* ISO8601DateFormatter.swift in Sources */,
+				7DF02E593030883F39949DBC41E26DFA /* KeyedBox.swift in Sources */,
+				A3E18DA1E1ACDDAB0E367DC0581B9529 /* KeyedStorage.swift in Sources */,
+				93A4D388AD0835F7F6C9182F55351CCB /* Metatypes.swift in Sources */,
+				90C6D78552C83705CA0ABE13FEC3B33D /* NullBox.swift in Sources */,
+				03EDA8FCB51E12BA4433E328833970FA /* SharedBox.swift in Sources */,
+				A908730E3594635BA0505B59CA61B51B /* SingleKeyedBox.swift in Sources */,
+				722717957A2FE95A2B031EF677B4B788 /* SingleValueDecodingContainer.swift in Sources */,
+				7D5CD3BBC4DB8C166298357D190E5E71 /* SingleValueEncodingContainer.swift in Sources */,
+				4F61EC27A6D5E16A3E005AE36930A986 /* String+Extensions.swift in Sources */,
+				B45B9715BBCE0B2A01DD2793AE3C8B02 /* StringBox.swift in Sources */,
+				1A5225EA3B31DE617AF0AFAABCE7D6DD /* UIntBox.swift in Sources */,
+				2316A4E89512BF28BFAC8BA5153B7D4A /* UnkeyedBox.swift in Sources */,
+				865D4F7D33E4CA374A3E6EB278297122 /* URLBox.swift in Sources */,
+				F4F2BD8CDAAE4EE7F34B1030BAD49ABD /* ValueBox.swift in Sources */,
+				A02C76D03A16352B67981F3EB8988397 /* XMLChoiceCodingKey.swift in Sources */,
+				73545ED607762FF89E8339DAB54C333D /* XMLChoiceDecodingContainer.swift in Sources */,
+				0352290C47102FA14C9489F808FA43F0 /* XMLChoiceEncodingContainer.swift in Sources */,
+				FFFB9457AB0A88464DD89691E9603398 /* XMLCoder-dummy.m in Sources */,
+				FCE7B9F39AEA91C3788F9314C15CAB2C /* XMLCoderElement.swift in Sources */,
+				E01458C3F9F022E9B5EA3411BD85228A /* XMLDecoder.swift in Sources */,
+				85BB959CA6F66DDD9A8F19F9F9F57468 /* XMLDecoderImplementation.swift in Sources */,
+				4F8D603F0690AF8C2D0E987E9B1847AF /* XMLDecodingStorage.swift in Sources */,
+				F6CB5262175298BA7DACBABD7C045D92 /* XMLEncoder.swift in Sources */,
+				1B317CE36EA30133B1605E04D20E0559 /* XMLEncoderImplementation.swift in Sources */,
+				25FBB21D70AE1120D0186A1F46CC1A32 /* XMLEncodingStorage.swift in Sources */,
+				8FBAD6925AD08CC2112600D280205D04 /* XMLHeader.swift in Sources */,
+				22865BEDFC888384568A172299D8A277 /* XMLKey.swift in Sources */,
+				9A07B09A51287972BE045318BB851229 /* XMLKeyedDecodingContainer.swift in Sources */,
+				A51123097EAF28F77158B70B26648219 /* XMLKeyedEncodingContainer.swift in Sources */,
+				5375DE4E8E3DF5583F0B70F5E534AE12 /* XMLReferencingEncoder.swift in Sources */,
+				AE2B18DFD1DFB5B9C3FC9794A3B8BE83 /* XMLStackParser.swift in Sources */,
+				59CAEA6522FAC66ADFBCD6F967C92D1D /* XMLUnkeyedDecodingContainer.swift in Sources */,
+				F960B3C4BDB86B4824D8EF41D0126A20 /* XMLUnkeyedEncodingContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1798262EDE03C27EB31D14CFED8A88F /* Sources */ = {
+		FDCCB45012F929F149D1A518921339DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15495D581A47F0754046411FD96F5906 /* Pods-Chinook_Tests-dummy.m in Sources */,
+				7B5B9EDE0E0BB2DEC3268E76CB7F4E90 /* Pods-Chinook_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		17F3B5ED3B6EE6EC3F391A224A81E668 /* PBXTargetDependency */ = {
+		3062C99EA3ABBB1E85A68BF040A0D564 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Chinook;
 			target = 49DD06EC36198694EE925791D3CD8744 /* Chinook */;
-			targetProxy = 9B30760B7520991F40ABBB6A921680ED /* PBXContainerItemProxy */;
+			targetProxy = 505FE08A023047E6A1CC649452B1FCCF /* PBXContainerItemProxy */;
 		};
-		42AEF73806671A74D6AA6CCF758FBCEE /* PBXTargetDependency */ = {
+		913BE8865434AD6C9B8E6984405F680F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XMLCoder;
 			target = E1753B4FA19C5F745ADF56B844ACAB36 /* XMLCoder */;
-			targetProxy = F4C0775337B9F738CD9DCA36CA371B4C /* PBXContainerItemProxy */;
+			targetProxy = 1EC411E797CE73C0F2B5D516EE268A90 /* PBXContainerItemProxy */;
 		};
-		851405C0FEE101948755B2937D434B0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = XMLCoder;
-			target = E1753B4FA19C5F745ADF56B844ACAB36 /* XMLCoder */;
-			targetProxy = D740C462DEEFF1D1ACB7BAE3B13DDB90 /* PBXContainerItemProxy */;
-		};
-		AF2B5390FA2E04BE8B9CB2D0F3F5773D /* PBXTargetDependency */ = {
+		F7FF8C7E58DE67CAEA6A7B212B05F58A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Chinook_Example";
 			target = 1BB0F53974866806E6D8A741D70028EE /* Pods-Chinook_Example */;
-			targetProxy = C073F3428D423230BA4A32C46BBC90B4 /* PBXContainerItemProxy */;
+			targetProxy = 6A1DABE89263E4C428BE97D21430FC43 /* PBXContainerItemProxy */;
+		};
+		FD9436E384ECB5EBF8D7EF2E8C807EB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XMLCoder;
+			target = E1753B4FA19C5F745ADF56B844ACAB36 /* XMLCoder */;
+			targetProxy = C193677C4D5FFC6FB436B211806CA3A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		22376E8ACCC9990A13A22B0827FEE8E4 /* Release */ = {
+		5098881EC3C3EFC3C7C1DBC50D6E128B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13661E22AEFAD05C20D3B7D06CB8BD3E /* XMLCoder.release.xcconfig */;
+			baseConfigurationReference = 9BD6F02AC5D7A5F294CA2F2992E6AEB4 /* XMLCoder.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1130,7 +1140,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREFIX_HEADER = "Target Support Files/XMLCoder/XMLCoder-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "Target Support Files/XMLCoder/XMLCoder-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1141,6 +1154,188 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		50C0310EFF3E4ED5641D0CF912D11414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90C580158A23DF5D5EAEFCA6E1FFCA52 /* Chinook.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Chinook/Chinook-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Chinook/Chinook-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Chinook/Chinook.modulemap";
+				PRODUCT_MODULE_NAME = Chinook;
+				PRODUCT_NAME = Chinook;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 6.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5EFE1EBF528A07C5D960E11767A068DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7348F189CDD6A87EF81C85179EEB493B /* Chinook.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/Chinook/Chinook-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/Chinook/Chinook-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Chinook/Chinook.modulemap";
+				PRODUCT_MODULE_NAME = Chinook;
+				PRODUCT_NAME = Chinook;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 6.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5F2AB05902042B540B59A65D9A890599 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28435FB82284E43967412EA1F2C82929 /* Pods-Chinook_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		68DA0D7DA95C71E21B8789A229B52593 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90957FD1F60F286FF073CAB0BA9CC6C5 /* Pods-Chinook_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7582C3378B5635BAE6F0762F0845CB98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13661E22AEFAD05C20D3B7D06CB8BD3E /* XMLCoder.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/XMLCoder/XMLCoder-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/XMLCoder/XMLCoder-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XMLCoder/XMLCoder.modulemap";
+				PRODUCT_MODULE_NAME = XMLCoder;
+				PRODUCT_NAME = XMLCoder;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1149,7 +1344,7 @@
 			};
 			name = Release;
 		};
-		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1202,7 +1397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1215,135 +1410,7 @@
 			};
 			name = Debug;
 		};
-		336693E0B9FE2BCD823B9A122AFBE523 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3C98CFD78092DB68DD38C640DABEB03 /* Pods-Chinook_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4F966D069202219A7A3F199FED65C033 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BD6F02AC5D7A5F294CA2F2992E6AEB4 /* XMLCoder.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/XMLCoder/XMLCoder-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XMLCoder/XMLCoder-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/XMLCoder/XMLCoder.modulemap";
-				PRODUCT_MODULE_NAME = XMLCoder;
-				PRODUCT_NAME = XMLCoder;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5953BB090FA0DA06B8388BF5F0352BC6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28435FB82284E43967412EA1F2C82929 /* Pods-Chinook_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9CC4ACE386E5DC756F8184B18E941968 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C57ADE7E8DC35D6799A78AEA51D6807A /* Pods-Chinook_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1393,21 +1460,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		CF433F8BEE6C7B6ECB2929FA472086E2 /* Debug */ = {
+		C0B3FD0702B2A9BDD470C157544B55E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90C580158A23DF5D5EAEFCA6E1FFCA52 /* Chinook.debug.xcconfig */;
+			baseConfigurationReference = C57ADE7E8DC35D6799A78AEA51D6807A /* Pods-Chinook_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1417,29 +1487,35 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Chinook/Chinook-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Chinook/Chinook-Info.plist";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Chinook/Chinook.modulemap";
-				PRODUCT_MODULE_NAME = Chinook;
-				PRODUCT_NAME = Chinook;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		E8579CF6DDBB961B0FB6D762625A85F7 /* Debug */ = {
+		C78CB6EF6537256F1E33176FA6068B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90957FD1F60F286FF073CAB0BA9CC6C5 /* Pods-Chinook_Tests.debug.xcconfig */;
+			baseConfigurationReference = D3C98CFD78092DB68DD38C640DABEB03 /* Pods-Chinook_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1448,12 +1524,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests-Info.plist";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Tests/Pods-Chinook_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Chinook_Example/Pods-Chinook_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1467,64 +1545,14 @@
 			};
 			name = Debug;
 		};
-		F65E46E7AD2004A3126864A8F3F4B373 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7348F189CDD6A87EF81C85179EEB493B /* Chinook.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Chinook/Chinook-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Chinook/Chinook-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Chinook/Chinook.modulemap";
-				PRODUCT_MODULE_NAME = Chinook;
-				PRODUCT_NAME = Chinook;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F80855B88CA7625D4E1AC425686B207 /* Build configuration list for PBXNativeTarget "XMLCoder" */ = {
+		012515B948C0F820C20D5AE5EDD26B06 /* Build configuration list for PBXNativeTarget "XMLCoder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F966D069202219A7A3F199FED65C033 /* Debug */,
-				22376E8ACCC9990A13A22B0827FEE8E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		345A2511363006FD8A692FEE32C4738F /* Build configuration list for PBXNativeTarget "Chinook" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CF433F8BEE6C7B6ECB2929FA472086E2 /* Debug */,
-				F65E46E7AD2004A3126864A8F3F4B373 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		43D82850B6498E56AFFD5C5E69968365 /* Build configuration list for PBXNativeTarget "Pods-Chinook_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E8579CF6DDBB961B0FB6D762625A85F7 /* Debug */,
-				9CC4ACE386E5DC756F8184B18E941968 /* Release */,
+				5098881EC3C3EFC3C7C1DBC50D6E128B /* Debug */,
+				7582C3378B5635BAE6F0762F0845CB98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1532,17 +1560,35 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
-				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9D1C537BD6B74557428286CA257533E /* Build configuration list for PBXNativeTarget "Pods-Chinook_Example" */ = {
+		4BCEE024B4C5F9F13D9BE9CF1AE2AAE0 /* Build configuration list for PBXNativeTarget "Pods-Chinook_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				336693E0B9FE2BCD823B9A122AFBE523 /* Debug */,
-				5953BB090FA0DA06B8388BF5F0352BC6 /* Release */,
+				C78CB6EF6537256F1E33176FA6068B9E /* Debug */,
+				5F2AB05902042B540B59A65D9A890599 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		867BF94E74B282B2C1ED7F47AA80B2D8 /* Build configuration list for PBXNativeTarget "Pods-Chinook_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68DA0D7DA95C71E21B8789A229B52593 /* Debug */,
+				C0B3FD0702B2A9BDD470C157544B55E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A85EDF34559BCD912670B86E898BD73B /* Build configuration list for PBXNativeTarget "Chinook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50C0310EFF3E4ED5641D0CF912D11414 /* Debug */,
+				5EFE1EBF528A07C5D960E11767A068DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

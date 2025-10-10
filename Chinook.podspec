@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Chinook'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'Simplified interactions to Environment Canada weather API.'
   s.homepage         = 'https://github.com/gpkash/Chinook'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

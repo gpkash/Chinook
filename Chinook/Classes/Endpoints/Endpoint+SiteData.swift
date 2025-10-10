@@ -12,7 +12,7 @@ extension Endpoint {
         let languageComponent = NSLocale.language == .french ? "fr" : "en"
         let hour = Calendar(identifier: .gregorian).component(.hour, from: Date().addingTimeInterval(-TimeInterval(TimeZone.current.secondsFromGMT())))
         let utcHour = String(format: "%02d", hour)
-        let baseURLString = "https://dd.weather.gc.ca/citypage_weather/\(site.provinceCode.uppercased())/\(utcHour)/"
+        let baseURLString = "https://dd.weather.gc.ca/today/citypage_weather/\(site.provinceCode.uppercased())/\(utcHour)/"
         guard let indexURL = URL(string: baseURLString) else {
             throw URLError(.badURL)
         }
@@ -39,7 +39,7 @@ extension Endpoint {
             throw NSError(domain: "EndpointError", code: 404, userInfo: [NSLocalizedDescriptionKey: "No matching city page file found"])
         }
 
-        let path = "/citypage_weather/\(site.provinceCode.uppercased())/\(utcHour)/\(latest)"
+        let path = "/today/citypage_weather/\(site.provinceCode.uppercased())/\(utcHour)/\(latest)"
         return Endpoint(host: .datamart, path: path)
     }
 }
