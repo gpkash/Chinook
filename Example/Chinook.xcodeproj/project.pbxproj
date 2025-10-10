@@ -502,7 +502,7 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Chinook/Chinook.framework/Headers\"",
 				);
 				INFOPLIST_FILE = Chinook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				MODULE_NAME = ExampleApp;
@@ -531,7 +531,7 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Chinook/Chinook.framework/Headers\"",
 				);
 				INFOPLIST_FILE = Chinook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				MODULE_NAME = ExampleApp;
