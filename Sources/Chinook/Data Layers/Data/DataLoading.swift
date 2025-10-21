@@ -8,12 +8,12 @@
 import Foundation
 
 public protocol DataLoading {
-    /// Makes a request to fetch data. Returns the progress associated to this operation.
-    /// - Parameters:
-    ///   - endpoint: The endpoint that is involved in fetching the data.
-    ///   - completion: Called once the request has either fulfilled or failed.
-    func request(_ endpoint: Endpoint, completion: @escaping (Result<DataResponse, Error>) -> Void) -> Progress
+    /// Makes a request to fetch data asynchronously.
+    /// - Parameter endpoint: The endpoint that is involved in fetching the data.
+    /// - Returns: A `DataResponse` object on success.
+    /// - Throws: An error if the operation fails or is cancelled.
+    static func request(_ endpoint: Endpoint) async throws -> DataResponse
     
     /// Cancels any current requests to fetch data.
-    func cancel()
+    static func cancel()
 }

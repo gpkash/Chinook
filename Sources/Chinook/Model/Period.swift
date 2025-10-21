@@ -8,6 +8,11 @@
 import Foundation
 
 public struct Period: XMLDecodable {
-    public let value: String
+    private enum CodingKeys: String, CodingKey {
+        case value = ""
+        case textForecastName
+    }
+    
+    public let value: String?
     public let textForecastName: String
 }

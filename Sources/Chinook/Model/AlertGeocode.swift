@@ -8,6 +8,11 @@
 import Foundation
 
 public struct AlertGeocode: XMLDecodable, Hashable {
+    private enum CodingKeys: String, CodingKey {
+        case value = ""
+        case valueName
+    }
+    
     public let valueName: String
-    public let value: String
+    public let value: String?
 }

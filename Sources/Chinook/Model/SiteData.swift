@@ -16,5 +16,4 @@ public struct SiteData: XMLDecodable {
     public let forecastGroup: ForecastGroup?
     public let yesterdayConditions: YesterdayConditions?
     public let riseSet: RiseSet?
-    public let almanac: Almanac?
 }

@@ -36,3 +36,9 @@ extension Site: Equatable {
     }
 }
 
+public extension Site {
+    var siteDataUpdatedNotification: NSNotification.Name {
+        NSNotification.Name("com.thefloorislava.retroweather.Site.SiteDataUpdated\(code)")
+    }
+}
+

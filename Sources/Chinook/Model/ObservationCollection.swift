@@ -18,14 +18,27 @@ public struct ObservationCollection: XMLDecodable {
 public struct IdentificationElements: XMLDecodable {
     public struct IdentificationElement: XMLDecodable {
         public struct Qualifier: XMLDecodable {
+            private enum CodingKeys: String, CodingKey {
+                case value = ""
+                case name
+                case uom
+            }
+
+            public let value: String?
             public let name: String
             public let uom: String
-            public let value: String
         }
         
+        private enum CodingKeys: String, CodingKey {
+            case value = ""
+            case name
+            case uom
+            case qualifier
+        }
+        
+        public let value: String?
         public let name: String?
         public let uom: String?
-        public let value: String?
         public let qualifier: Qualifier?
     }
 

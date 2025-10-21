@@ -8,6 +8,17 @@
 import Foundation
 
 public struct Measurement: XMLDecodable {
+    private enum CodingKeys: String, CodingKey {
+        case value = ""
+        case index
+        case unitType
+        case units
+        case `class`
+        case category
+        case period
+        case year
+    }
+
     public let value: String?
     public let index: String?
     public let unitType: String?

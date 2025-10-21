@@ -1,5 +1,5 @@
 //
-//  RegionalNorms.swift
+//  RegionalNormals.swift
 //  Chinook
 //
 //  Created by Gary Kash on 2020-12-18.
