@@ -2,126 +2,118 @@
 
 Chinook wraps parts of Environment Canada's weather API to make fetching Canadian weather details trivial.
 
-## Requirements
-
 ## Installation
 
-Chinook is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+Chinook is available as a Swift Package. Add it to your project via Xcode's Swift Package Manager or add the following to your `Package.swift`:
 
-```ruby
-pod 'Chinook'
+```swift
+dependencies: [
+    .package(url: "https://github.com/gpkash/Chinook.git", from: "0.0.0")
+]
 ```
 
 ## Example
 
-There are two ways you can interact with Chinook's API.
+Chinook uses Swift's modern async/await concurrency. The primary way to interact with the API is through the `WeatherRepository` and `AlertRepository`.
 
-### 1. Using `Operations` (recommended)
+### Fetching the Site List
 
-This is the easiest way to fetch weather data using Chinook. It provides you with some convenience Operations that wrap up all of the dirty work.
-
-#### Site List:
 ```swift
-let operation = FetchCityPageWeatherSiteListOperation()
+import Chinook
 
-operation.completionHandler = { result in
-
-    switch result {
-    case .success(let siteList):
-        let siteList = siteList as! SiteList
-
-        print("\(siteList.site.count) sites fetched.")
-
-    case .failure(let error):
-        // Network or XML parsing issue.
-    }
-}
-
-queue.addOperation(operation)
-```
-
-#### City Page Weather:
-```swift
-let operation = FetchCityPageWeatherSiteDataOperation(site: site)
-operation.completionHandler = { result in
-
-    switch result {
-    case .success(let siteData):
-        let siteData = siteData as! SiteData
-
-        if let temperature = siteData.currentConditions?.temperature.value {
-            print("\(temperature)C, \(location.name.value), \(location.province)")
-        }
-        else {
-            print("N/A, \(location.name.value), \(location.province)")
-        }
-
-    case .failure(let error):
-        // Network or XML parsing issue.
-    }
-}
-
-queue.addOperation(operation)
-
-```
-
-### 2. Using the `DataLoader` directly
-
-Alternatively, you can roll your own solution by fetching data directly using the `DataLoader`.
-
-#### Site List:
-```swift
-let dataLoader = DataLoader()
-
-dataLoader.request(.citypageWeatherSiteList) { result in
-    switch result {
-    case .success(let data):
-        do {
-            let siteList = try SiteList.decode(fromXML: data)
-
-            print("\(siteList.site.count) sites fetched.")
-        }
-        catch {
-            // Parsing failed.
-        }
-
-    case .failure(let error):
-        // Network call failed.
-    }
+do {
+    let siteList = try await WeatherRepository.fetchCityPageSiteList(strategy: .diskWithNetworkFallback)
+    print("\(siteList.site.count) sites fetched.")
+} catch {
+    // Handle network or parsing error
 }
 ```
 
-#### City Page Weather:
+### Fetching Weather for a Site
 
 ```swift
-let endpoint = Endpoint.cityPageWeather(forSite: site)
+do {
+    let siteData = try await WeatherRepository.fetchWeather(forSite: site, strategy: .networkOnly)
+    
+    if let temperature = siteData.currentConditions?.temperature.value {
+        print("\(temperature)°C")
+    }
+} catch {
+    // Handle error
+}
+```
 
-dataLoader.request(endpoint) { [weak self] result in
-    switch result {
-    case .success(let data):
-        do {
-            let siteData = try SiteData.decode(fromXML: data)
+### Fetching Weather for Multiple Sites
 
-            print("Loaded city page weather for \(siteData.location.name)")
-        }
-        catch {
-          // Parsing failed.
-        }
+```swift
+do {
+    let sites: [Site] = [...] // Your list of sites
+    let allSiteData = try await WeatherRepository.fetchWeather(forSites: sites, strategy: .diskWithNetworkFallback)
+    
+    for siteData in allSiteData {
+        print("\(siteData.location.name): \(siteData.currentConditions?.temperature.value ?? "N/A")")
+    }
+} catch {
+    // Handle error
+}
+```
 
-    case .failure(let error):
-        // Network call failed.
+### Fetching Observation Collection
+
+```swift
+do {
+    let observations = try await WeatherRepository.fetchObservationCollection(
+        forProvince: "ON",
+        strategy: .diskWithNetworkFallback
+    )
+    // Process observations
+} catch {
+    // Handle error
+}
+```
+
+### Fetching Weather Alerts
+
+```swift
+do {
+    let advisories = try await AlertRepository.fetchAdvisories()
+    
+    for advisory in advisories {
+        print("Advisory: \(advisory.designationCode)")
+    }
+} catch {
+    // Handle error
+}
+```
+
+### Data Loading Strategies
+
+Chinook supports three loading strategies via `DataLoaderStrategy`:
+
+- **`.diskOnly`** — Load only from cache
+- **`.networkOnly`** — Fetch from network (caches on success)
+- **`.diskWithNetworkFallback`** — Try cache first, fall back to network
+
+### Notifications
+
+You can observe data updates via `NotificationCenter`:
+
+```swift
+NotificationCenter.default.addObserver(
+    forName: WeatherRepository.Notifications.siteListUpdated,
+    object: nil,
+    queue: .main
+) { notification in
+    if let siteList = notification.object as? SiteList {
+        // Handle updated site list
     }
 }
 ```
 
-## Future Improvements
-
-Planning to add more endpoints. Enjoy!
 
 ## Author
 
-gpkash, capikaw@gmail.com
+Gary Kash, capikaw@gmail.com
 
 ## License
 
