@@ -37,6 +37,11 @@ extension Site: Equatable {
 }
 
 public extension Site {
+    enum SiteDataUpdatedNotificationKeys: String {
+        case site
+        case siteData
+    }
+    
     var siteDataUpdatedNotification: NSNotification.Name {
         NSNotification.Name("com.thefloorislava.retroweather.Site.SiteDataUpdated\(code)")
     }

@@ -9,7 +9,7 @@ import Foundation
 
 public struct AlertParameter: XMLDecodable, Hashable {
     private enum CodingKeys: String, CodingKey {
-        case value = ""
+        case value
         case valueName
     }
     

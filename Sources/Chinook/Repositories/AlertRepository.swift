@@ -37,21 +37,19 @@ public enum AlertRepository {
             return []
         }
         
-        // Extract quoted strings and filter to .cap files, matching previous logic.
-        // Example pattern: matches '"..."' and '\' escapes.
-        let regex = try NSRegularExpression(pattern: "([\"'])(?:(?=(\\?))\\2.)*?\\1")
+        // Extract href attribute values and filter to .cap files.
+        let regex = try NSRegularExpression(pattern: #"<a\s+href="([^"]+)">"#)
         let fullRange = NSRange(html.startIndex..<html.endIndex, in: html)
         let matches = regex.matches(in: html, options: [], range: fullRange)
         
         var urls: [URL] = []
         urls.reserveCapacity(matches.count)
         
-        let doubleQuoteCharacterSet = CharacterSet(charactersIn: "\"")
         let base = "\(endpoint.host.scheme)://\(endpoint.host.hostname)\(endpoint.path)/"
         
         for match in matches {
-            guard let range = Range(match.range, in: html) else { continue }
-            let raw = String(html[range]).trimmingCharacters(in: doubleQuoteCharacterSet)
+            guard let range = Range(match.range(at: 1), in: html) else { continue }
+            let raw = String(html[range])
             guard raw.hasSuffix(".cap") else { continue }
             
             if let url = URL(string: base + raw) {
@@ -102,25 +100,38 @@ public enum AlertRepository {
         // Support cooperative cancellation before launching tasks
         try Task.checkCancellation()
         
-        await withTaskGroup(of: [URL].self) { group in
+        await withTaskGroup(of: [URL].self) { taskGroup in
             for item in work {
-                group.addTask { @Sendable in
-                    // Each child ignores its own errors to mirror old behavior
+                taskGroup.addTask { @Sendable in
+                    // Each child ignores its own errors to mirror old behavior.
+                    // For diskWithNetworkFallback, retry with networkOnly if disk data fails.
                     do {
-                        let urls = try await AlertRepository.fetchManifest(
+                        return try await AlertRepository.fetchManifest(
                             forStationCode: item.station.rawValue,
                             day: item.day,
                             hour: item.hour,
                             strategy: strategy
                         )
-                        return urls
                     } catch {
+                        if strategy == .diskWithNetworkFallback {
+                            do {
+                                return try await AlertRepository.fetchManifest(
+                                    forStationCode: item.station.rawValue,
+                                    day: item.day,
+                                    hour: item.hour,
+                                    strategy: .networkOnly
+                                )
+                            } catch {
+                                return []
+                            }
+                        }
+                        
                         return []
                     }
                 }
             }
             
-            for await urls in group {
+            for await urls in taskGroup {
                 if !urls.isEmpty { allURLs.append(contentsOf: urls) }
             }
         }
@@ -170,6 +181,15 @@ public enum AlertRepository {
                         let response = try await DataLoader.request(endpoint, strategy: strategy)
                         return try Alert.decode(fromXML: response.data)
                     } catch {
+                        // For diskWithNetworkFallback, retry with networkOnly if disk data fails.
+                        if strategy == .diskWithNetworkFallback {
+                            do {
+                                let response = try await DataLoader.request(endpoint, strategy: .networkOnly)
+                                return try Alert.decode(fromXML: response.data)
+                            } catch {
+                                return nil
+                            }
+                        }
                         return nil
                     }
                 }

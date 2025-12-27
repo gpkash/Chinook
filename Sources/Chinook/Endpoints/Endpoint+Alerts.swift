@@ -10,7 +10,7 @@ import Foundation
 
 extension Endpoint {
     public static func alertsManifest(stationCode: String, day: String, hour: String) -> Endpoint {
-        let path = "/alerts/cap/\(day)/\(stationCode)/\(hour)" // eg: https://dd.weather.gc.ca/alerts/cap/20201219/CWHX/02/
+        let path = "/today/alerts/cap/\(day)/\(stationCode)/\(hour)" // eg: https://dd.weather.gc.ca/alerts/cap/20201219/CWHX/02/
         return Endpoint(host: .datamart, path: path)
     }
 

@@ -7,6 +7,60 @@
 
 import Foundation
 
+private actor URLDataCache {
+    static let shared = URLDataCache()
+
+    private var cache: [URL: Data] = [:]
+    private var inFlight: [URL: Task<Data, Error>] = [:]
+    private var cacheCleanupTask: Task<Void, Never>?
+
+    private func clearCache() {
+        cache.removeAll()
+    }
+
+    private func ensureCleanupTaskStarted() {
+        guard cacheCleanupTask == nil else {
+            return
+        }
+
+        // clear cache once / day
+        cacheCleanupTask = Task { [weak self] in
+            while let self, !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: 86_400_000_000_000)
+                await self.clearCache()
+            }
+        }
+    }
+
+    func data(for url: URL) async throws -> Data {
+        ensureCleanupTaskStarted()
+
+        if let data = cache[url] {
+            return data
+        }
+
+        if let task = inFlight[url] {
+            return try await task.value
+        }
+
+        let task = Task<Data, Error> {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            return data
+        }
+        inFlight[url] = task
+
+        do {
+            let data = try await task.value
+            cache[url] = data
+            inFlight[url] = nil
+            return data
+        } catch {
+            inFlight[url] = nil
+            throw error
+        }
+    }
+}
+
 extension Endpoint {
     public static func latestCityPageWeather(forSite site: Site) async throws -> Endpoint {
         let languageComponent = NSLocale.language == .french ? "fr" : "en"
@@ -17,7 +71,7 @@ extension Endpoint {
             throw URLError(.badURL)
         }
 
-        let (data, _) = try await URLSession.shared.data(from: indexURL)
+        let data = try await URLDataCache.shared.data(for: indexURL)
         guard let html = String(data: data, encoding: .utf8) else {
             throw URLError(.cannotDecodeContentData)
         }

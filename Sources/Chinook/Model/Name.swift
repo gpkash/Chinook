@@ -9,7 +9,7 @@ import Foundation
 
 public struct Name: XMLDecodable {
     private enum CodingKeys: String, CodingKey {
-        case value = ""
+        case value
         case lat
         case lon
     }

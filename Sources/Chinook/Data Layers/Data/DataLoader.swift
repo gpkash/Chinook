@@ -31,19 +31,13 @@ public enum DataLoader {
             return result
 
         case .diskWithNetworkFallback:
-            // Try disk first; if missing, fall back to network.
+            // Try disk first; if missing or any disk error, fall back to network.
             do {
                 return try await DiskLoader.request(endpoint)
-            } catch let error as DiskLoaderError {
-                switch error {
-                case .missingAsset:
-                    let result = try await NetworkLoader.request(endpoint)
-                    endpoint.cache(result.data)
-                    return result
-                }
-            } catch {
-                // Other disk errors propagate.
-                throw error
+            } catch is DiskLoaderError {
+                let result = try await NetworkLoader.request(endpoint)
+                endpoint.cache(result.data)
+                return result
             }
         }
     }
