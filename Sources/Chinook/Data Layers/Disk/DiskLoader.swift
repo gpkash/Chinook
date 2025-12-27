@@ -15,32 +15,30 @@ enum DiskLoaderError: Error {
 }
 
 /// Handles disk requests.
-class DiskLoader: NSObject {
-    // MARK: Private Properties
+enum DiskLoader { }
 
-    private let fileManager = FileManager.default
+private extension DiskLoader {
+    static let state = DiskLoaderState()
 }
 
 extension DiskLoader: DataLoading {
-    func request(_ endpoint: Endpoint, completion: @escaping (Result<DataResponse, Error>) -> Void) -> Progress {
-        let progress = Progress(totalUnitCount: 1)
-        
-        do {
+    static func request(_ endpoint: Endpoint) async throws -> DataResponse {
+        // Create a child Task so we can cancel via `cancel()`.
+        let task = Task<DataResponse, Error> {
+            try Task.checkCancellation()
             let data = try Data(contentsOf: endpoint.storageURL)
-            let dataResponse = DataResponse(data: data, source: .disk)
-            progress.completedUnitCount = 1
-            completion(.success(dataResponse))
+            try Task.checkCancellation()
+            return DataResponse(data: data, source: .disk)
+        }
 
-        }
-        catch {
-            progress.completedUnitCount = 1
-            completion(.failure(DiskLoaderError.missingAsset))
-        }
-        
-        return progress
+        // Keep a reference for cancellation in an actor-isolated state.
+        await state.set(task)
+        defer { Task { await state.set(nil) } }
+
+        return try await task.value
     }
-    
-    func cancel() {
-        
+
+    static func cancel() {
+        Task { await state.cancel() }
     }
 }

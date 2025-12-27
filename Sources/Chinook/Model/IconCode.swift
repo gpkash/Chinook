@@ -8,6 +8,11 @@
 import Foundation
 
 public struct IconCode: XMLDecodable {
+    private enum CodingKeys: String, CodingKey {
+        case value = ""
+        case format
+    }
+
     public let value: String?
     public let format: String?
 }

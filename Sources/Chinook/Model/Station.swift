@@ -8,7 +8,14 @@
 import Foundation
 
 public struct Station: XMLDecodable {
-    public let value: String
+    private enum CodingKeys: String, CodingKey {
+        case value = ""
+        case code
+        case lat
+        case lon
+    }
+    
+    public let value: String?
     public let code: String
     public let lat: String
     public let lon: String

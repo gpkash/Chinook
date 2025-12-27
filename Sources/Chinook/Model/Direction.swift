@@ -8,6 +8,11 @@
 import Foundation
 
 public struct Direction: XMLDecodable {
-    public let value: String
+    private enum CodingKeys: String, CodingKey {
+        case value = ""
+        case windDirFull
+    }
+    
+    public let value: String?
     public let windDirFull: String?
 }

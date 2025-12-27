@@ -22,27 +22,6 @@ public struct Province: Hashable, Sendable {
         self.nameFr = nameFr
     }
     
-    public static func forCode(_ code: String) -> Province? {
-        switch code.uppercased() {
-        case "BC": return Province.britishColumbia
-        case "AB": return Province.alberta
-        case "SK": return Province.saskatchewan
-        case "MB": return Province.manitoba
-        case "ON": return Province.ontario
-        case "QC": return Province.quebec
-        case "NB": return Province.newBrunswick
-        case "NS": return Province.novaScotia
-        case "PE", "PEI": return Province.priceEdwardIsland
-        case "NL": return Province.newfoundlandAndLabrador
-        case "NU": return Province.nunavut
-        case "NT", "NWT": return Province.northwestTerritories
-        case "YT": return Province.yukon
-        default: break
-        }
-        
-        return nil
-    }
-    
     public static let britishColumbia = Province(abbreviation: "BC", nameEn: "British Columbia", nameFr: "Colombie-Britannique")
     public static let alberta = Province(abbreviation: "AB", nameEn: "Alberta", nameFr: "Alberta")
     public static let saskatchewan = Province(abbreviation: "SK", nameEn: "Saskatchewan", nameFr: "Saskatchewan")
@@ -56,4 +35,29 @@ public struct Province: Hashable, Sendable {
     public static let nunavut = Province(abbreviation: "NU", nameEn: "Nunavut", nameFr: "Nunavut")
     public static let northwestTerritories = Province(abbreviation: "NT", nameEn: "Northwest Territories", nameFr: "Territoires du Nord-Ouest")
     public static let yukon = Province(abbreviation: "YT", nameEn: "Yukon", nameFr: "Yukon")
+    
+    /// Fast lookup table for province codes
+    public static let lookupTable: [String: Province] = [
+        "BC": .britishColumbia,
+        "AB": .alberta,
+        "SK": .saskatchewan,
+        "MB": .manitoba,
+        "ON": .ontario,
+        "QC": .quebec,
+        "NB": .newBrunswick,
+        "NS": .novaScotia,
+        "PE": .priceEdwardIsland,
+        "PEI": .priceEdwardIsland,
+        "NL": .newfoundlandAndLabrador,
+        "NU": .nunavut,
+        "NT": .northwestTerritories,
+        "NWT": .northwestTerritories,
+        "YT": .yukon
+    ]
+    
+    public static func forCode(_ code: String) -> Province? {
+        lookupTable[code.uppercased()]
+    }
+    
+    static let count: Int = 13
 }

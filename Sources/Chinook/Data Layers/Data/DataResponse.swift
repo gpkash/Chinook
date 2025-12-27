@@ -12,7 +12,7 @@ public enum DataResponseSource {
     case disk
 }
 
-public struct DataResponse: Equatable {
+public struct DataResponse: Equatable, @unchecked Sendable {
     public let data: Data
     public let source: DataResponseSource
     

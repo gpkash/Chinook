@@ -8,50 +8,66 @@
 
 import Foundation
 
-/// Handles network requests.
-final class NetworkLoader: NSObject, DataLoading, @unchecked Sendable {
-    // MARK: Private Properties
-    private var activeTask: URLSessionDataTask?
+enum NetworkLoader { }
 
-    func request(_ endpoint: Endpoint, completion: @escaping (Result<DataResponse, Error>) -> Void) -> Progress {
-        let urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: .main)
-        
-        guard let url = endpoint.url
-        else {
-            completion(.failure(NetworkError.badURL))
-            return Progress(totalUnitCount: 1)
-        }
-
-        activeTask = urlSession.dataTask(with: url) { data, response, error in
-            if let error {
-                completion(.failure(error))
-                return
-            }
-
-            if let httpResponse = response as? HTTPURLResponse,
-               !(200...299).contains(httpResponse.statusCode) {
-                completion(.failure(NetworkError.httpError(statusCode: httpResponse.statusCode)))
-                return
-            }
-
-            if let data {
-                let dataResponse = DataResponse(data: data, source: .network)
-                completion(.success(dataResponse))
-            } else {
-                completion(.failure(NetworkError.emptyResponse))
-            }
-        }
-        
-        activeTask?.resume()
-        urlSession.finishTasksAndInvalidate()
-
-        return activeTask?.progress ?? Progress()
-    }
-    
-    func cancel() {
-        activeTask?.cancel()
-    }
+private extension NetworkLoader {
+    static let state = NetworkLoaderState()
 }
 
-// MARK: - URLSessionDelegate
-extension NetworkLoader: URLSessionDelegate { }
+/// Handles network requests.
+extension NetworkLoader: DataLoading {
+    static func request(_ endpoint: Endpoint) async throws -> DataResponse {
+        let urlSession = URLSession(configuration: .default)
+
+        guard let url = endpoint.url else {
+            throw NetworkError.badURL
+        }
+
+        // Create a task reference for cancellation.
+        let (data, _) = try await withTaskCancellationHandler {
+            // Handler cannot be async; hop to a Task to call the actor.
+            Task { await state.cancel() }
+        } operation: {
+            try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<(Data, HTTPURLResponse), Error>) in
+                let task = urlSession.dataTask(with: url) { data, response, error in
+                    if let error {
+                        Task { await state.set(nil) }
+                        continuation.resume(throwing: error)
+                        return
+                    }
+
+                    guard let httpResponse = response as? HTTPURLResponse else {
+                        Task { await state.set(nil) }
+                        continuation.resume(throwing: NetworkError.emptyResponse)
+                        return
+                    }
+
+                    guard (200...299).contains(httpResponse.statusCode) else {
+                        Task { await state.set(nil) }
+                        continuation.resume(throwing: NetworkError.httpError(statusCode: httpResponse.statusCode))
+                        return
+                    }
+
+                    guard let data else {
+                        Task { await state.set(nil) }
+                        continuation.resume(throwing: NetworkError.emptyResponse)
+                        return
+                    }
+
+                    Task { await state.set(nil) }
+                    continuation.resume(returning: (data, httpResponse))
+                }
+
+                Task { await state.set(task) }
+                task.resume()
+            }
+        }
+
+        urlSession.finishTasksAndInvalidate()
+        return DataResponse(data: data, source: .network)
+    }
+
+    static func cancel() {
+        Task { await state.cancel() }
+    }
+}
