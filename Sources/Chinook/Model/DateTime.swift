@@ -8,14 +8,14 @@
 import Foundation
 
 public struct DateTime: XMLDecodable {
-    public let name: String
-    public let zone: String
-    public let UTCOffset: String // Must be capital to map to EC's xml element name. 🤷
-    public let year: Int
-    public let month: Int
-    public let day: Int
-    public let hour: Int
-    public let minute: Int
-    public let timeStamp: Double
-    public let textSummary: String
+    public let name: String?
+    public let zone: String?
+    public let UTCOffset: String?
+    public let year: Int?
+    public let month: Int?
+    public let day: Int?
+    public let hour: Int?
+    public let minute: Int?
+    public let timeStamp: Double?
+    public let textSummary: String?
 }
