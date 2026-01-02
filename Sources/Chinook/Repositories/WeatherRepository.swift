@@ -43,7 +43,7 @@ public enum WeatherRepository {
     /// - Parameters:
     ///   - sites: The Environment Canada site descriptors.
     ///   - strategy: Loading strategy (disk/network behavior).
-    /// - Returns: An array of decoded `SiteData` for each site’s current conditions, in the same order as `sites`.
+    /// - Returns: An array of decoded `SiteData` for each site’s current conditions, preserving the input order for successful sites. Individual failures do not cancel other loads and are omitted from the result. If all sites fail, the first encountered error is thrown.
     @discardableResult
     public static func fetchWeather(forSites sites: [Site], strategy: DataLoaderStrategy) async throws -> [SiteData] {
         // Fast-path: nothing to do
@@ -51,29 +51,49 @@ public enum WeatherRepository {
 
         try Task.checkCancellation()
 
-        // Run all site fetches concurrently while preserving the input order.
-        return try await withThrowingTaskGroup(of: (Int, SiteData).self, returning: [SiteData].self) { group in
-            // Spawn child tasks
+        // Run all site fetches concurrently, but ensure single failures don't cancel other loads.
+        let (successes, firstError) = await withTaskGroup(of: (Int, Result<SiteData, Error>).self, returning: ([SiteData], Error?).self) { group in
+            // Spawn child tasks that never throw; they report success/failure via Result.
             for (index, site) in sites.enumerated() {
                 group.addTask {
-                    try Task.checkCancellation()
-                    // Reuse the single-site fetch which handles endpoint discovery, network, decode, and notification posting.
-                    let data = try await fetchWeather(forSite: site, strategy: strategy)
-                    return (index, data)
+                    // Cooperatively respect cancellation without throwing from the child.
+                    if Task.isCancelled {
+                        return (index, .failure(CancellationError()))
+                    }
+
+                    do {
+                        let data = try await fetchWeather(forSite: site, strategy: strategy)
+                        return (index, .success(data))
+                    } catch {
+                        // Capture individual site failure without throwing to the group.
+                        return (index, .failure(error))
+                    }
                 }
             }
 
-            // Collect results into an order-preserving buffer
+            // Collect results into an order-preserving buffer, skipping failures.
             var ordered = Array<SiteData?>(repeating: nil, count: sites.count)
-            for try await (index, data) in group {
-                ordered[index] = data
+            var firstError: Error?
+
+            for await (index, result) in group {
+                switch result {
+                case .success(let data):
+                    ordered[index] = data
+                case .failure(let error):
+                    if firstError == nil { firstError = error }
+                }
             }
 
-            try Task.checkCancellation()
-
-            // Compact map is safe here because every successful task fills exactly one slot.
-            return ordered.compactMap { $0 }
+            let successes = ordered.compactMap { $0 }
+            return (successes, firstError)
         }
+        
+        try Task.checkCancellation()
+        
+        if successes.isEmpty, let error = firstError {
+            throw error
+        }
+        return successes
     }
     
     /// Fetch the `ObservationCollection` for the specified province.
@@ -124,3 +144,4 @@ public enum WeatherRepository {
 extension SiteData: @unchecked Sendable { }
 extension Site: @unchecked Sendable { }
 extension DataLoaderStrategy: @unchecked Sendable { }
+
