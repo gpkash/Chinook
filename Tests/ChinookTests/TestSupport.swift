@@ -11,6 +11,7 @@ final class FakeTransport: DataTransport, @unchecked Sendable {
 
     private let lock = NSLock()
     private var stubs: [String: Stub] = [:]
+    private var fallback: Stub?
     private var recordedRequests: [URL] = []
     private var inFlight = 0
     private var peakInFlight = 0
@@ -20,6 +21,11 @@ final class FakeTransport: DataTransport, @unchecked Sendable {
 
     func stub(_ urlString: String, status: Int = 200, body: String = "") {
         lock.withLock { stubs[urlString] = .http(status: status, body: Data(body.utf8)) }
+    }
+
+    /// Served for any URL without its own stub.
+    func stubEverythingElse(status: Int = 200, body: String = "") {
+        lock.withLock { fallback = .http(status: status, body: Data(body.utf8)) }
     }
 
     func stubNonHTTP(_ urlString: String) {
@@ -52,7 +58,7 @@ final class FakeTransport: DataTransport, @unchecked Sendable {
             recordedRequests.append(url)
             inFlight += 1
             peakInFlight = max(peakInFlight, inFlight)
-            return stubs[url.absoluteString]
+            return stubs[url.absoluteString] ?? fallback
         }
     }
 
@@ -81,4 +87,29 @@ func makeLoader(_ transport: FakeTransport, cacheDirectory: URL, maxConcurrentRe
 func fixture(_ name: String) throws -> Data {
     let url = Bundle.module.url(forResource: name, withExtension: nil, subdirectory: "Fixtures")
     return try Data(contentsOf: try #require(url, "missing fixture \(name)"))
+}
+
+/// A fixed moment: 2026-11-05 at the given UTC hour and minute.
+func utc(hour: Int, minute: Int = 0, day: Int = 5) -> Date {
+    var components = DateComponents(year: 2026, month: 11, day: day, hour: hour, minute: minute)
+    components.timeZone = TimeZone(secondsFromGMT: 0)
+
+    return Calendar(identifier: .gregorian).date(from: components)!
+}
+
+/// A directory listing in the shape Datamart serves.
+func capListing(_ files: String...) -> String {
+    files.map { "<img src=\"/icons/unknown.gif\"> <a href=\"\($0)\">\($0)</a> 2026-11-05 20:01 17K" }.joined(separator: "\n")
+}
+
+func fixtureString(_ name: String) throws -> String {
+    String(decoding: try fixture(name), as: UTF8.self)
+}
+
+/// City page XML with the location rewritten, for point-in-polygon tests.
+func siteData(latitude: String, longitude: String) throws -> SiteData {
+    let xml = try fixtureString("citypage-edmonton-en.xml")
+        .replacingOccurrences(of: #"lat="53.54N" lon="113.49W""#, with: #"lat="\#(latitude)" lon="\#(longitude)""#)
+
+    return try SiteData.decode(fromXML: Data(xml.utf8))
 }

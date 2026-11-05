@@ -27,6 +27,13 @@ extension SiteData {
             longitude = -longitude
         }
 
-        return CGPoint(x: longitude, y: latitude)
+        return CGPoint(latitude: latitude, longitude: longitude)
+    }
+}
+
+extension CGPoint {
+    /// Map convention used everywhere in Chinook: x is longitude, y is latitude.
+    init(latitude: Double, longitude: Double) {
+        self.init(x: longitude, y: latitude)
     }
 }
