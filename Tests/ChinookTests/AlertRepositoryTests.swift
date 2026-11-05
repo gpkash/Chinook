@@ -60,7 +60,7 @@ private func alertTransport() throws -> FakeTransport {
     }
 
     @Test func aManifestThatCantBeFetchedThrows() async throws {
-        try await withCacheDirectory { directory in
+        await withCacheDirectory { directory in
             let loader = makeLoader(FakeTransport(), cacheDirectory: directory)
 
             await #expect(throws: URLError.self) {
@@ -166,7 +166,7 @@ private func alertTransport() throws -> FakeTransport {
     }
 
     @Test func anAlertThatIsNotXMLFailsToDecode() async throws {
-        try await withCacheDirectory { directory in
+        await withCacheDirectory { directory in
             let transport = FakeTransport()
             transport.stub(capURL("CWNT", "20", "bad.cap"), body: "not xml")
             let loader = makeLoader(transport, cacheDirectory: directory)
