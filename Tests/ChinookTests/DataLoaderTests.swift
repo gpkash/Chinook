@@ -159,43 +159,95 @@ import Testing
     @Test func cancellingOneRequestLeavesTheOthersRunning() async throws {
         try await withCacheDirectory { directory in
             let transport = FakeTransport()
-            transport.delay = .milliseconds(150)
-            transport.stub("https://example.test/today/test/a.xml", body: "a")
+            let first = "https://example.test/today/test/a.xml"
+            transport.stub(first, body: "a")
             transport.stub("https://example.test/today/test/b.xml", body: "b")
+            transport.hold(first)
             let loader = makeLoader(transport, cacheDirectory: directory)
 
-            let first = Task { try await loader.request(makeEndpoint("/today/test/a.xml"), strategy: .networkOnly) }
-            let second = Task { try await loader.request(makeEndpoint("/today/test/b.xml"), strategy: .networkOnly) }
+            let firstTask = Task { try await loader.request(makeEndpoint("/today/test/a.xml"), strategy: .networkOnly) }
+            let secondTask = Task { try await loader.request(makeEndpoint("/today/test/b.xml"), strategy: .networkOnly) }
 
-            try await Task.sleep(for: .milliseconds(30))
-            first.cancel()
+            // The first request is in the transport, held; cancel it, then let it go.
+            #expect(await eventually { transport.requests.contains(URL(string: first)!) })
+            firstTask.cancel()
+            transport.open(first)
 
-            await #expect(throws: (any Error).self) { try await first.value }
-            let survivor = try await second.value
+            await #expect(throws: CancellationError.self) { try await firstTask.value }
+            let survivor = try await secondTask.value
             #expect(survivor.data == Data("b".utf8))
         }
     }
 
-    @Test func aCancelledWaiterLeavesTheQueueAndFreesItsPlace() async throws {
+    @Test func aCancelledWaiterNeverReachesTheTransportAndFreesItsPlace() async throws {
         try await withCacheDirectory { directory in
             let transport = FakeTransport()
-            transport.delay = .milliseconds(150)
+            let held = "https://example.test/today/test/a.xml"
             ["a", "b", "c"].forEach { transport.stub("https://example.test/today/test/\($0).xml", body: $0) }
+            transport.hold(held)
             let loader = makeLoader(transport, cacheDirectory: directory, maxConcurrentRequests: 1)
 
+            // The holder takes the only permit and stays in the transport until we open it.
             let holder = Task { try await loader.request(makeEndpoint("/today/test/a.xml"), strategy: .networkOnly) }
-            try await Task.sleep(for: .milliseconds(30))
-            let waiter = Task { try await loader.request(makeEndpoint("/today/test/b.xml"), strategy: .networkOnly) }
-            try await Task.sleep(for: .milliseconds(30))
-            waiter.cancel()
+            #expect(await eventually { transport.requests.contains(URL(string: held)!) })
 
+            // Whether the waiter is already queued or not yet started, it can't get a permit before the holder lets go.
+            let waiter = Task { try await loader.request(makeEndpoint("/today/test/b.xml"), strategy: .networkOnly) }
+            waiter.cancel()
             await #expect(throws: CancellationError.self) { try await waiter.value }
+
+            transport.open(held)
             _ = try await holder.value
 
             let next = try await loader.request(makeEndpoint("/today/test/c.xml"), strategy: .networkOnly)
             #expect(next.data == Data("c".utf8))
             #expect(!transport.requests.contains(URL(string: "https://example.test/today/test/b.xml")!))
         }
+    }
+
+    @Test func aQueuedWaiterThatIsCancelledLeavesTheQueue() async throws {
+        let limiter = RequestLimiter(limit: 1)
+        let latch = Latch()
+
+        let holder = Task { try await limiter.withPermit { await latch.wait() } }
+        #expect(await eventually { await limiter.runningCount == 1 })
+
+        let waiter = Task { try await limiter.withPermit { "ran" } }
+        #expect(await eventually { await limiter.waitingCount == 1 })
+
+        waiter.cancel()
+        await #expect(throws: CancellationError.self) { try await waiter.value }
+        #expect(await limiter.waitingCount == 0)
+
+        await latch.open()
+        _ = try await holder.value
+
+        #expect(await limiter.runningCount == 0)
+        #expect(try await limiter.withPermit { "next" } == "next")
+    }
+
+    @Test func waitersAreServedInOrder() async throws {
+        let limiter = RequestLimiter(limit: 1)
+        let latch = Latch()
+        let order = Posted<[Int]>()
+        order.set([])
+
+        let holder = Task { try await limiter.withPermit { await latch.wait() } }
+        #expect(await eventually { await limiter.runningCount == 1 })
+
+        var waiters: [Task<Void, Error>] = []
+        for index in 1...3 {
+            waiters.append(Task {
+                try await limiter.withPermit { order.set((order.value ?? []) + [index]) }
+            })
+            #expect(await eventually { await limiter.waitingCount == index })
+        }
+
+        await latch.open()
+        _ = try await holder.value
+        for waiter in waiters { try await waiter.value }
+
+        #expect(order.value == [1, 2, 3])
     }
 
     @Test func alreadyCancelledRequestsNeverStart() async throws {

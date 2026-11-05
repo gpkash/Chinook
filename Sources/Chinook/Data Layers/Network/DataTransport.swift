@@ -44,6 +44,12 @@ actor RequestLimiter {
         self.limit = max(1, limit)
     }
 
+    /// How many permits are held right now. Read by tests so they can wait on state instead of on time.
+    var runningCount: Int { running }
+
+    /// How many callers are queued behind the cap. Read by tests, for the same reason.
+    var waitingCount: Int { waiters.count }
+
     func withPermit<T: Sendable>(_ operation: @Sendable () async throws -> T) async throws -> T {
         try await acquire()
 

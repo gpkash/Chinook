@@ -15,6 +15,8 @@ final class FakeTransport: DataTransport, @unchecked Sendable {
     private var recordedRequests: [URL] = []
     private var inFlight = 0
     private var peakInFlight = 0
+    private var heldURLs: Set<String> = []
+    private var heldRequests: [String: [CheckedContinuation<Void, Never>]] = [:]
 
     /// How long each request takes, so tests can overlap them.
     var delay: Duration = .zero
@@ -28,6 +30,19 @@ final class FakeTransport: DataTransport, @unchecked Sendable {
         lock.withLock { fallback = .http(status: status, body: Data(body.utf8)) }
     }
 
+    /// Requests to this URL are recorded, then suspended until `open` is called for it.
+    func hold(_ urlString: String) {
+        lock.withLock { _ = heldURLs.insert(urlString) }
+    }
+
+    func open(_ urlString: String) {
+        let resumable = lock.withLock { () -> [CheckedContinuation<Void, Never>] in
+            heldURLs.remove(urlString)
+            return heldRequests.removeValue(forKey: urlString) ?? []
+        }
+        resumable.forEach { $0.resume() }
+    }
+
     func stubNonHTTP(_ urlString: String) {
         lock.withLock { stubs[urlString] = .nonHTTP }
     }
@@ -39,9 +54,13 @@ final class FakeTransport: DataTransport, @unchecked Sendable {
         let stub = begin(url)
         defer { end() }
 
+        await waitWhileHeld(url)
+
         if delay > .zero {
             try await Task.sleep(for: delay)
         }
+
+        try Task.checkCancellation()
 
         switch stub {
         case .http(let status, let body):
@@ -59,6 +78,18 @@ final class FakeTransport: DataTransport, @unchecked Sendable {
             inFlight += 1
             peakInFlight = max(peakInFlight, inFlight)
             return stubs[url.absoluteString] ?? fallback
+        }
+    }
+
+    private func waitWhileHeld(_ url: URL) async {
+        await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>) in
+            let mustWait = lock.withLock { () -> Bool in
+                guard heldURLs.contains(url.absoluteString) else { return false }
+                heldRequests[url.absoluteString, default: []].append(continuation)
+                return true
+            }
+
+            if !mustWait { continuation.resume() }
         }
     }
 
@@ -112,4 +143,33 @@ func siteData(latitude: String, longitude: String) throws -> SiteData {
         .replacingOccurrences(of: #"lat="53.54N" lon="113.49W""#, with: #"lat="\#(latitude)" lon="\#(longitude)""#)
 
     return try SiteData.decode(fromXML: Data(xml.utf8))
+}
+
+/// Polls until `condition` holds, so tests wait on state rather than on a guess about timing.
+func eventually(timeout: Duration = .seconds(5), _ condition: () async -> Bool) async -> Bool {
+    let deadline = ContinuousClock.now + timeout
+
+    while ContinuousClock.now < deadline {
+        if await condition() { return true }
+        try? await Task.sleep(for: .milliseconds(2))
+    }
+
+    return await condition()
+}
+
+/// A gate that holds callers of `wait()` until `open()`.
+actor Latch {
+    private var isOpen = false
+    private var waiters: [CheckedContinuation<Void, Never>] = []
+
+    func wait() async {
+        if isOpen { return }
+        await withCheckedContinuation { waiters.append($0) }
+    }
+
+    func open() {
+        isOpen = true
+        waiters.forEach { $0.resume() }
+        waiters = []
+    }
 }
