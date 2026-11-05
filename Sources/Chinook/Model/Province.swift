@@ -13,7 +13,11 @@ public struct Province: Hashable, Sendable {
     public var nameFr: String
     
     public var name: String {
-        return NSLocale.language == .french ? nameFr : nameEn
+        name(in: NSLocale.language)
+    }
+
+    public func name(in language: Language) -> String {
+        language.pick(en: nameEn, fr: nameFr)
     }
     
     public init(abbreviation: String, nameEn: String, nameFr: String) {
@@ -30,7 +34,7 @@ public struct Province: Hashable, Sendable {
     public static let quebec = Province(abbreviation: "QC", nameEn: "Quebec", nameFr: "Québec")
     public static let newBrunswick = Province(abbreviation: "NB", nameEn: "New Brunswick", nameFr: "Nouveau-Brunswick")
     public static let novaScotia = Province(abbreviation: "NS", nameEn: "Nova Scotia", nameFr: "Nouvelle-Écosse")
-    public static let priceEdwardIsland = Province(abbreviation: "PE", nameEn: "Price Edward Island", nameFr: "Île-du-Prince-Édouard")
+    public static let priceEdwardIsland = Province(abbreviation: "PE", nameEn: "Prince Edward Island", nameFr: "Île-du-Prince-Édouard")
     public static let newfoundlandAndLabrador = Province(abbreviation: "NL", nameEn: "Newfoundland and Labrador", nameFr: "Terre-Neuve-et-Labrador")
     public static let nunavut = Province(abbreviation: "NU", nameEn: "Nunavut", nameFr: "Nunavut")
     public static let northwestTerritories = Province(abbreviation: "NT", nameEn: "Northwest Territories", nameFr: "Territoires du Nord-Ouest")
@@ -59,5 +63,5 @@ public struct Province: Hashable, Sendable {
         lookupTable[code.uppercased()]
     }
     
-    static let count: Int = 13
+    static var count: Int { Set(lookupTable.values).count }
 }

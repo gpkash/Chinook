@@ -25,7 +25,11 @@ public struct Site: XMLDecodable, Hashable {
 public extension Site {
     /// Returns either `nameEn` or `nameFr` depending on the locale of the system.
     var name: String {
-        return NSLocale.language == .french ? nameFr : nameEn
+        name(in: NSLocale.language)
+    }
+
+    func name(in language: Language) -> String {
+        language.pick(en: nameEn, fr: nameFr)
     }
 }
 
@@ -37,11 +41,6 @@ extension Site: Equatable {
 }
 
 public extension Site {
-    enum SiteDataUpdatedNotificationKeys: String {
-        case site
-        case siteData
-    }
-    
     var siteDataUpdatedNotification: NSNotification.Name {
         NSNotification.Name("com.thefloorislava.retroweather.Site.SiteDataUpdated\(code)")
     }

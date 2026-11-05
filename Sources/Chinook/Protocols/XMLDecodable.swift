@@ -9,7 +9,7 @@
 import Foundation
 import XMLCoder
 
-public protocol XMLDecodable: Codable {
+public protocol XMLDecodable: Codable, Sendable {
     static func decode(fromXML data: Data, keyDecodingStrategy: XMLDecoder.KeyDecodingStrategy) throws -> Self
 }
 
