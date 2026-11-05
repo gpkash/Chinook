@@ -34,7 +34,7 @@ import Testing
     }
 
     @Test func diskOnlyThrowsWhenNothingIsCached() async throws {
-        try await withCacheDirectory { directory in
+        await withCacheDirectory { directory in
             let transport = FakeTransport()
             let loader = makeLoader(transport, cacheDirectory: directory)
 
@@ -124,7 +124,7 @@ import Testing
     }
 
     @Test func transportErrorsPropagate() async throws {
-        try await withCacheDirectory { directory in
+        await withCacheDirectory { directory in
             let loader = makeLoader(FakeTransport(), cacheDirectory: directory)
 
             await #expect(throws: URLError.self) {
