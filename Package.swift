@@ -31,7 +31,8 @@ let package = Package(
         ),
         .testTarget(
             name: "ChinookTests",
-            dependencies: ["Chinook"]
+            dependencies: ["Chinook"],
+            resources: [.copy("Fixtures")]
         ),
     ],
     swiftLanguageModes: [.v5, .v6]

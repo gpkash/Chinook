@@ -1,3 +1,4 @@
+import Testing
 import Foundation
 @testable import Chinook
 
@@ -74,4 +75,10 @@ func makeEndpoint(_ path: String = "/today/test/file.xml", host: String = "examp
 
 func makeLoader(_ transport: FakeTransport, cacheDirectory: URL, maxConcurrentRequests: Int = 8) -> DataLoader {
     DataLoader(transport: transport, cacheDirectory: cacheDirectory, maxConcurrentRequests: maxConcurrentRequests)
+}
+
+/// Loads a file from `Tests/ChinookTests/Fixtures`.
+func fixture(_ name: String) throws -> Data {
+    let url = Bundle.module.url(forResource: name, withExtension: nil, subdirectory: "Fixtures")
+    return try Data(contentsOf: try #require(url, "missing fixture \(name)"))
 }

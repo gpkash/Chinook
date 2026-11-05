@@ -56,3 +56,13 @@ public extension XMLDecodable {
         }
     }
 }
+
+public extension KeyedDecodingContainer {
+    /// Decodes `key`, or returns `fallback` when EC left it out or sent something unusable.
+    ///
+    /// EC omits and blanks fields freely, and one bad field shouldn't cost a whole site. Models that
+    /// want to tolerate that use this instead of `decode`, so the policy lives in one place.
+    func decodeLenient<T: Decodable>(_ type: T.Type, forKey key: Key, fallback: @autoclosure () -> T) -> T {
+        (try? decodeIfPresent(type, forKey: key)) ?? fallback()
+    }
+}
