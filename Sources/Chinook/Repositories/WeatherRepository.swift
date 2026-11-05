@@ -143,5 +143,4 @@ public enum WeatherRepository {
 
 extension SiteData: @unchecked Sendable { }
 extension Site: @unchecked Sendable { }
-extension DataLoaderStrategy: @unchecked Sendable { }
 

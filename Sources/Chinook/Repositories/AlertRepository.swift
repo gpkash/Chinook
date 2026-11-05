@@ -235,6 +235,5 @@ public enum AlertRepository {
 }
 
 // MARK: - Sendable conformances for task-group captures
-extension DataLoaderStrategy: @unchecked Sendable {}
 extension StationCode: @unchecked Sendable {}
 extension Alert: @unchecked Sendable {}
