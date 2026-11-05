@@ -58,20 +58,6 @@ do {
 }
 ```
 
-### Fetching Observation Collection
-
-```swift
-do {
-    let observations = try await WeatherRepository.fetchObservationCollection(
-        forProvince: "ON",
-        strategy: .diskWithNetworkFallback
-    )
-    // Process observations
-} catch {
-    // Handle error
-}
-```
-
 ### Fetching Weather Alerts
 
 ```swift
@@ -92,7 +78,9 @@ Chinook supports three loading strategies via `DataLoaderStrategy`:
 
 - **`.diskOnly`** — Load only from cache
 - **`.networkOnly`** — Fetch from network (caches on success)
-- **`.diskWithNetworkFallback`** — Try cache first, fall back to network
+- **`.diskWithNetworkFallback`** — Try cache first, fall back to network (a missing or unreadable cache entry is not an error)
+
+Requests share one `URLSession` and at most 8 are in flight at once.
 
 ### Notifications
 
@@ -104,11 +92,14 @@ NotificationCenter.default.addObserver(
     object: nil,
     queue: .main
 ) { notification in
-    if let siteList = notification.object as? SiteList {
+    if let siteList = notification.siteList {
         // Handle updated site list
     }
 }
 ```
+
+Notifications are posted from the thread of the task that fetched, not the main thread. `Notification` has typed
+accessors (`siteData`, `siteList`, `advisories`), so there's no need to cast `object`.
 
 
 ## Author

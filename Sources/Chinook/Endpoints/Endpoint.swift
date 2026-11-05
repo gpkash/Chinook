@@ -24,7 +24,7 @@ public struct Endpoint: Sendable {
     }
     
     init(url: URL) {
-        self.host = Host(hostname: url.host!)
+        self.host = Host(scheme: url.scheme ?? "https", hostname: url.host ?? "")
         self.path = url.path
         self.queryItems = nil
     }

@@ -11,34 +11,20 @@ import Foundation
 public enum WeatherRepository {
     public enum Notifications {
         public static let siteListUpdated = Notification.Name(rawValue: "com.thefloorislava.retroweather.WeatherRepository.siteListUpdated")
-        public static let observationCollectionUpdated = Notification.Name(rawValue: "com.thefloorislava.retroweather.WeatherRepository.observationCollectionUpdated")
     }
 
     /// Fetch the latest City Page weather `SiteData` for a given site.
+    ///
+    /// Also posts the result on `site.siteDataUpdatedNotification`, from the calling task's thread.
     /// - Parameters:
     ///   - site: The Environment Canada site descriptor.
     ///   - strategy: Loading strategy (disk/network behavior).
     /// - Returns: Decoded `SiteData` for the site’s current conditions.
     @discardableResult
     public static func fetchWeather(forSite site: Site, strategy: DataLoaderStrategy) async throws -> SiteData {
-        // Cooperative cancellation before and after network work
-        try Task.checkCancellation()
-
-        // Endpoint discovery (appears to be async in your codebase)
-        let endpoint = try await Endpoint.latestCityPageWeather(forSite: site)
-
-        // Fetch via static DataLoader facade
-        let responseData = try await DataLoader.request(endpoint, strategy: strategy).data
-
-        try Task.checkCancellation()
-        
-        let siteData = try SiteData.decode(fromXML: responseData)
-
-        NotificationCenter.default.post(name: site.siteDataUpdatedNotification, object: siteData)
-
-        return siteData
+        try await fetchWeather(forSite: site, strategy: strategy, loader: .shared, locator: .shared)
     }
-    
+
     /// Fetch the latest City Page weather `SiteData` for multiple sites in parallel.
     /// - Parameters:
     ///   - sites: The Environment Canada site descriptors.
@@ -46,6 +32,50 @@ public enum WeatherRepository {
     /// - Returns: An array of decoded `SiteData` for each site’s current conditions, preserving the input order for successful sites. Individual failures do not cancel other loads and are omitted from the result. If all sites fail, the first encountered error is thrown.
     @discardableResult
     public static func fetchWeather(forSites sites: [Site], strategy: DataLoaderStrategy) async throws -> [SiteData] {
+        try await fetchWeather(forSites: sites, strategy: strategy, loader: .shared, locator: .shared)
+    }
+
+    /// Fetch the Environment Canada City Page weather site list.
+    ///
+    /// Also posts the result on `Notifications.siteListUpdated`.
+    /// - Parameter strategy: Loading strategy (disk/network behavior).
+    /// - Returns: Decoded `SiteList`.
+    @discardableResult
+    public static func fetchCityPageSiteList(strategy: DataLoaderStrategy) async throws -> SiteList {
+        try await fetchCityPageSiteList(strategy: strategy, loader: .shared)
+    }
+}
+
+// MARK: - Implementation (loader and locator injectable)
+
+extension WeatherRepository {
+    static func fetchWeather(
+        forSite site: Site,
+        strategy: DataLoaderStrategy,
+        loader: DataLoader,
+        locator: CityPageLocator
+    ) async throws -> SiteData {
+        // Cooperative cancellation before and after network work
+        try Task.checkCancellation()
+
+        let endpoint = try await locator.latestEndpoint(for: site, language: NSLocale.language)
+        let responseData = try await loader.request(endpoint, strategy: strategy).data
+
+        try Task.checkCancellation()
+
+        let siteData = try SiteData.decode(fromXML: responseData)
+
+        NotificationCenter.default.post(name: site.siteDataUpdatedNotification, object: siteData)
+
+        return siteData
+    }
+
+    static func fetchWeather(
+        forSites sites: [Site],
+        strategy: DataLoaderStrategy,
+        loader: DataLoader,
+        locator: CityPageLocator
+    ) async throws -> [SiteData] {
         // Fast-path: nothing to do
         guard !sites.isEmpty else { return [] }
 
@@ -62,9 +92,10 @@ public enum WeatherRepository {
                     }
 
                     do {
-                        let data = try await fetchWeather(forSite: site, strategy: strategy)
+                        let data = try await fetchWeather(forSite: site, strategy: strategy, loader: loader, locator: locator)
                         return (index, .success(data))
-                    } catch {
+                    }
+                    catch {
                         // Capture individual site failure without throwing to the group.
                         return (index, .failure(error))
                     }
@@ -84,64 +115,30 @@ public enum WeatherRepository {
                 }
             }
 
-            let successes = ordered.compactMap { $0 }
-            return (successes, firstError)
+            return (ordered.compactMap { $0 }, firstError)
         }
-        
+
         try Task.checkCancellation()
-        
+
         if successes.isEmpty, let error = firstError {
             throw error
         }
+
         return successes
     }
-    
-    /// Fetch the `ObservationCollection` for the specified province.
-    /// - Parameters:
-    ///   - provinceCode: The province code.
-    ///   - strategy: The data loading strategy to use.
-    /// - Returns: A decoded `ObservationCollection`.
-    public static func fetchObservationCollection(
-        forProvince provinceCode: String,
-        strategy: DataLoaderStrategy
-    ) async throws -> ObservationCollection {
+
+    static func fetchCityPageSiteList(strategy: DataLoaderStrategy, loader: DataLoader) async throws -> SiteList {
         try Task.checkCancellation()
 
-        let endpoint = Endpoint.observationCollection(forProvinceWithCode: provinceCode)
-        let response = try await DataLoader.request(endpoint, strategy: strategy)
+        let response = try await loader.request(.citypageWeatherSiteList, strategy: strategy)
 
         try Task.checkCancellation()
-        
-        let observationCollection = try ObservationCollection.decode(
-            fromXML: response.data,
-            keyDecodingStrategy: .observationCollectionCustomStrategy
-        )
-        
-        NotificationCenter.default.post(name: Notifications.observationCollectionUpdated, object: observationCollection)
-        
-        return observationCollection
-    }
-    
-    /// Fetch the Environment Canada City Page weather site list.
-    /// - Parameter strategy: Loading strategy (disk/network behavior).
-    /// - Returns: Decoded `SiteList`.
-    @discardableResult
-    public static func fetchCityPageSiteList(strategy: DataLoaderStrategy) async throws -> SiteList {
-        try Task.checkCancellation()
 
-        let response = try await DataLoader.request(.citypageWeatherSiteList, strategy: strategy)
-
-        try Task.checkCancellation()
-        
         let siteList = try SiteList.decode(fromXML: response.data)
-        
+
         NotificationCenter.default.post(name: Notifications.siteListUpdated, object: siteList)
-        
+
         return siteList
     }
 }
-
-extension SiteData: @unchecked Sendable { }
-extension Site: @unchecked Sendable { }
-extension DataLoaderStrategy: @unchecked Sendable { }
 

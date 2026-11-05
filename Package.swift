@@ -17,7 +17,7 @@ let package = Package(
     ],
     dependencies: [
         // Add external package dependencies here
-        .package(url: "https://github.com/CoreOffice/XMLCoder.git", from: "0.17.1")
+        .package(url: "https://github.com/CoreOffice/XMLCoder.git", from: "0.18.2")
     ],
 
     targets: [
@@ -31,7 +31,8 @@ let package = Package(
         ),
         .testTarget(
             name: "ChinookTests",
-            dependencies: ["Chinook"]
+            dependencies: ["Chinook"],
+            resources: [.copy("Fixtures")]
         ),
     ],
     swiftLanguageModes: [.v5, .v6]

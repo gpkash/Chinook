@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AlertInfo: XMLDecodable, Hashable {
+public struct AlertInfo: XMLDecodable, Hashable, Sendable {
     public let language: String
     public let event: String
     public let responseType: String
@@ -41,37 +41,43 @@ public struct AlertInfo: XMLDecodable, Hashable {
 }
 
 extension AlertInfo {
-    private static var dateFormatter: DateFormatter {
+    // One shared formatter avoids allocating a new one on every access.
+    private static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(secondsFromGMT:0)
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss-00:00" // eg: 2020-12-21T04:21:30-00:00
         return dateFormatter
-    }
+    }()
 
     public var effectiveDate: Date? {
         guard let effective else { return nil }
         return Self.dateFormatter.date(from: effective)
     }
-    
+
     public var expiresDate: Date? {
         guard let expires else { return nil }
         return Self.dateFormatter.date(from: expires)
     }
 
     /// Returns whether the alert is effective and not expired.
-    public var isActive: Bool {
+    public var isActive: Bool { isActive(at: Date()) }
+
+    public func isActive(at date: Date) -> Bool {
         guard let effectiveDate else { return true }
-        return effectiveDate <= Date() && !isExpired
+        return effectiveDate <= date && !isExpired(at: date)
     }
-    
+
     /// Returns whether the alert is still going. Aka: active, not clear and not past.
-    public var isInEffect: Bool {
-        isActive && responseType != "AllClear" && urgency != "Past"
+    public var isInEffect: Bool { isInEffect(at: Date()) }
+
+    public func isInEffect(at date: Date) -> Bool {
+        isActive(at: date) && responseType != "AllClear" && urgency != "Past"
     }
-    
-    
-    public var isExpired: Bool {
+
+    public var isExpired: Bool { isExpired(at: Date()) }
+
+    public func isExpired(at date: Date) -> Bool {
         guard let expiresDate else { return false }
-        return expiresDate < Date()
+        return expiresDate < date
     }
 }

@@ -10,15 +10,6 @@ import Foundation
 
 public extension NSLocale {
     static var language: Language {
-        for languageCode in NSLocale.preferredLanguages {
-            if languageCode.starts(with: "fr") {
-                return .french
-            }
-            else if languageCode.starts(with: "en") {
-                return .english
-            }
-        }
-        
-        return .english
+        Language.preferred(from: NSLocale.preferredLanguages)
     }
 }

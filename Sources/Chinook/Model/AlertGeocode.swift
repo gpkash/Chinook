@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AlertGeocode: XMLDecodable, Hashable {
+public struct AlertGeocode: XMLDecodable, Hashable, Sendable {
     private enum CodingKeys: String, CodingKey {
         case value = ""
         case valueName

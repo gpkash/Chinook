@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<siteList>
+	<site code="s0000045">
+		<nameEn>Edmonton</nameEn>
+		<nameFr>Edmonton</nameFr>
+		<provinceCode>AB</provinceCode>
+	</site>
+	<site code="s0000047">
+		<nameEn>Calgary</nameEn>
+		<nameFr>Calgary</nameFr>
+		<provinceCode>AB</provinceCode>
+	</site>
+	<site code="s0000193">
+		<nameEn>Winnipeg</nameEn>
+		<nameFr>Winnipeg</nameFr>
+		<provinceCode>MB</provinceCode>
+	</site>
+	<site code="s0000330">
+		<nameEn>Charlottetown</nameEn>
+		<nameFr>Charlottetown</nameFr>
+		<provinceCode>PE</provinceCode>
+	</site>
+	<site code="s0000901">
+		<nameEn>Zeballos</nameEn>
+		<nameFr>Zeballos</nameFr>
+		<provinceCode>QC</provinceCode>
+	</site>
+	<site code="s0000902">
+		<nameEn>Isle-aux-Coudres</nameEn>
+		<nameFr>Île-aux-Coudres</nameFr>
+		<provinceCode>QC</provinceCode>
+	</site>
+	<site code="s0000903">
+		<nameEn>Inukjuak</nameEn>
+		<nameFr>Inukjuak</nameFr>
+		<provinceCode>QC</provinceCode>
+	</site>
+	<site code="s0000999">
+		<nameEn>Nowhere</nameEn>
+		<nameFr>Nulle part</nameFr>
+		<provinceCode>ZZ</provinceCode>
+	</site>
+</siteList>

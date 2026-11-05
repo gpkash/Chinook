@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AlertParameter: XMLDecodable, Hashable {
+public struct AlertParameter: XMLDecodable, Hashable, Sendable {
     private enum CodingKeys: String, CodingKey {
         case value
         case valueName

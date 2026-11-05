@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Alert: XMLDecodable, Hashable {
+public struct Alert: XMLDecodable, Hashable, Sendable {
     public let identifier: String
     public let sent: String
     public let status: String

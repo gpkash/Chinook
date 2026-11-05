@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum StationCode: String, CaseIterable {
+public enum StationCode: String, CaseIterable, Sendable {
     case CWHX = "CWHX"
     case CWNT = "CWNT"
     case CWTO = "CWTO"

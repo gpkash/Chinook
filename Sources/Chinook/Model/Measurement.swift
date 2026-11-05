@@ -27,4 +27,7 @@ public struct Measurement: XMLDecodable {
     public let category: String?
     public let period: String?
     public let year: String?
+
+    /// A measurement EC left out entirely.
+    static var empty: Measurement { Measurement(value: nil, index: nil, unitType: nil, units: nil, class: nil, category: nil, period: nil, year: nil) }
 }
