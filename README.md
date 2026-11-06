@@ -72,6 +72,40 @@ do {
 }
 ```
 
+### Fetching Temperature Records
+
+Daily record highs and lows work for any site EC keeps records for (about 86% of them; remote communities are missing).
+
+```swift
+do {
+    let records = try await ClimateRepository.fetchTemperatureRecords(forSite: site, strategy: .diskWithNetworkFallback)
+
+    if let today = records.records(on: .now) {
+        print("Record high \(today.recordHigh?.temperature ?? .nan) in \(today.recordHigh?.year ?? 0)")
+        print("Record low \(today.recordLow?.temperature ?? .nan) in \(today.recordLow?.year ?? 0)")
+    }
+} catch ClimateError.noRecordStation {
+    // EC keeps no records for this site.
+} catch {
+    // Handle network or parsing error
+}
+```
+
+### Finding the Station for a Site and Year
+
+A site's weather station changes over the years, so the year is part of the question:
+
+```swift
+let siteData = try await WeatherRepository.fetchWeather(forSite: site, strategy: .diskWithNetworkFallback)
+let station = try await ClimateRepository.fetchClimateStation(forSiteData: siteData, year: 1986, strategy: .diskWithNetworkFallback)
+
+station.climateID // "5023222": Winnipeg Richardson Int'l A, which stopped reporting daily in 2008
+```
+
+### Climate Endpoints
+
+`Endpoint` also names the Datamart climate files, for callers that want the raw CSV: `climateDaily(province:climateID:year:)`, `climateNormals(province:climateID:)`, `climateRecords(province:virtualClimateID:)`, `climateStationList(language:)` and `climateRecordStations`. Get a station's `climateID` and `province` from `fetchClimateStation` rather than hard-coding them.
+
 ### Data Loading Strategies
 
 Chinook supports three loading strategies via `DataLoaderStrategy`:
