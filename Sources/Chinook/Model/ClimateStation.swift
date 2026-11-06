@@ -20,18 +20,31 @@ public struct ClimateStation: Hashable, Sendable {
     public let longitude: Double
     /// The first to last year the station reported daily observations, if it ever did. Years inside the range can still be missing.
     public let dailyYears: ClosedRange<Int>?
+    /// The first to last year the station reported monthly summaries, if it ever did. Climate normals are built from these.
+    public let monthlyYears: ClosedRange<Int>?
 
-    public init(climateID: String, name: String, province: Province, latitude: Double, longitude: Double, dailyYears: ClosedRange<Int>?) {
+    public init(climateID: String, name: String, province: Province, latitude: Double, longitude: Double, dailyYears: ClosedRange<Int>?, monthlyYears: ClosedRange<Int>? = nil) {
         self.climateID = climateID
         self.name = name
         self.province = province
         self.latitude = latitude
         self.longitude = longitude
         self.dailyYears = dailyYears
+        self.monthlyYears = monthlyYears
     }
 
     public func reportsDaily(in year: Int) -> Bool {
         dailyYears?.contains(year) ?? false
+    }
+
+    /// Whether the station reported long enough in 1981–2010 for EC to have published normals for it.
+    ///
+    /// EC wants at least 15 years of monthly data. This is a guess from the station list, not a promise: a file can still be missing.
+    var likelyHasNormals: Bool {
+        guard let monthlyYears else { return false }
+
+        let overlap = min(monthlyYears.upperBound, ClimateNormals.lastYear) - max(monthlyYears.lowerBound, ClimateNormals.firstYear) + 1
+        return overlap >= 15
     }
 
     /// Great-circle distance to a point, in kilometres.
@@ -60,11 +73,10 @@ public struct ClimateStations: Sendable {
                   let longitude = row["Longitude"].flatMap({ Double($0) })
             else { return nil }
 
-            let dailyYears = row["DLY First Year"].flatMap { Int($0) }.flatMap { first in
-                row["DLY Last Year"].flatMap { Int($0) }.flatMap { last in first <= last ? first...last : nil }
-            }
+            let dailyYears = Self.years(row, first: "DLY First Year", last: "DLY Last Year")
+            let monthlyYears = Self.years(row, first: "MLY First Year", last: "MLY Last Year")
 
-            return ClimateStation(climateID: climateID, name: name, province: province, latitude: latitude, longitude: longitude, dailyYears: dailyYears)
+            return ClimateStation(climateID: climateID, name: name, province: province, latitude: latitude, longitude: longitude, dailyYears: dailyYears, monthlyYears: monthlyYears)
         }
     }
 
@@ -86,6 +98,26 @@ public struct ClimateStations: Sendable {
         guard let point = siteData.observationPoint ?? siteData.point else { return nil }
 
         return station(nearLatitude: point.y, longitude: point.x, year: year, maxKilometres: maxKilometres)
+    }
+
+    /// Stations near a site that probably have climate normals, nearest first. The nearest is often not the one with a file
+    /// (Winnipeg's airport is `5023227` today, but its normals were built from `5023222`), so callers try them in order.
+    public func normalsStations(for siteData: SiteData, maxKilometres: Double = 25, limit: Int = 3) -> [ClimateStation] {
+        guard let point = siteData.observationPoint ?? siteData.point else { return [] }
+
+        return stations
+            .filter(\.likelyHasNormals)
+            .map { (station: $0, distance: $0.kilometres(fromLatitude: point.y, longitude: point.x)) }
+            .filter { $0.distance <= maxKilometres }
+            .sorted { $0.distance < $1.distance }
+            .prefix(limit)
+            .map(\.station)
+    }
+
+    private static func years(_ row: CSVTable.Row, first: String, last: String) -> ClosedRange<Int>? {
+        row[first].flatMap { Int($0) }.flatMap { first in
+            row[last].flatMap { Int($0) }.flatMap { last in first <= last ? first...last : nil }
+        }
     }
 
     /// The station list names provinces in full, in capitals: "NEWFOUNDLAND AND LABRADOR".

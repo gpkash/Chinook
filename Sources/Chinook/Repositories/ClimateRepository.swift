@@ -52,6 +52,21 @@ public enum ClimateRepository {
     public static func fetchClimateStation(forSiteData siteData: SiteData, year: Int, strategy: DataLoaderStrategy) async throws -> ClimateStation {
         try await fetchClimateStation(forSiteData: siteData, year: year, strategy: strategy, loader: .shared)
     }
+
+    /// Fetch how a calendar month went at a site's station, next to the 1981–2010 normals for that month.
+    ///
+    /// The daily file for the current year grows every day, so for a month that has just ended pass `.networkOnly`
+    /// to get all of it. The station list and normals change rarely and are always read from disk first.
+    /// - Parameters:
+    ///   - siteData: The site's city page, which says where it and its observing station are.
+    ///   - year: The calendar year of the month.
+    ///   - month: The month, 1 to 12.
+    ///   - strategy: Loading strategy for the daily observations (disk/network behavior).
+    /// - Throws: `ClimateError.noClimateStation` if no station near the site reported daily observations in `year`.
+    ///   Normals are optional: the summary's `normals` is nil when EC publishes none near the site.
+    public static func fetchMonthlySummary(forSiteData siteData: SiteData, year: Int, month: Int, strategy: DataLoaderStrategy) async throws -> MonthlyClimateSummary {
+        try await fetchMonthlySummary(forSiteData: siteData, year: year, month: month, strategy: strategy, loader: .shared)
+    }
 }
 
 // MARK: - Implementation (loader injectable)
@@ -100,5 +115,42 @@ extension ClimateRepository {
         try Task.checkCancellation()
 
         return TemperatureRecords(csv: response.data, station: station)
+    }
+
+    static func fetchMonthlySummary(forSiteData siteData: SiteData, year: Int, month: Int, strategy: DataLoaderStrategy, loader: DataLoader) async throws -> MonthlyClimateSummary {
+        let slowChanging: DataLoaderStrategy = strategy == .diskOnly ? .diskOnly : .diskWithNetworkFallback
+        let stations = try await fetchClimateStations(strategy: slowChanging, loader: loader)
+
+        guard let station = stations.station(for: siteData, year: year) else {
+            throw ClimateError.noClimateStation(siteName: siteData.location.name.value ?? "", year: year)
+        }
+
+        let daily = try await loader.request(.climateDaily(province: station.province, climateID: station.climateID, year: year), strategy: strategy)
+
+        try Task.checkCancellation()
+
+        let normals = try await fetchNormals(forMonth: month, near: stations.normalsStations(for: siteData), strategy: slowChanging, loader: loader)
+
+        return MonthlyClimateSummary(station: station, year: year, month: month, observations: DailyObservations(csv: daily.data), normals: normals)
+    }
+
+    /// The first of `candidates` EC has a normals file for. A missing file isn't an error, since the station list can't say for sure which exist.
+    private static func fetchNormals(forMonth month: Int, near candidates: [ClimateStation], strategy: DataLoaderStrategy, loader: DataLoader) async throws -> MonthlyNormals? {
+        for candidate in candidates {
+            try Task.checkCancellation()
+
+            do {
+                let response = try await loader.request(.climateNormals(province: candidate.province, climateID: candidate.climateID), strategy: strategy)
+                return ClimateNormals(csv: response.data).normals(forMonth: month)
+            }
+            catch NetworkError.httpError(let statusCode) where statusCode == 404 {
+                continue
+            }
+            catch DataLoaderError.notCached {
+                continue
+            }
+        }
+
+        return nil
     }
 }

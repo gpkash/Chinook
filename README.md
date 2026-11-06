@@ -91,6 +91,22 @@ do {
 }
 ```
 
+### Summarising a Month
+
+How a calendar month went at a site, next to its 1981–2010 normals:
+
+```swift
+let siteData = try await WeatherRepository.fetchWeather(forSite: site, strategy: .diskWithNetworkFallback)
+let october = try await ClimateRepository.fetchMonthlySummary(forSiteData: siteData, year: 2026, month: 10, strategy: .networkOnly)
+
+october.averageHigh                 // 14.2
+october.normals?.averageHigh        // 10.5
+october.warmest                     // DayTemperature(temperature: 24.6, day: 23)
+october.snowfall                    // nil: the station doesn't measure snow
+```
+
+`snowfall` is nil for stations that don't report it, and `normals` is nil when EC publishes none near the site. Use `.networkOnly` for a month that has just ended: the current year's daily file grows every day.
+
 ### Finding the Station for a Site and Year
 
 A site's weather station changes over the years, so the year is part of the question:
