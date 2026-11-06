@@ -17,6 +17,36 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Security
 
+## [1.1.0] - 2026-11-05
+Climate data from Datamart: a site's daily temperature records, and the station that observed its weather in a given year. Nothing here changes existing behaviour.
+
+### Added
+- Datamart climate endpoints: `Endpoint.climateDaily(province:climateID:year:)`, `climateNormals(province:climateID:)`, `climateRecords(province:virtualClimateID:)`, `climateStationList(language:)` and `climateRecordStations`. Daily observations and normals are only named here; decoding them is not part of Chinook yet.
+- `ClimateRepository.fetchTemperatureRecords(forSite:strategy:)`: a site's record high and low (and coldest high, warmest low) for every calendar day, with the year each was set. It works for any site EC keeps records for (733 of 855 today) and throws `ClimateError.noRecordStation` for the rest.
+- `ClimateRecordStations` finds a site's record series by province and name; `TemperatureRecords.records(on:)` and `records(month:day:)` look up a day.
+- `ClimateRepository.fetchClimateStation(forSiteData:year:strategy:)`: the station that observed a site's weather in a given year, so `climateID` and `province` name that year's daily file. A city's station is often replaced by one with a new ID (Winnipeg's airport is `5023222` until 2008, `5023227` since 2018), so the year is part of the question. It looks near the station measuring the site's current conditions, and throws `ClimateError.noClimateStation` when none within 25 km reported that year.
+- `ClimateStation` and `ClimateStations`: the station list, with `station(for:year:)` and `station(nearLatitude:longitude:year:)`.
+- `CSVTable`, an internal reader for Datamart's CSV files (quoted fields, stray trailing commas, Latin-1).
+
+### Changed
+- `SiteData.point` shares its coordinate parsing with the new `SiteData.observationPoint`; behaviour is unchanged.
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## [1.0.0] - 2026-11-05
 The first stable release. Breaking changes are relative to 0.0.7.
 
