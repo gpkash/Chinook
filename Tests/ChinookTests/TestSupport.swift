@@ -25,6 +25,11 @@ final class FakeTransport: DataTransport, @unchecked Sendable {
         lock.withLock { stubs[urlString] = .http(status: status, body: Data(body.utf8)) }
     }
 
+    /// For bodies that aren't UTF-8, like the Latin-1 climate files.
+    func stub(_ urlString: String, status: Int = 200, data: Data) {
+        lock.withLock { stubs[urlString] = .http(status: status, body: data) }
+    }
+
     /// Served for any URL without its own stub.
     func stubEverythingElse(status: Int = 200, body: String = "") {
         lock.withLock { fallback = .http(status: status, body: Data(body.utf8)) }

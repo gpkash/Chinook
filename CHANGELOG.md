@@ -17,6 +17,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Security
 
+## [1.2.0] - 2026-11-06
+How a calendar month went at a site's station, next to the 1981–2010 normals. Nothing here changes existing behaviour.
+
+### Added
+- `ClimateRepository.fetchMonthlySummary(forSiteData:year:month:strategy:)`: how a calendar month went at a site's station (average high and low, warmest and coldest day, snowfall) next to the 1981–2010 normals for that month. Snowfall is nil where the station doesn't measure it, which is many of them (Winnipeg, Regina, Saskatoon and Quebec City among the airports). Normals are nil where EC publishes none near the site. The strategy applies to the year's daily file, which grows daily; the station list and normals are read from disk first.
+- `DailyObservations` and `ClimateNormals` decode the Datamart daily and normals files (`Endpoint.climateDaily` and `climateNormals`).
+- `ClimateStation.monthlyYears` and `ClimateStations.normalsStations(for:)`: stations near a site that probably have normals, nearest first. The station that reports daily is often not the one the normals were built from (Winnipeg's airport is `5023227`, its normals are under `5023222`).
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## [1.1.0] - 2026-11-05
 Climate data from Datamart: a site's daily temperature records, and the station that observed its weather in a given year. Nothing here changes existing behaviour.
 

@@ -28,8 +28,7 @@ struct CSVTable: Sendable {
     }
 
     init(data: Data) {
-        let text = String(data: data, encoding: .utf8) ?? String(data: data, encoding: .isoLatin1) ?? ""
-        let parsed = CSVTable.parse(text)
+        let parsed = CSVTable.records(in: data)
 
         guard let header = parsed.first else {
             rows = []
@@ -42,6 +41,13 @@ struct CSVTable: Sendable {
         }
 
         rows = parsed.dropFirst().map { Row(columns: columns, values: $0) }
+    }
+
+    /// The fields of every non-blank line, for files that aren't one table: climate normals stack several, each under its own heading.
+    static func records(in data: Data) -> [[String]] {
+        let text = String(data: data, encoding: .utf8) ?? String(data: data, encoding: .isoLatin1) ?? ""
+
+        return parse(text)
     }
 
     /// Splits `text` into records of fields: quoted fields may hold commas, line breaks and `""`.
